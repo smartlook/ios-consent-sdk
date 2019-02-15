@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PrivacyPolicyDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy control panel demo." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87p-6n-RQL">
+                                <rect key="frame" x="8" y="20" width="359" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy consent: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiN-C0-TOX">
+                                <rect key="frame" x="8" y="64" width="131" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Analytics consent: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eo1-fZ-1eM">
+                                <rect key="frame" x="8" y="93" width="144.5" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VW8-ZM-rxk">
+                                <rect key="frame" x="143" y="64" width="21" height="21"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VW8-ZM-rxk" secondAttribute="height" multiplier="1:1" id="KWS-mc-keA"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LGH-L0-xrg">
+                                <rect key="frame" x="156.5" y="93" width="21" height="21"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LGH-L0-xrg" secondAttribute="height" multiplier="1:1" id="Zvb-Z4-znF"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxu-qE-ax0">
+                                <rect key="frame" x="83.5" y="134" width="208" height="33"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <state key="normal" title="Change privacy consents..."/>
+                                <connections>
+                                    <action selector="changePrivacySettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xwc-xO-w6i"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VW8-ZM-rxk" firstAttribute="leading" secondItem="XiN-C0-TOX" secondAttribute="trailing" constant="4" id="28W-gI-bWq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="87p-6n-RQL" secondAttribute="trailing" constant="8" id="8Lo-IE-Sz8"/>
+                            <constraint firstItem="LGH-L0-xrg" firstAttribute="centerY" secondItem="Eo1-fZ-1eM" secondAttribute="centerY" id="Aob-vO-t0v"/>
+                            <constraint firstItem="Bxu-qE-ax0" firstAttribute="top" secondItem="Eo1-fZ-1eM" secondAttribute="bottom" constant="20" id="Ds0-Kh-iNc"/>
+                            <constraint firstItem="XiN-C0-TOX" firstAttribute="top" secondItem="87p-6n-RQL" secondAttribute="bottom" constant="8" id="Eic-fb-bUD"/>
+                            <constraint firstItem="Eo1-fZ-1eM" firstAttribute="top" secondItem="XiN-C0-TOX" secondAttribute="bottom" constant="8" id="NQx-fI-fRQ"/>
+                            <constraint firstItem="Bxu-qE-ax0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PFo-mJ-f3R"/>
+                            <constraint firstItem="VW8-ZM-rxk" firstAttribute="height" secondItem="XiN-C0-TOX" secondAttribute="height" id="Pi4-HU-RFh"/>
+                            <constraint firstItem="87p-6n-RQL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="aeU-a8-naM"/>
+                            <constraint firstItem="Eo1-fZ-1eM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="aqX-cc-XDV"/>
+                            <constraint firstItem="87p-6n-RQL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="f7p-Nf-VJc"/>
+                            <constraint firstItem="LGH-L0-xrg" firstAttribute="width" secondItem="LGH-L0-xrg" secondAttribute="height" multiplier="1:1" id="gqh-NM-dyr"/>
+                            <constraint firstItem="XiN-C0-TOX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="hgZ-7V-KfO"/>
+                            <constraint firstItem="LGH-L0-xrg" firstAttribute="height" secondItem="Eo1-fZ-1eM" secondAttribute="height" id="lfE-Q8-g2F"/>
+                            <constraint firstItem="VW8-ZM-rxk" firstAttribute="centerY" secondItem="XiN-C0-TOX" secondAttribute="centerY" id="qNm-wf-E14"/>
+                            <constraint firstItem="LGH-L0-xrg" firstAttribute="leading" secondItem="Eo1-fZ-1eM" secondAttribute="trailing" constant="4" id="vlm-h3-AoE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="analyticsConsentIndicator" destination="LGH-L0-xrg" id="m13-b8-dFF"/>
+                        <outlet property="privacyConsentIndicator" destination="VW8-ZM-rxk" id="zjt-j0-ECI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>

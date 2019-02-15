@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  PrivacyPolicyDemo
+
+  Created by Pavel Kroh on 15/02/2019.
+  Copyright © 2019 Smartlook. All rights reserved.
+*/
+
+"privacy-control-panel-title" = "Privacy settings for $APP.";
+"privacy-control-panel-text" = "Intro text.";
+
+"privacy-control-panel-privacy-consent" = "Privacy consent";
+"privacy-control-panel-privacy-consent-url" = "https://www.smartlook.com";
+
+"privacy-control-panel-analytics-consent" = "Analytics consent";
+
+"privacy-control-panel-button" = "Start playing";
