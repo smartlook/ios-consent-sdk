@@ -24,48 +24,60 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy consent: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiN-C0-TOX">
-                                <rect key="frame" x="8" y="64" width="131" height="21"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Analytics consent: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eo1-fZ-1eM">
-                                <rect key="frame" x="8" y="93" width="144.5" height="21"/>
+                                <rect key="frame" x="8" y="136" width="144.5" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VW8-ZM-rxk">
-                                <rect key="frame" x="143" y="64" width="21" height="21"/>
+                                <rect key="frame" x="143" y="107" width="21" height="21"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="VW8-ZM-rxk" secondAttribute="height" multiplier="1:1" id="KWS-mc-keA"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LGH-L0-xrg">
-                                <rect key="frame" x="156.5" y="93" width="21" height="21"/>
+                                <rect key="frame" x="156.5" y="136" width="21" height="21"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LGH-L0-xrg" secondAttribute="height" multiplier="1:1" id="Zvb-Z4-znF"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxu-qE-ax0">
-                                <rect key="frame" x="83.5" y="134" width="208" height="33"/>
+                                <rect key="frame" x="83.5" y="177" width="208" height="33"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" title="Change privacy consents..."/>
                                 <connections>
                                     <action selector="changePrivacySettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xwc-xO-w6i"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consents were already shown: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5P-ki-qZS">
+                                <rect key="frame" x="8" y="78" width="238" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFV-9Z-g4h">
+                                <rect key="frame" x="246" y="78" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy consent: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiN-C0-TOX">
+                                <rect key="frame" x="8" y="107" width="131" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="VW8-ZM-rxk" firstAttribute="leading" secondItem="XiN-C0-TOX" secondAttribute="trailing" constant="4" id="28W-gI-bWq"/>
+                            <constraint firstItem="hFV-9Z-g4h" firstAttribute="centerY" secondItem="M5P-ki-qZS" secondAttribute="centerY" id="80q-cB-MdA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="87p-6n-RQL" secondAttribute="trailing" constant="8" id="8Lo-IE-Sz8"/>
                             <constraint firstItem="LGH-L0-xrg" firstAttribute="centerY" secondItem="Eo1-fZ-1eM" secondAttribute="centerY" id="Aob-vO-t0v"/>
                             <constraint firstItem="Bxu-qE-ax0" firstAttribute="top" secondItem="Eo1-fZ-1eM" secondAttribute="bottom" constant="20" id="Ds0-Kh-iNc"/>
-                            <constraint firstItem="XiN-C0-TOX" firstAttribute="top" secondItem="87p-6n-RQL" secondAttribute="bottom" constant="8" id="Eic-fb-bUD"/>
                             <constraint firstItem="Eo1-fZ-1eM" firstAttribute="top" secondItem="XiN-C0-TOX" secondAttribute="bottom" constant="8" id="NQx-fI-fRQ"/>
                             <constraint firstItem="Bxu-qE-ax0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PFo-mJ-f3R"/>
                             <constraint firstItem="VW8-ZM-rxk" firstAttribute="height" secondItem="XiN-C0-TOX" secondAttribute="height" id="Pi4-HU-RFh"/>
@@ -74,14 +86,19 @@
                             <constraint firstItem="87p-6n-RQL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="f7p-Nf-VJc"/>
                             <constraint firstItem="LGH-L0-xrg" firstAttribute="width" secondItem="LGH-L0-xrg" secondAttribute="height" multiplier="1:1" id="gqh-NM-dyr"/>
                             <constraint firstItem="XiN-C0-TOX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="hgZ-7V-KfO"/>
+                            <constraint firstItem="hFV-9Z-g4h" firstAttribute="leading" secondItem="M5P-ki-qZS" secondAttribute="trailing" id="kbn-mG-wwQ"/>
                             <constraint firstItem="LGH-L0-xrg" firstAttribute="height" secondItem="Eo1-fZ-1eM" secondAttribute="height" id="lfE-Q8-g2F"/>
                             <constraint firstItem="VW8-ZM-rxk" firstAttribute="centerY" secondItem="XiN-C0-TOX" secondAttribute="centerY" id="qNm-wf-E14"/>
+                            <constraint firstItem="M5P-ki-qZS" firstAttribute="top" secondItem="87p-6n-RQL" secondAttribute="bottom" constant="22" id="qfJ-Ps-bfi"/>
+                            <constraint firstItem="XiN-C0-TOX" firstAttribute="top" secondItem="M5P-ki-qZS" secondAttribute="bottom" constant="8" id="tWM-c2-Jqs"/>
+                            <constraint firstItem="M5P-ki-qZS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="u9g-xh-Rws"/>
                             <constraint firstItem="LGH-L0-xrg" firstAttribute="leading" secondItem="Eo1-fZ-1eM" secondAttribute="trailing" constant="4" id="vlm-h3-AoE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="analyticsConsentIndicator" destination="LGH-L0-xrg" id="m13-b8-dFF"/>
+                        <outlet property="consentsWereShownIndicator" destination="hFV-9Z-g4h" id="ALd-vf-3b8"/>
                         <outlet property="privacyConsentIndicator" destination="VW8-ZM-rxk" id="zjt-j0-ECI"/>
                     </connections>
                 </viewController>

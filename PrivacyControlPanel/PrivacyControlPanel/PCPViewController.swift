@@ -13,7 +13,7 @@ protocol PCPViewControllerDelegate {
     func viewControllerRequestClose(_ viewController: PCPViewController)
 }
 
-class PCPViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PCPViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ConsentCellDelegate {
 
    @IBOutlet weak var tableView: UITableView!
     
@@ -33,6 +33,10 @@ class PCPViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         return consents.count + 2
     }
     
+    func consentForIndex(_ index: Int) -> PrivacyControlPanel.Consent? {
+        return consents.keys.sorted()[index]
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.item {
         case 0:
@@ -40,7 +44,8 @@ class PCPViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         case consents.count + 1:
             return tableView.dequeueReusableCell(withIdentifier: "ButtonCell", for: indexPath)
         default:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "ConsentCell", for: indexPath) as? ConsentCell, let consent = PrivacyControlPanel.Consent(rawValue: indexPath.item - 1), let defaultState = consents[consent] {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "ConsentCell", for: indexPath) as? ConsentCell, let consent = consentForIndex(indexPath.item - 1), let defaultState = consents[consent] {
+                cell.delegate = self
                 cell.setupCell(consent, defaultState)
                 return cell
             }
@@ -57,11 +62,10 @@ class PCPViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         delegate?.viewControllerRequestClose(self)
     }
     
-    
     private var safariController: SFSafariViewController?
     
-    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        guard let consent = PrivacyControlPanel.Consent(rawValue: indexPath.item - 1), let url = consent.detailUrl() else {
+    func consentCellDetailButtonPressed(cell: ConsentCell) {
+        guard let consent = cell.consent, let url = consent.detailUrl() else {
             return
         }
         var safariController: SFSafariViewController?
@@ -69,7 +73,7 @@ class PCPViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             let config = SFSafariViewController.Configuration()
             config.barCollapsingEnabled = false
             safariController = SFSafariViewController(url: url, configuration: config)
-            safariController?.dismissButtonStyle = .cancel
+            safariController?.dismissButtonStyle = .done
         } else {
             safariController = SFSafariViewController(url: url)
         }

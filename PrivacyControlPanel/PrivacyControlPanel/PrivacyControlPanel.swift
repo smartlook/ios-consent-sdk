@@ -22,7 +22,8 @@ public typealias PrivacyControlPanelSetting = Dictionary<PrivacyControlPanel.Con
         case provided = 1
     }
     
-    @objc public enum Consent: Int {
+    @objc public enum Consent: Int, Comparable {
+        
         case privacy
         case analytics
         
@@ -36,7 +37,7 @@ public typealias PrivacyControlPanelSetting = Dictionary<PrivacyControlPanel.Con
         }
         
         // why this is stored as bool even if there are three possible values in the enum?
-        // to have dirrect UserDefaults mapping to system settings bundle
+        // to have direct UserDefaults mapping to system settings bundle
         var state: ConsentState {
             set {
                 switch newValue {
@@ -69,6 +70,11 @@ public typealias PrivacyControlPanelSetting = Dictionary<PrivacyControlPanel.Con
             }
             return URL(string: consentUrlString)
         }
+        
+        public static func < (lhs: PrivacyControlPanel.Consent, rhs: PrivacyControlPanel.Consent) -> Bool {
+            return lhs.rawValue < rhs.rawValue
+        }
+
     }
     
     @objc public static func consent(for consent: Consent) -> ConsentState {
@@ -83,6 +89,12 @@ public typealias PrivacyControlPanelSetting = Dictionary<PrivacyControlPanel.Con
     @objc public static func resetAllConsents() {
         UserDefaults.standard.removeObject(forKey: Consent.privacy.key)
         UserDefaults.standard.removeObject(forKey: Consent.analytics.key)
+    }
+    
+    @objc public static var wasShown: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: "\(keyPrefix)-shown")
+        }
     }
 
     private static var _shared: PrivacyControlPanel = {
@@ -119,26 +131,37 @@ public typealias PrivacyControlPanelSetting = Dictionary<PrivacyControlPanel.Con
             keyWindow.backgroundColor = UIColor.clear
             viewController.consents = consents
             DispatchQueue.main.async {
+                UserDefaults.standard.set(true, forKey: "\(keyPrefix)-shown")
                 keyWindow.makeKeyAndVisible()
                 keyWindow.rootViewController?.present(viewController, animated: true, completion: nil)
             }
         }
     }
     
-    private lazy var viewController: PCPViewController? = {
-        guard let viewController = UIStoryboard(name: "PrivacyControlPanel", bundle: Bundle(for: type(of: self))).instantiateInitialViewController() as? PCPViewController else {
-            return nil
+    private var _viewController: PCPViewController?
+    
+    private var viewController: PCPViewController? {
+        get {
+            if _viewController != nil {
+                return _viewController
+            }
+            guard let _viewController = UIStoryboard(name: "PrivacyControlPanel", bundle: Bundle(for: type(of: self))).instantiateInitialViewController() as? PCPViewController else {
+                return nil
+            }
+            _viewController.delegate = self
+            _viewController.modalTransitionStyle = .coverVertical
+            // this ensures, together with the viewController.supportedInterfaceOrientations = .portrait
+            // that the controller is never in landscape
+            _viewController.modalPresentationStyle = .formSheet
+            if let currentRootViewController = originalKeyWindow?.rootViewController, currentRootViewController.traitCollection.containsTraits(in: UITraitCollection(userInterfaceIdiom: .phone)) {
+                _viewController.modalPresentationStyle = .fullScreen
+            }
+            return _viewController
         }
-        viewController.delegate = self
-        viewController.modalTransitionStyle = .coverVertical
-        // this ensures, together with the viewController.supportedInterfaceOrientations = .portrait
-        // that the controller is never in landscape
-        viewController.modalPresentationStyle = .formSheet
-        if let currentRootViewController = originalKeyWindow?.rootViewController, currentRootViewController.traitCollection.containsTraits(in: UITraitCollection(userInterfaceIdiom: .phone)) {
-            viewController.modalPresentationStyle = .fullScreen
+        set {
+            _viewController = newValue
         }
-        return viewController
-    }()
+    }
     
     func viewControllerRequestClose(_ viewController: PCPViewController) {
         DispatchQueue.main.async {
@@ -146,6 +169,7 @@ public typealias PrivacyControlPanelSetting = Dictionary<PrivacyControlPanel.Con
                 self.originalKeyWindow?.makeKeyAndVisible()
                 self.originalKeyWindow = nil
                 self.keyWindow = nil
+                self.viewController = nil
                 self.callback?()
                 self.callback = nil
             }

@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ButtonCell: UITableViewCell {
+class ButtonCell: TopBorderCell {
     
+    @IBOutlet weak var buttonBackground: UIView!
     @IBOutlet weak var title: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        contentView.layer.cornerRadius = 4
+        buttonBackground.layer.cornerRadius = 6
         title.text = NSLocalizedString("\(PrivacyControlPanel.keyPrefix)-button", comment: "")
     }
 }

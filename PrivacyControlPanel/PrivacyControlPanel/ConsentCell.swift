@@ -8,10 +8,17 @@
 
 import UIKit
 
-class ConsentCell: UITableViewCell {
+protocol ConsentCellDelegate: class {
+    func consentCellDetailButtonPressed(cell: ConsentCell)
+}
+
+class ConsentCell: TopBorderCell {
     
     @IBOutlet weak var consentSwitch: UISwitch!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var detailView: UIView!
+    
+    public weak var delegate: ConsentCellDelegate?
     
     private var consentUrl: URL?
     
@@ -27,7 +34,7 @@ class ConsentCell: UITableViewCell {
             consentSwitch.isOn = consent.state == .provided
             label.text = consent.label()
             consentUrl = consent.detailUrl()
-            accessoryType = consentUrl == nil ? .none : .detailButton
+            detailView.isHidden = consentUrl == nil
         }
     }
     
@@ -43,5 +50,8 @@ class ConsentCell: UITableViewCell {
         consentUrl = nil
     }
     
+    @IBAction func detailButtonAction(_ sender: Any) {
+        delegate?.consentCellDetailButtonPressed(cell: self)
+    }
 }
 

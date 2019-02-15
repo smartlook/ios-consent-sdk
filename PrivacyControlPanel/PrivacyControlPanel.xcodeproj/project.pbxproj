@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33ACA5C52217147A008A85F2 /* TopBorderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ACA5C42217147A008A85F2 /* TopBorderCell.swift */; };
 		33C9E9F02216D2A100096A85 /* PrivacyControlPanel.h in Headers */ = {isa = PBXBuildFile; fileRef = 33C9E9EE2216D2A100096A85 /* PrivacyControlPanel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		33C9E9FC2216D2C500096A85 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C9E9F62216D2C500096A85 /* ButtonCell.swift */; };
 		33C9E9FD2216D2C500096A85 /* PrivacyControlPanel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C9E9F72216D2C500096A85 /* PrivacyControlPanel.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33ACA5C42217147A008A85F2 /* TopBorderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBorderCell.swift; sourceTree = "<group>"; };
 		33C9E9EB2216D2A100096A85 /* PrivacyControlPanel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrivacyControlPanel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C9E9EE2216D2A100096A85 /* PrivacyControlPanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivacyControlPanel.h; sourceTree = "<group>"; };
 		33C9E9EF2216D2A100096A85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				33C9E9FB2216D2C500096A85 /* ConsentCell.swift */,
 				33C9E9F62216D2C500096A85 /* ButtonCell.swift */,
 				33C9E9F82216D2C500096A85 /* HeaderCell.swift */,
+				33ACA5C42217147A008A85F2 /* TopBorderCell.swift */,
 				33C9E9EF2216D2A100096A85 /* Info.plist */,
 			);
 			path = PrivacyControlPanel;
@@ -152,6 +155,7 @@
 				33C9E9FF2216D2C500096A85 /* PrivacyControlPanel.swift in Sources */,
 				33C9EA012216D2C500096A85 /* ConsentCell.swift in Sources */,
 				33C9EA002216D2C500096A85 /* PCPViewController.swift in Sources */,
+				33ACA5C52217147A008A85F2 /* TopBorderCell.swift in Sources */,
 				33C9E9FE2216D2C500096A85 /* HeaderCell.swift in Sources */,
 				33C9E9FC2216D2C500096A85 /* ButtonCell.swift in Sources */,
 			);
