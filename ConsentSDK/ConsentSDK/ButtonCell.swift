@@ -1,6 +1,6 @@
 //
 //  ButtonCell.swift
-//  Privacy-Policy-Control-Panel
+//  ConsentSDK
 //
 //  Created by Pavel Kroh on 15/02/2019.
 //  Copyright © 2019 Smartlook. All rights reserved.
@@ -16,7 +16,7 @@ class ButtonCell: TopBorderCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         buttonBackground.layer.cornerRadius = 6
-        title.text = NSLocalizedString("\(PrivacyControlPanel.keyPrefix)-button", comment: "")
+        title.text = NSLocalizedString("\(ConsentSDK.keyPrefix)-button", comment: "")
     }
 }
 

@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="nZO-h7-nCt">
             <objects>
-                <viewController id="hBv-OV-dYa" customClass="PCPViewController" customModule="PrivacyControlPanel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hBv-OV-dYa" customClass="CSDKViewController" customModule="ConsentSDK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NmP-RK-Vit">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="16" y="20" width="343" height="627"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ConsentCell" rowHeight="74" id="fD0-2E-sps" customClass="ConsentCell" customModule="PrivacyControlPanel" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ConsentCell" rowHeight="74" id="fD0-2E-sps" customClass="ConsentCell" customModule="ConsentSDK" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fD0-2E-sps" id="DTI-Ig-8ku">
@@ -81,7 +81,7 @@
                                             <outlet property="label" destination="bNS-V7-Cbj" id="k7c-Aj-TmT"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ButtonCell" rowHeight="76" id="oy0-Kw-gJ8" customClass="ButtonCell" customModule="PrivacyControlPanel" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ButtonCell" rowHeight="76" id="oy0-Kw-gJ8" customClass="ButtonCell" customModule="ConsentSDK" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="102" width="343" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oy0-Kw-gJ8" id="cKE-nz-ifl">
@@ -118,7 +118,7 @@
                                             <outlet property="title" destination="PdY-yG-DPk" id="oSm-hs-ZzU"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="108" id="glC-Rp-Jfz" customClass="HeaderCell" customModule="PrivacyControlPanel" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="108" id="glC-Rp-Jfz" customClass="HeaderCell" customModule="ConsentSDK" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="178" width="343" height="108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="glC-Rp-Jfz" id="sbA-4l-Bv4">

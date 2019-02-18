@@ -1,6 +1,6 @@
 //
 //  PPCPViewController.swift
-//  Privacy-Policy-Control-Panel
+//  ConsentSDK
 //
 //  Created by Pavel Kroh on 13/02/2019.
 //  Copyright © 2019 Smartlook. All rights reserved.
@@ -9,17 +9,17 @@
 import UIKit
 import SafariServices
 
-protocol PCPViewControllerDelegate {
-    func viewControllerRequestClose(_ viewController: PCPViewController)
+protocol CSDKViewControllerDelegate {
+    func viewControllerRequestClose(_ viewController: CSDKViewController)
 }
 
-class PCPViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ConsentCellDelegate {
+class CSDKViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ConsentCellDelegate {
 
    @IBOutlet weak var tableView: UITableView!
     
-    public var delegate: PCPViewControllerDelegate?
+    public var delegate: CSDKViewControllerDelegate?
     
-    public var consents = Dictionary<PrivacyControlPanel.Consent, PrivacyControlPanel.ConsentState>()
+    public var consents = Dictionary<ConsentSDK.Consent, ConsentSDK.ConsentState>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,7 @@ class PCPViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         return consents.count + 2
     }
     
-    func consentForIndex(_ index: Int) -> PrivacyControlPanel.Consent? {
+    func consentForIndex(_ index: Int) -> ConsentSDK.Consent? {
         return consents.keys.sorted()[index]
     }
     

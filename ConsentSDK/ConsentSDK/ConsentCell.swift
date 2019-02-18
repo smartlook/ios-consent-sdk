@@ -1,6 +1,6 @@
 //
 //  TableViewCell.swift
-//  Privacy-Policy-Control-Panel
+//  ConsentSDK
 //
 //  Created by Pavel Kroh on 15/02/2019.
 //  Copyright © 2019 Smartlook. All rights reserved.
@@ -22,9 +22,9 @@ class ConsentCell: TopBorderCell {
     
     private var consentUrl: URL?
     
-    var consent: PrivacyControlPanel.Consent?
+    var consent: ConsentSDK.Consent?
     
-    func setupCell(_ consent_: PrivacyControlPanel.Consent, _ defaultState_: PrivacyControlPanel.ConsentState) {
+    func setupCell(_ consent_: ConsentSDK.Consent, _ defaultState_: ConsentSDK.ConsentState) {
         consent = consent_
         if var consent = consent {
             if consent.state == .unknown {

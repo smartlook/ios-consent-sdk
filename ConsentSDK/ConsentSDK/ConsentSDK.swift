@@ -1,6 +1,6 @@
 //
-//  PrivacyPolicyControlPanel.swift
-//  Privacy-Policy-Control-Panel
+//  ConsentSDK.swift
+//  ConsentSDK
 //
 //  Created by Pavel Kroh on 12/02/2019.
 //  Copyright © 2019 Smartlook. All rights reserved.
@@ -8,20 +8,20 @@
 
 import Foundation
 
-public typealias RequestIdCallback = () -> Void
-public typealias PrivacyControlPanelSetting = Dictionary<PrivacyControlPanel.Consent, PrivacyControlPanel.ConsentState>
+public typealias CSDKRequestIdCallback = () -> Void
+public typealias CSDKControlPanelSetting = Dictionary<ConsentSDK.Consent, ConsentSDK.ConsentState>
 
-@objc public class PrivacyControlPanel : NSObject, PCPViewControllerDelegate {
+@objc public class ConsentSDK : NSObject, CSDKViewControllerDelegate {
     
     static let keyPrefix = "privacy-control-panel"
     
-    @objc(PrivacyControlPanelSettingConsentState) public enum ConsentState: Int {
+    @objc(CSDKConsentState) public enum ConsentState: Int {
         case unknown = -2
         case notProvided = -1
         case provided = 1
     }
     
-    @objc(PrivacyControlPanelSettingConsent) public enum Consent: Int, Comparable {
+    @objc(CSDKConsent) public enum Consent: Int, Comparable {
         
         case privacy
         case analytics
@@ -29,9 +29,9 @@ public typealias PrivacyControlPanelSetting = Dictionary<PrivacyControlPanel.Con
         var key: String {
             switch self {
             case .privacy:
-                return "\(PrivacyControlPanel.keyPrefix)-privacy-consent"
+                return "\(ConsentSDK.keyPrefix)-privacy-consent"
             case .analytics:
-                return "\(PrivacyControlPanel.keyPrefix)-analytics-consent"
+                return "\(ConsentSDK.keyPrefix)-analytics-consent"
             }
         }
         
@@ -70,7 +70,7 @@ public typealias PrivacyControlPanelSetting = Dictionary<PrivacyControlPanel.Con
             return URL(string: consentUrlString)
         }
         
-        public static func < (lhs: PrivacyControlPanel.Consent, rhs: PrivacyControlPanel.Consent) -> Bool {
+        public static func < (lhs: ConsentSDK.Consent, rhs: ConsentSDK.Consent) -> Bool {
             return lhs.rawValue < rhs.rawValue
         }
 
@@ -96,17 +96,17 @@ public typealias PrivacyControlPanelSetting = Dictionary<PrivacyControlPanel.Con
         }
     }
 
-    private static var _shared: PrivacyControlPanel = {
-       return PrivacyControlPanel()
+    private static var _shared: ConsentSDK = {
+       return ConsentSDK()
     }()
     
     // MARK: - Presenting Control Panel
     
     private var originalKeyWindow: UIWindow?
     private var keyWindow: UIWindow?
-    private var callback: RequestIdCallback?
+    private var callback: CSDKRequestIdCallback?
 
-    @objc public static func show(consents: Dictionary<Int,Int>, callback: @escaping RequestIdCallback) {
+    @objc public static func show(consents: Dictionary<Int,Int>, callback: @escaping CSDKRequestIdCallback) {
         var swiftConsents = Dictionary<Consent,ConsentState>()
         consents.forEach { (key: Int, value: Int) in
             if let newKey = Consent(rawValue: key), let newValue = ConsentState(rawValue: value) {
@@ -116,7 +116,7 @@ public typealias PrivacyControlPanelSetting = Dictionary<PrivacyControlPanel.Con
         show(for: swiftConsents, callback: callback)
     }
     
-    public static func show(for consents: PrivacyControlPanelSetting, callback: @escaping RequestIdCallback) {
+    public static func show(for consents: CSDKControlPanelSetting, callback: @escaping CSDKRequestIdCallback) {
         guard _shared.keyWindow == nil else {
             return
         }
@@ -137,14 +137,14 @@ public typealias PrivacyControlPanelSetting = Dictionary<PrivacyControlPanel.Con
         }
     }
     
-    private var _viewController: PCPViewController?
+    private var _viewController: CSDKViewController?
     
-    private var viewController: PCPViewController? {
+    private var viewController: CSDKViewController? {
         get {
             if _viewController != nil {
                 return _viewController
             }
-            guard let _viewController = UIStoryboard(name: "PrivacyControlPanel", bundle: Bundle(for: type(of: self))).instantiateInitialViewController() as? PCPViewController else {
+            guard let _viewController = UIStoryboard(name: "CSDKControlPanel", bundle: Bundle(for: type(of: self))).instantiateInitialViewController() as? CSDKViewController else {
                 return nil
             }
             _viewController.delegate = self
@@ -162,7 +162,7 @@ public typealias PrivacyControlPanelSetting = Dictionary<PrivacyControlPanel.Con
         }
     }
     
-    func viewControllerRequestClose(_ viewController: PCPViewController) {
+    func viewControllerRequestClose(_ viewController: CSDKViewController) {
         DispatchQueue.main.async {
             viewController.dismiss(animated: true) {
                 self.originalKeyWindow?.makeKeyAndVisible()
