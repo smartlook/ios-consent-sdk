@@ -2,11 +2,13 @@
 
 Obtaining explicit user consent with gathering analytics data in an app, or with processing user’s personal data is important part of establishing user trust and seamless user experience.
 
-It is also an obligation of an app developer stated in [App Store Guidelines](https://developer.apple.com/app-store/review/guidelines/) (2.5.14 and 5.1.2), necessary to fulfil in order to get your app approved for distribution. It is the sole responsibility of the app developer, not 3rd party tool provider, that e.g. no app analytics tool starts registering events in the app without user explicit consent.
+It is also an obligation of an app developer stated in [App Store Guidelines](https://developer.apple.com/app-store/review/guidelines/) (2.5.14 and 5.1.2), necessary to fulfil in order to get your app approved for distribution. If your app e.g. uses a 3rd party tool for analytics, it is the sole responsibility of you as the app developer, not of the 3rd party tool provider, that the analytics tool does not start registering events in the app without user explicit consent.
 
 Although implementing some dialog to obtain user consents and store them for further reference seems pretty straightforward, digging into it reveals (as usual with “_simple tasks_”) many programming and design details that must be implemented, which are not the core functionality of your app. 
 
 So why not use or reuse some ready-made SDK?
+
+![iPhone Screenshot](ConsentSDK-Screenshot-iPhone.png) ![iPad Screenshot](ConsentSDK-Screenshot-iPad.png)
 
 ## What ConsentsSDK does. 
 
