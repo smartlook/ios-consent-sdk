@@ -17,7 +17,7 @@ This SDK:
 - stores the selected user preferences to be used in your app
 - works both with Swift and Objective-C apps
 - all texts are fully localizable
-- privacy policies may be provided by an external web page that is presented w/out leaving the app (see [localisation](#localisation).)
+- privacy policies may be provided by an external web page that is presented w/out leaving the app (see [localisation](## Localisation).)
 
 ## Code examples
 ### Simple example 
@@ -40,8 +40,8 @@ In this example, only consent for analytics is sought for with the consent provi
 
 ```swift
 var consentsSettingsDefaults = ConsentSDK.ConsentsSettings()
-consentsSettingsDefaults.append((.privacy, .provided))
-consentsSettingsDefaults.append((.analytics, .notProvided))
+//consentsSettingsDefaults.append((.privacy, .notProvided)) 
+consentsSettingsDefaults.append((.analytics, .provided))
 
 ConsentSDK.check(with: consentsSettingsDefaults) {
     if ConsentSDK.consentState(for: .analytics) == .provided {
@@ -65,18 +65,26 @@ Is a standard enumaration and indicates whether user seen and provided consent t
 - `.provided` state indicates that the user explicitely provided consent to the policy 
 ```swift
 @objc(CSDKConsentState) public enum ConsentState: Int {
-case unknown = -2
-case notProvided = -1
-case provided = 1
+      case unknown = -2
+      case notProvided = -1
+      case provided = 1
 }
 ```
 ### ConsentSDK.check()
-Is the key method of the SDK. It comes in two versions
-- `@objc public static func check(callback: @escaping RequestIdCallback)` a straigth one w/out consents configuration that can be used when both `.privacy` and `.analytics` policies consents are required with `.provided` as the default value. 
-- `public static func check(with consentsSettings: ConsentsSettings, callback: @escaping RequestIdCallback)`  a version with configuration that allows fine-tuning required consents (adding, removing, chaning order of or their default values) 
+Is the key method of the SDK. It comes in two versions:
+
+```swift
+@objc public static func check(callback: @escaping RequestIdCallback)
+``` 
+a straigth one w/out consents configuration that can be used when both `.privacy` and `.analytics` policies consents are required with `.provided` as the default value. 
+
+```swift
+public static func check(with consentsSettings: ConsentsSettings, callback: @escaping RequestIdCallback)
+```  
+a version with configuration that allows fine-tuning required consents (adding, removing, chaning order of or their default values) 
 
 ### ConsentSDK.show()
-Much like `check()`, it **always** opens the Control Panle for the user to review her current privacy settings.
+Two variants much like `check()`, it **always** opens the Control Panle for the user to review her current privacy settings.
 
 ## Localisation
 The texts shown in the control panel are configured using the standard `Localizable.strings` mechanism. `Localizable.strings`  are also used to provide an optional URL of a detailed policy information (thus the link is localised as well).
@@ -84,10 +92,13 @@ The texts shown in the control panel are configured using the standard `Localiza
 The keys used in the `Localizable.strings` are listed in the table below, or you can simply reuse [the file in our demo app](ConsentSDKDemo/ConsentSDKDemo/Base.lproj/Localizable.strings) .
 
 Localization follows a name conventions. If a new consent type is added (on top of the predefined convenience types `.privacy` a `.analytics`), the respective keys must be added to localized files following the pattern
-`"consent-sdk-`*consent-key*`-consent" = "My special consent...";`
-`"consent-sdk-`*consent-key*`-consent-url" = "https://www.my-company.com/consent-policy-details?lang=de"; //optional`
 
-where `consent-key` is simply the text string constant used to identify the policy.
+```
+"consent-sdk-*consent-key*-consent" = "My special consent...";
+"consent-sdk-*consent-key*-consent-url" = "https://www.my-company.com/consent-policy-details?lang=de"; //optional
+```
+
+where `*consent-key*` is simply the text string constant used to identify the policy.
 
 ## Instalation
 ### Cocoapods
