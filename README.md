@@ -8,7 +8,7 @@ Although implementing some dialog to obtain user consents and store them for fur
 
 So why not use or reuse some ready-made SDK?
 
-![iPhone Screenshot](ConsentSDK-Screenshot-iPhone.png) ![iPad Screenshot](ConsentSDK-Screenshot-iPad.png)
+![iPhone Screenshot](ConsentSDK-Screenshot-iPhone.png | width=20%) ![iPad Screenshot](ConsentSDK-Screenshot-iPad.png | width=60%)
 
 ## What ConsentsSDK does. 
 
