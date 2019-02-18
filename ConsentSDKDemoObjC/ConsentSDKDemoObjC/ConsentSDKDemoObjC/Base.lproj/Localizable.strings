@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  PrivacyPolicyDemo
+
+  Created by Pavel Kroh on 15/02/2019.
+  Copyright © 2019 Smartlook. All rights reserved.
+*/
+
+"privacy-control-panel-title" = "Consents for $APP";
+"privacy-control-panel-text" = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante.\n\nCurabitur vitae diam non enim vestibulum interdum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos."; //\n\nCurabitur sagittis hendrerit ante. Donec iaculis gravida nulla.\n\nClass aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
+
+"privacy-control-panel-privacy-consent" = "Privacy consent proin mattis lacinia justo. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede.";   //Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui.
+"privacy-control-panel-privacy-consent-url" = "https://www.smartlook.com";
+
+"privacy-control-panel-analytics-consent" = "Analytics consent aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Morbi scelerisque luctus velit. Nunc auctor. ";
+
+"privacy-control-panel-button" = "Confirm & continue";

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <PrivacyControlPanel/PrivacyControlPanel.h>
+#import <ConsentSDK/ConsentSDK.h>
 
 @interface ViewController ()
 
@@ -28,11 +28,14 @@
     // which policies consents are asked for, and default consent values
     NSMutableDictionary *privacyControlPanelSettings = [NSMutableDictionary new];
     
-    [privacyControlPanelSettings setObject:@(PrivacyControlPanelSettingConsentStateProvided) forKey:@(PrivacyControlPanelSettingConsentPrivacy)];
+    [privacyControlPanelSettings setObject:@(CSDKConsentStateProvided) forKey:@(CSDKConsentPrivacy)];
     
-    [PrivacyControlPanel showWithConsents:privacyControlPanelSettings callback:^{
-        NSLog(@"privacy consent: %ld", (long)[PrivacyControlPanel consentFor:PrivacyControlPanelSettingConsentPrivacy]);
-        NSLog(@"analytics conset: %ld", (long)[PrivacyControlPanel consentFor:PrivacyControlPanelSettingConsentAnalytics]);
+    [ConsentSDK showWithConsents:privacyControlPanelSettings callback:^{
+        NSLog(@"privacy consent: %ld", (long)[ConsentSDK consentFor:CSDKConsentPrivacy]);
+        NSLog(@"analytics conset: %ld", (long)[ConsentSDK consentFor:CSDKConsentAnalytics]);
+        if ([ConsentSDK consentFor:CSDKConsentPrivacy] == CSDKConsentStateProvided) {
+            NSLog(@"Consent provided");
+        }
     }];
     
     //        var privacyControlPanelSettings = PrivacyControlPanelSetting()

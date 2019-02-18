@@ -14,6 +14,7 @@
 		338579DA221AD647006861C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338579D8221AD647006861C1 /* LaunchScreen.storyboard */; };
 		338579E2221AD67D006861C1 /* ConsentSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 338579E1221AD67D006861C1 /* ConsentSDK.framework */; };
 		338579E3221AD67D006861C1 /* ConsentSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 338579E1221AD67D006861C1 /* ConsentSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		338579EB221AE6F4006861C1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 338579E9221AE6F4006861C1 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,7 @@
 		338579D9221AD647006861C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		338579DB221AD647006861C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		338579E1221AD67D006861C1 /* ConsentSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ConsentSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		338579EA221AE6F4006861C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 		338579CE221AD646006861C1 /* ConsentSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
+				338579E9221AE6F4006861C1 /* Localizable.strings */,
 				338579CF221AD646006861C1 /* AppDelegate.swift */,
 				338579D1221AD646006861C1 /* ViewController.swift */,
 				338579D3221AD646006861C1 /* Main.storyboard */,
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				338579DA221AD647006861C1 /* LaunchScreen.storyboard in Resources */,
+				338579EB221AE6F4006861C1 /* Localizable.strings in Resources */,
 				338579D7221AD647006861C1 /* Assets.xcassets in Resources */,
 				338579D5221AD646006861C1 /* Main.storyboard in Resources */,
 			);
@@ -177,6 +181,14 @@
 				338579D9221AD647006861C1 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		338579E9221AE6F4006861C1 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				338579EA221AE6F4006861C1 /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
