@@ -30,7 +30,7 @@
     
     [privacyControlPanelSettings setObject:@(CSDKConsentStateProvided) forKey:@(CSDKConsentPrivacy)];
     
-    [ConsentSDK showWithConsents:privacyControlPanelSettings callback:^{
+    [ConsentSDK showWith:privacyControlPanelSettings callback:^{
         NSLog(@"privacy consent: %ld", (long)[ConsentSDK consentFor:CSDKConsentPrivacy]);
         NSLog(@"analytics conset: %ld", (long)[ConsentSDK consentFor:CSDKConsentAnalytics]);
         if ([ConsentSDK consentFor:CSDKConsentPrivacy] == CSDKConsentStateProvided) {

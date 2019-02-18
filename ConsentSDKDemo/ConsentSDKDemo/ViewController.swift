@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         privacyControlPanelSettings[.privacy] = .notProvided
         privacyControlPanelSettings[.analytics] = .provided
         
-        ConsentSDK.show(for: privacyControlPanelSettings) {
+        ConsentSDK.show(with: privacyControlPanelSettings) {
             // here, read the current values from PrivacyControlPanel and act accordingly
             self.updateConsentIndicators()
         }

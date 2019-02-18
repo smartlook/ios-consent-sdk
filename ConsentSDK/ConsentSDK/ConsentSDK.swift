@@ -105,18 +105,25 @@ public typealias CSDKControlPanelSetting = Dictionary<ConsentSDK.Consent, Consen
     private var originalKeyWindow: UIWindow?
     private var keyWindow: UIWindow?
     private var callback: CSDKRequestIdCallback?
+    
+    private static let defaultControlPanelSettings: CSDKControlPanelSetting = [.privacy: .provided, .analytics: .provided]
 
-    @objc public static func show(consents: Dictionary<Int,Int>, callback: @escaping CSDKRequestIdCallback) {
-        var swiftConsents = Dictionary<Consent,ConsentState>()
-        consents.forEach { (key: Int, value: Int) in
+    static func settings(from dictionary: Dictionary<Int,Int>) -> CSDKControlPanelSetting {
+        var swiftConsents = CSDKControlPanelSetting()
+        dictionary.forEach { (key: Int, value: Int) in
             if let newKey = Consent(rawValue: key), let newValue = ConsentState(rawValue: value) {
                 swiftConsents[newKey] = newValue
             }
         }
-        show(for: swiftConsents, callback: callback)
+        return swiftConsents
     }
     
-    public static func show(for consents: CSDKControlPanelSetting, callback: @escaping CSDKRequestIdCallback) {
+    // MARK: - Show control panel
+    @objc public static func show(callback: @escaping CSDKRequestIdCallback) {
+        show(with: defaultControlPanelSettings, callback: callback)
+    }
+    
+    public static func show(with consents: CSDKControlPanelSetting, callback: @escaping CSDKRequestIdCallback) {
         guard _shared.keyWindow == nil else {
             return
         }
@@ -137,6 +144,31 @@ public typealias CSDKControlPanelSetting = Dictionary<ConsentSDK.Consent, Consen
         }
     }
     
+    @objc public static func show(with consents: Dictionary<Int,Int>, callback: @escaping CSDKRequestIdCallback) {
+        show(with: settings(from: consents), callback: callback)
+    }
+
+    // MARK: - Check and show control panel
+    @objc public static func check(callback: @escaping CSDKRequestIdCallback) {
+        check(with: defaultControlPanelSettings, callback: callback)
+    }
+
+    public static func check(with consents: CSDKControlPanelSetting, callback: @escaping CSDKRequestIdCallback) {
+        var consentsHaveBeenSet = true
+        consents.forEach { (key: ConsentSDK.Consent, value: ConsentSDK.ConsentState) in
+            consentsHaveBeenSet = consentsHaveBeenSet && value != .unknown
+        }
+        guard consentsHaveBeenSet else {
+            show(with: consents, callback: callback)
+            return
+        }
+        callback()
+    }
+
+    @objc public static func check(with consents: Dictionary<Int,Int>, callback: @escaping CSDKRequestIdCallback) {
+    }
+
+    // MARK: - View Controller Implementation
     private var _viewController: CSDKViewController?
     
     private var viewController: CSDKViewController? {
