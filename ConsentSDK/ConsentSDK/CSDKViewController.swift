@@ -43,7 +43,7 @@ class CSDKViewController: UIViewController, UITableViewDelegate, UITableViewData
             if let cell = tableView.dequeueReusableCell(withIdentifier: "ConsentCell", for: indexPath) as? ConsentCell {
                 cell.delegate = self
                 let consentDef = consents[indexPath.item - 1]
-                cell.setupCell(consentDef.consent, consentDef.state)
+                cell.setupCell(consentDef.consent, consentDef.defaultState)
                 return cell
             }
         }

@@ -50,19 +50,47 @@ ConsentSDK.check(with: consentsSettingsDefaults) {
 }
 ```
 
+## Objective-C
+The SDK is fully compatible with `Objective-C`. For code examples see the respective demo app.
+
 ## API
-{TBD}
-- enumerations
-- functions
-	- ConsentSDK.check() {}
-	- ConsentSDK.show() {}
+
+### Consent
+Consent is identified by a string constant. For convenience, SDK provides a `String` alias with two predefined constants, `.privacy` a `.analytics` together with the respective text placeholders in demo app `Localizable.strings`. However, any string works, and the name convention used in `Localizable.strings` is obvious.
+
+### ConsentState
+Is a standard enumaration and indicates whether user seen and provided consent to a policy.
+- `.unknown` state indicates that the user did not reviewed the policy
+- `.notProvided` state indicates that the user explicitely refused consent to the policy
+- `.provided` state indicates that the user explicitely provided consent to the policy 
+```swift
+@objc(CSDKConsentState) public enum ConsentState: Int {
+case unknown = -2
+case notProvided = -1
+case provided = 1
+}
+```
+### ConsentSDK.check()
+Is the key method of the SDK. It comes in two versions
+- `@objc public static func check(callback: @escaping RequestIdCallback)` a straigth one w/out consents configuration that can be used when both `.privacy` and `.analytics` policies consents are required with `.provided` as the default value. 
+- `public static func check(with consentsSettings: ConsentsSettings, callback: @escaping RequestIdCallback)`  a version with configuration that allows fine-tuning required consents (adding, removing, chaning order of or their default values) 
+
+### ConsentSDK.show()
+Much like `check()`, it **always** opens the Control Panle for the user to review her current privacy settings.
 
 ## Localisation
 The texts shown in the control panel are configured using the standard `Localizable.strings` mechanism. `Localizable.strings`  are also used to provide an optional URL of a detailed policy information (thus the link is localised as well).
 
 The keys used in the `Localizable.strings` are listed in the table below, or you can simply reuse [the file in our demo app](ConsentSDKDemo/ConsentSDKDemo/Base.lproj/Localizable.strings) .
 
+Localization follows a name conventions. If a new consent type is added (on top of the predefined convenience types `.privacy` a `.analytics`), the respective keys must be added to localized files following the pattern
+`"consent-sdk-`*consent-key*`-consent" = "My special consent...";`
+`"consent-sdk-`*consent-key*`-consent-url" = "https://www.my-company.com/consent-policy-details?lang=de"; //optional`
+
+where `consent-key` is simply the text string constant used to identify the policy.
+
 ## Instalation
-{TBD}
 ### Cocoapods
+{TBD}
 ### Direct framework embedding
+Framwork is ready for direct embedding in your app, e.g. the way it is embedded into the demo apps here. For detailed descriptions see this Apple Developer Portal document [Embedding Frameworks In An App](https://developer.apple.com/library/archive/technotes/tn2435/_index.html)

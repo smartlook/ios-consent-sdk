@@ -19,7 +19,11 @@ import Foundation
     // MARK: - Presenting Control Panel
     
     public typealias RequestIdCallback = () -> Void
-    public typealias ConsentsSettings = Array<(consent: ConsentSDK.Consent, state: ConsentSDK.ConsentState)>
+    
+    /**
+     An array used to configure what consents with which default state appear in the control panel. If user already changed set its own state to a particular consent, her choise is respected and the default state is not used.
+     */
+    public typealias ConsentsSettings = Array<(consent: ConsentSDK.Consent, defaultState: ConsentSDK.ConsentState)>
     
     private var originalKeyWindow: UIWindow?
     private var keyWindow: UIWindow?
@@ -28,16 +32,25 @@ import Foundation
     private static let defaultConsentsSettings: ConsentsSettings = [(.privacy, .provided), (.analytics, .provided)]
     
     // MARK: - Show control panel
+    /**
+     Indicates whenther the control panel was already shown at least once.
+     */
     @objc public static var wasShown: Bool {
         get {
             return UserDefaults.standard.bool(forKey: "\(keyPrefix)-shown")
         }
     }
 
+    /**
+     This method always opens the Control Panel for user to review the current consents states and calls the callback once the user confirm her choice in with the button there.
+     */
     @objc public static func show(callback: @escaping RequestIdCallback) {
         show(with: defaultConsentsSettings, callback: callback)
     }
 
+    /**
+     This method always opens the Control Panel for user to review the current consents states and calls the callback once the user confirm her choice in with the button there.
+     */
     public static func show(with consentsSettings: ConsentsSettings, callback: @escaping RequestIdCallback) {
         guard _shared.keyWindow == nil else {
             return
@@ -60,10 +73,16 @@ import Foundation
     }
     
     // MARK: - Check and show control panel
+    /**
+     This method checks if the user reviewed the default (i.e., `privacy` and `analytics` policies). If not, it opens the Control Panel and calls the callback once the user confirm her choice in with the button there. If the consents were already reviewed by the user, callback is called immediatelly.
+    */
     @objc public static func check(callback: @escaping RequestIdCallback) {
         check(with: defaultConsentsSettings, callback: callback)
     }
 
+    /**
+     This method checks if the user reviewed the privacy policies enumerated in `ConsentsSettings` array. If not, it opens the Control Panel and calls the callback once the user confirm her choice in with the button there. If the consents were already reviewed by the user, callback is called immediatelly.
+     */
     public static func check(with consentsSettings: ConsentsSettings, callback: @escaping RequestIdCallback) {
         var consentsHaveBeenSet = true
         consentsSettings.forEach { (key: ConsentSDK.Consent, value: ConsentSDK.ConsentState) in

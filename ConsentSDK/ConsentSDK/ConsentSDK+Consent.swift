@@ -18,7 +18,16 @@ extension ConsentSDK.Consent {
 }
 
 extension ConsentSDK {
-    
+
+    /**
+     Indicates whether user seen and provided consent to a policy.
+     
+     `.unknown` state indicates that the user did not reviewed the policy
+
+     `.notProvided` state indicates that the user explicitely refused consent to the policy
+     
+     `.provided` state indicates that the user explicitely provided consent to the policy
+     */
     @objc(CSDKConsentState) public enum ConsentState: Int {
         case unknown = -2
         case notProvided = -1
@@ -41,6 +50,9 @@ extension ConsentSDK {
         UserDefaults.standard.synchronize()
     }
     
+    /**
+     The current consent state.
+     */
     @objc public static func consentState(for consent: Consent) -> ConsentState {
         guard let value = UserDefaults.standard.object(forKey: key(for: consent)) as? Bool else {
             return .unknown
