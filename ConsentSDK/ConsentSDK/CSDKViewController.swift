@@ -19,7 +19,7 @@ class CSDKViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     public var delegate: CSDKViewControllerDelegate?
     
-    public var consents = Dictionary<ConsentSDK.Consent, ConsentSDK.ConsentState>()
+    public var consents = ConsentSDK.ConsentsSettings()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +33,6 @@ class CSDKViewController: UIViewController, UITableViewDelegate, UITableViewData
         return consents.count + 2
     }
     
-    func consentForIndex(_ index: Int) -> ConsentSDK.Consent? {
-        return consents.keys.sorted()[index]
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.item {
         case 0:
@@ -44,9 +40,10 @@ class CSDKViewController: UIViewController, UITableViewDelegate, UITableViewData
         case consents.count + 1:
             return tableView.dequeueReusableCell(withIdentifier: "ButtonCell", for: indexPath)
         default:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "ConsentCell", for: indexPath) as? ConsentCell, let consent = consentForIndex(indexPath.item - 1), let defaultState = consents[consent] {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "ConsentCell", for: indexPath) as? ConsentCell {
                 cell.delegate = self
-                cell.setupCell(consent, defaultState)
+                let consentDef = consents[indexPath.item - 1]
+                cell.setupCell(consentDef.consent, consentDef.state)
                 return cell
             }
         }
@@ -65,7 +62,7 @@ class CSDKViewController: UIViewController, UITableViewDelegate, UITableViewData
     private var safariController: SFSafariViewController?
     
     func consentCellDetailButtonPressed(cell: ConsentCell) {
-        guard let consent = cell.consent, let url = consent.detailUrl() else {
+        guard let consent = cell.consent, let url = ConsentSDK.detailUrl(for: consent) else {
             return
         }
         var safariController: SFSafariViewController?

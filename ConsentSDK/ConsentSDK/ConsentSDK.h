@@ -16,4 +16,5 @@ FOUNDATION_EXPORT const unsigned char ConsentSDKVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <ConsentSDK/PublicHeader.h>
 
-
+#define CSDKConsentPrivacy @"privacy"
+#define CSDKConsentAnalytics @"analytics"

@@ -39,14 +39,14 @@ In the case user previously went though these settings, the control panel is not
 In this example, only consent for analytics is sought for with the consent provided by default.
 
 ```swift
-var panelSettings = CSDKControlPanelSetting()
-//panelSettings[.privacy] = .notProvided
-panelSettings[.analytics] = .provided
+var consentsSettingsDefaults = ConsentSDK.ConsentsSettings()
+consentsSettingsDefaults.append((.privacy, .provided))
+consentsSettingsDefaults.append((.analytics, .notProvided))
 
-ConsentSDK.check(with: panelSettings) {
-      if ConsentSDK.consent(for: .analytics) == .provided {
-          // Start analytics tools
-      }
+ConsentSDK.check(with: consentsSettingsDefaults) {
+    if ConsentSDK.consentState(for: .analytics) == .provided {
+        // start analytics tools
+    }
 }
 ```
 

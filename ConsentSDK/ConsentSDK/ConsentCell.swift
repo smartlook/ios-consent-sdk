@@ -26,23 +26,23 @@ class ConsentCell: TopBorderCell {
     
     func setupCell(_ consent_: ConsentSDK.Consent, _ defaultState_: ConsentSDK.ConsentState) {
         consent = consent_
-        if var consent = consent {
-            if consent.state == .unknown {
+        if let consent = consent {
+            if ConsentSDK.consentState(for: consent) == .unknown {
                 // default default state is .provided
-                consent.state = defaultState_ == .unknown ? .provided : defaultState_
+                ConsentSDK.set(state: defaultState_ == .unknown ? .provided : defaultState_, for: consent)
             }
-            consentSwitch.isOn = consent.state == .provided
-            label.text = consent.label()
-            consentUrl = consent.detailUrl()
+            consentSwitch.isOn = ConsentSDK.consentState(for: consent) == .provided
+            label.text = ConsentSDK.label(for: consent)
+            consentUrl = ConsentSDK.detailUrl(for: consent)
             detailView.isHidden = consentUrl == nil
         }
     }
     
     // the state is changed immediatelly
     @IBAction func switchAction(_ sender: Any) {
-        if var consent = consent {
-            consent.state = consentSwitch.isOn ? .provided : .notProvided
-            consentSwitch.isOn = consent.state != .notProvided
+        if let consent = consent {
+            ConsentSDK.set(state: consentSwitch.isOn ? .provided : .notProvided, for: consent)
+            consentSwitch.isOn = ConsentSDK.consentState(for: consent) != .notProvided
         }
     }
     

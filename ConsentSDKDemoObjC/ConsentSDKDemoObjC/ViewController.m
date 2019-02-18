@@ -11,6 +11,9 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *consentsPanelWasShownIndicator;
+@property (weak, nonatomic) IBOutlet UIView *privacyConsentIndicator;
+@property (weak, nonatomic) IBOutlet UIView *analyticsConsentIndicator;
 
 @end
 
@@ -19,33 +22,53 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //if (!PrivacyControlPanel.wasShown) {
-        [self showPrivacyControlPanel];
-    //}
+    [super viewDidLoad];
+    
+    //privacyConsentIndicator.layer.cornerRadius = 3
+    //analyticsConsentIndicator.layer.cornerRadius = 3
+    
+    [self updateConsentIndicators];
+
+    NSMutableArray *consentsSettingsDefaults = [NSMutableArray new];
+    [consentsSettingsDefaults addObjectsFromArray:@[CSDKConsentPrivacy, @(CSDKConsentStateProvided)]];
+    [consentsSettingsDefaults addObjectsFromArray:@[CSDKConsentAnalytics, @(CSDKConsentStateNotProvided)]];
+
+    [ConsentSDK checkWith:consentsSettingsDefaults callback:^{
+        [self updateConsentIndicators];
+        if ([ConsentSDK consentStateFor:CSDKConsentAnalytics] == CSDKConsentStateProvided) {
+            // start analytics tools
+        };
+    }];
 }
 
-- (void)showPrivacyControlPanel {
-    // which policies consents are asked for, and default consent values
-    NSMutableDictionary *privacyControlPanelSettings = [NSMutableDictionary new];
-    
-    [privacyControlPanelSettings setObject:@(CSDKConsentStateProvided) forKey:@(CSDKConsentPrivacy)];
-    
-    [ConsentSDK showWith:privacyControlPanelSettings callback:^{
-        NSLog(@"privacy consent: %ld", (long)[ConsentSDK consentFor:CSDKConsentPrivacy]);
-        NSLog(@"analytics conset: %ld", (long)[ConsentSDK consentFor:CSDKConsentAnalytics]);
-        if ([ConsentSDK consentFor:CSDKConsentPrivacy] == CSDKConsentStateProvided) {
-            NSLog(@"Consent provided");
-        }
+- (UIColor *)colourForState:(CSDKConsentState)state {
+    switch (state) {
+        case CSDKConsentStateUnknown:
+            return [UIColor lightGrayColor];
+            break;
+        case CSDKConsentStateNotProvided:
+            return [UIColor redColor];
+            break;
+        case CSDKConsentStateProvided:
+            return [UIColor greenColor];
+            break;
+    }
+}
+
+-(void)updateConsentIndicators {
+    self.consentsPanelWasShownIndicator.backgroundColor = ConsentSDK.wasShown ? [UIColor greenColor] : [UIColor grayColor];
+    self.privacyConsentIndicator.backgroundColor = [self colourForState:[ConsentSDK consentStateFor:CSDKConsentPrivacy]];
+    self.analyticsConsentIndicator.backgroundColor = [self colourForState:[ConsentSDK consentStateFor:CSDKConsentAnalytics]];
+}
+
+- (IBAction)buttonAction:(id)sender {
+    [ConsentSDK showWithCallback:^{
+        [self updateConsentIndicators];
+        if ([ConsentSDK consentStateFor:CSDKConsentAnalytics] != CSDKConsentStateProvided) {
+            // stop analytics tools
+        };
+
     }];
-    
-    //        var privacyControlPanelSettings = PrivacyControlPanelSetting()
-    //        privacyControlPanelSettings[.privacy] = .notProvided
-    //        privacyControlPanelSettings[.analytics] = .provided
-    //
-    //        PrivacyControlPanel.show(for: privacyControlPanelSettings) {
-    //            // here, read the current values from PrivacyControlPanel and act accordingly
-    //            self.updateConsentIndicators()
-    //        }
 }
 
 @end

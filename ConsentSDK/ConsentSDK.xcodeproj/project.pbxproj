@@ -15,6 +15,8 @@
 		338579A2221AD45E006861C1 /* ConsentSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3385799B221AD45E006861C1 /* ConsentSDK.swift */; };
 		338579A3221AD45E006861C1 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3385799C221AD45E006861C1 /* HeaderCell.swift */; };
 		338579A4221AD45E006861C1 /* TopBorderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3385799D221AD45E006861C1 /* TopBorderCell.swift */; };
+		338579F0221B1711006861C1 /* ConsentSDK+Consent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338579EF221B1711006861C1 /* ConsentSDK+Consent.swift */; };
+		338579F2221B1E99006861C1 /* ConsentSDK+ObjC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338579F1221B1E99006861C1 /* ConsentSDK+ObjC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		3385799B221AD45E006861C1 /* ConsentSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentSDK.swift; sourceTree = "<group>"; };
 		3385799C221AD45E006861C1 /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		3385799D221AD45E006861C1 /* TopBorderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopBorderCell.swift; sourceTree = "<group>"; };
+		338579EF221B1711006861C1 /* ConsentSDK+Consent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConsentSDK+Consent.swift"; sourceTree = "<group>"; };
+		338579F1221B1E99006861C1 /* ConsentSDK+ObjC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConsentSDK+ObjC.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 			children = (
 				3385796F221AD3CE006861C1 /* ConsentSDK.h */,
 				3385799B221AD45E006861C1 /* ConsentSDK.swift */,
+				338579EF221B1711006861C1 /* ConsentSDK+Consent.swift */,
+				338579F1221B1E99006861C1 /* ConsentSDK+ObjC.swift */,
 				33857999221AD45E006861C1 /* ButtonCell.swift */,
 				33857997221AD45E006861C1 /* ConsentCell.swift */,
 				3385799A221AD45E006861C1 /* CSDKControlPanel.storyboard */,
@@ -157,6 +163,8 @@
 				338579A3221AD45E006861C1 /* HeaderCell.swift in Sources */,
 				3385799E221AD45E006861C1 /* ConsentCell.swift in Sources */,
 				338579A4221AD45E006861C1 /* TopBorderCell.swift in Sources */,
+				338579F0221B1711006861C1 /* ConsentSDK+Consent.swift in Sources */,
+				338579F2221B1E99006861C1 /* ConsentSDK+ObjC.swift in Sources */,
 				338579A0221AD45E006861C1 /* ButtonCell.swift in Sources */,
 				338579A2221AD45E006861C1 /* ConsentSDK.swift in Sources */,
 			);
