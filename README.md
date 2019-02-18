@@ -17,7 +17,7 @@ This SDK:
 - stores the selected user preferences to be used in your app
 - works both with Swift and Objective-C apps
 - all texts are fully localizable
-- privacy policies may be provided by an external web page that is presented w/out leaving the app (see [localisation](## Localisation).)
+- privacy policies may be provided by an external web page that is presented w/out leaving the app (see [localisation](#localisation).)
 
 ## Code examples
 ### Simple example 
