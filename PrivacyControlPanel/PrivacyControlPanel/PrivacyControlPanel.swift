@@ -9,20 +9,19 @@
 import Foundation
 
 public typealias RequestIdCallback = () -> Void
-
 public typealias PrivacyControlPanelSetting = Dictionary<PrivacyControlPanel.Consent, PrivacyControlPanel.ConsentState>
 
 @objc public class PrivacyControlPanel : NSObject, PCPViewControllerDelegate {
     
     static let keyPrefix = "privacy-control-panel"
     
-    @objc public enum ConsentState: Int {
+    @objc(PrivacyControlPanelSettingConsentState) public enum ConsentState: Int {
         case unknown = -2
         case notProvided = -1
         case provided = 1
     }
     
-    @objc public enum Consent: Int, Comparable {
+    @objc(PrivacyControlPanelSettingConsent) public enum Consent: Int, Comparable {
         
         case privacy
         case analytics
@@ -107,7 +106,7 @@ public typealias PrivacyControlPanelSetting = Dictionary<PrivacyControlPanel.Con
     private var keyWindow: UIWindow?
     private var callback: RequestIdCallback?
 
-    @objc static func show(consents: Dictionary<Int,Int>, callback: @escaping RequestIdCallback) {
+    @objc public static func show(consents: Dictionary<Int,Int>, callback: @escaping RequestIdCallback) {
         var swiftConsents = Dictionary<Consent,ConsentState>()
         consents.forEach { (key: Int, value: Int) in
             if let newKey = Consent(rawValue: key), let newValue = ConsentState(rawValue: value) {

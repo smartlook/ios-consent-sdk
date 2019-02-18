@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:README.md">
+   </FileRef>
+   <FileRef
+      location = "group:ConsentSDKDemoObjC/ConsentSDKDemoObjC.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:PrivacyPolicyDemo/PrivacyPolicyDemo.xcodeproj">
    </FileRef>
    <FileRef
