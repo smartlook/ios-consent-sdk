@@ -13,7 +13,7 @@ public typealias CSDKControlPanelSetting = Dictionary<ConsentSDK.Consent, Consen
 
 @objc public class ConsentSDK : NSObject, CSDKViewControllerDelegate {
     
-    static let keyPrefix = "privacy-control-panel"
+    static let keyPrefix = "consent-sdk"
     
     @objc(CSDKConsentState) public enum ConsentState: Int {
         case unknown = -2
