@@ -8,7 +8,7 @@ Although implementing some dialog to obtain user consents and store them for fur
 
 So why not use or reuse some ready-made SDK?
 
-![iPhone Screenshot](ConsentSDK-Screenshot-iPhone.png | width=20%) ![iPad Screenshot](ConsentSDK-Screenshot-iPad.png | width=60%)
+[![iPhone Screenshot](readme/ConsentSDK-Screenshot-iPhone-thumbnail.png)](readme/ConsentSDK-Screenshot-iPhone.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![iPad Screenshot](readme/ConsentSDK-Screenshot-iPad-thumbnail.png)](readme/ConsentSDK-Screenshot-iPad.png)
 
 ## What ConsentsSDK does. 
 
@@ -59,3 +59,10 @@ ConsentSDK.check(with: panelSettings) {
 
 ## Localisation
 The texts shown in the control panel are configured using the standard `Localizable.strings` mechanism. `Localizable.strings`  are also used to provide an optional URL of a detailed policy information (thus the link is localised as well).
+
+The keys used in the `Localizable.strings` are listed in the table below, or you can simply reuse [the file in our demo app](PrivacyPolicyDemo/PrivacyPolicyDemo/Base.lproj/Localizable.strings) .
+
+## Instalation
+{TBD}
+### Cocoapods
+### Direct framework embedding
