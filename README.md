@@ -56,9 +56,6 @@ SmartlookConsentSDK.check(with: consentsSettingsDefaults) {
 }
 ```
 
-## Objective-C
-The SDK is fully compatible with `Objective-C`. For code examples see the respective demo app.
-
 ## Instalation
 
 ### Direct framework embedding
@@ -66,6 +63,9 @@ Framwork is ready for direct embedding in your app, e.g. the way it is embedded 
 
 ### Cocoapods
 Add cocoapod `SmartlookConsentSDK` into your Podfile.
+
+## Objective-C
+The SDK is fully compatible with `Objective-C`. For code examples see the respective demo app.
 
 ## API
 
