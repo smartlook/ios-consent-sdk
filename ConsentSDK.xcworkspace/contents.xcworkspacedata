@@ -13,4 +13,7 @@
    <FileRef
       location = "group:README.md">
    </FileRef>
+   <FileRef
+      location = "group:ConsentSDK/ConsentSDK.podspec">
+   </FileRef>
 </Workspace>
