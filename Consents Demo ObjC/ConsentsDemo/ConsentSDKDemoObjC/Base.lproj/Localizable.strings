@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  ConsentSDKDemo
+
+  Created by Pavel Kroh on 15/02/2019.
+  Copyright © 2019 Smartlook. All rights reserved.
+*/
+
+// Title and into text
+"smartlook-consent-sdk-title" = "Consents for $APP"; //$APP is replaced by the app display name and the name is highlighted then
+"smartlook-consent-sdk-text" = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante.\n\nCurabitur vitae diam non enim vestibulum interdum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos."; //\n\nCurabitur sagittis hendrerit ante. Donec iaculis gravida nulla.\n\nClass aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
+
+// Texts for privacy consent
+"smartlook-consent-sdk-privacy-consent" = "Privacy consent proin mattis lacinia justo. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede.";   //Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui.
+"smartlook-consent-sdk-privacy-consent-url" = "https://www.smartlook.com";
+
+// Texts for analytics consent
+"smartlook-consent-sdk-analytics-consent" = "Analytics consent aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Morbi scelerisque luctus velit. Nunc auctor. ";
+//"consent-sdk-analytics-consent-url" = "https://www.smartlook.com";
+
+// The button
+"smartlook-consent-sdk-button" = "Confirm & continue";
