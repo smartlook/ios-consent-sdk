@@ -31,10 +31,11 @@ Although implementing some dialog to obtain user consents and store them for fur
 DESC
 
 s.homepage         = 'https://github.com/smartlook/ios-consent-sdk/'
-# s.screenshots     = 'github.com/smartlook/ios-consent-sdk/blob/master/readme-media/ConsentSDK-Screenshot-iPad.png', 'github.com/smartlook/ios-consent-sdk/blob/master/readme-media/ConsentSDK-Screenshot-iPhone.png'
+s.screenshots     =  ['https://sdk.smartlook.com/assets/SmartlookConsentSDKDemo2.gif', 'https://sdk.smartlook.com/assets/ConsentSDK-Screenshot-iPhone.png']
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
 s.author           = { 'Pavel Kroh' => 'pavelkroh@smartlook.com' }
 s.source           = { :git => 'https://github.com/smartlook/ios-consent-sdk.git', :tag => s.version.to_s }
+s.documentation_url = 'https://github.com/smartlook/ios-consent-sdk/'
 
 s.ios.deployment_target = '10.0'
 
