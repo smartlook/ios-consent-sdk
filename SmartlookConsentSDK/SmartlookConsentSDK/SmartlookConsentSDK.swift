@@ -103,16 +103,22 @@ import Foundation
             if _viewController != nil {
                 return _viewController
             }
-            guard let _viewController = UIStoryboard(name: "ControlPanel", bundle: Bundle(for: type(of: self))).instantiateInitialViewController() as? ViewController else {
+            let thisBundle = Bundle(for: type(of: self))
+            if thisBundle.bundleIdentifier == "com.smartlook.SmartlookConsentSDK" {
+                _viewController = UIStoryboard(name: "ControlPanel", bundle: thisBundle).instantiateInitialViewController() as? ViewController
+            } else if let cocoapodResourcesBundleUrl = thisBundle.url(forResource: "SmartlookConsentSDK", withExtension: "bundle"), let cocoapodResourcesBundle = Bundle(url: cocoapodResourcesBundleUrl) {
+                _viewController = UIStoryboard(name: "ControlPanel", bundle: cocoapodResourcesBundle).instantiateInitialViewController() as? ViewController
+            }
+            guard let viewController = _viewController else {
                 return nil
             }
-            _viewController.delegate = self
-            _viewController.modalTransitionStyle = .coverVertical
+            viewController.delegate = self
+            viewController.modalTransitionStyle = .coverVertical
             // this ensures, together with the viewController.supportedInterfaceOrientations = .portrait
             // that the controller is never in landscape
-            _viewController.modalPresentationStyle = .formSheet
+            viewController.modalPresentationStyle = .formSheet
             if let currentRootViewController = originalKeyWindow?.rootViewController, currentRootViewController.traitCollection.containsTraits(in: UITraitCollection(userInterfaceIdiom: .phone)) {
-                _viewController.modalPresentationStyle = .fullScreen
+                viewController.modalPresentationStyle = .fullScreen
             }
             return _viewController
         }

@@ -10,7 +10,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'SmartlookConsentSDK'
-s.version          = '0.1.0'
+s.version          = '1.0.0'
 s.summary          = 'This SDK provides a configurable control panel where user selects her privacy options.'
 
 # This description is used to generate tags and improve search results.
@@ -40,5 +40,9 @@ s.ios.deployment_target = '10.0'
 
 s.swift_version = '4.2'
 s.source_files = 'SmartlookConsentSDK/SmartlookConsentSDK/*.{h,m,c,swift}'
+
+s.resource_bundles = {
+    'SmartlookConsentSDK' => ['SmartlookConsentSDK/SmartlookConsentSDK/**/*.{storyboard,xib}']
+}
 
 end
