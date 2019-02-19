@@ -10,7 +10,7 @@ import Foundation
 
 @objc public class SmartlookConsentSDK : NSObject, SLCViewControllerDelegate {
     
-    static let keyPrefix = "consent-sdk"
+    static let keyPrefix = "smartlook-consent-sdk"
 
     private static var _shared: SmartlookConsentSDK = {
         return SmartlookConsentSDK()

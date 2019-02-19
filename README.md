@@ -102,8 +102,8 @@ The keys used in the `Localizable.strings` are listed in the table below, or you
 Localization follows a name conventions. If a new consent type is added (on top of the predefined convenience types `.privacy` a `.analytics`), the respective keys must be added to localized files following the pattern
 
 ```
-"consent-sdk-*consent-key*-consent" = "My special consent...";
-"consent-sdk-*consent-key*-consent-url" = "https://www.my-company.com/consent-policy-details?lang=de"; //optional
+"smartlook-consent-sdk-*consent-key*-consent" = "My special consent...";
+"smartlook-consent-sdk-*consent-key*-consent-url" = "https://www.my-company.com/consent-policy-details?lang=de"; //optional
 ```
 
 where `*consent-key*` is simply the text string constant used to identify the policy.

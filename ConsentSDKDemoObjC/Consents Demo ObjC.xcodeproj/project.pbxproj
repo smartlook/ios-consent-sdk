@@ -13,9 +13,9 @@
 		337E625722173CAC00EBAB60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 337E625622173CAC00EBAB60 /* Assets.xcassets */; };
 		337E625A22173CAC00EBAB60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337E625822173CAC00EBAB60 /* LaunchScreen.storyboard */; };
 		337E625D22173CAC00EBAB60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 337E625C22173CAC00EBAB60 /* main.m */; };
-		338579E6221AE468006861C1 /* ConsentSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 338579E5221AE468006861C1 /* ConsentSDK.framework */; };
-		338579E7221AE468006861C1 /* ConsentSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 338579E5221AE468006861C1 /* ConsentSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		338579EE221AE740006861C1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 338579EC221AE740006861C1 /* Localizable.strings */; };
+		33C27E60221C0B710026F090 /* SmartlookConsentSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C27E5F221C0B710026F090 /* SmartlookConsentSDK.framework */; };
+		33C27E61221C0B710026F090 /* SmartlookConsentSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 33C27E5F221C0B710026F090 /* SmartlookConsentSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +25,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				338579E7221AE468006861C1 /* ConsentSDK.framework in Embed Frameworks */,
+				33C27E61221C0B710026F090 /* SmartlookConsentSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,7 +33,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		337E624A22173CAB00EBAB60 /* ConsentSDKDemoObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConsentSDKDemoObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		337E624A22173CAB00EBAB60 /* Consents Demo ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Consents Demo ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		337E624D22173CAB00EBAB60 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		337E624E22173CAB00EBAB60 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		337E625022173CAB00EBAB60 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -43,8 +43,8 @@
 		337E625922173CAC00EBAB60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		337E625B22173CAC00EBAB60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		337E625C22173CAC00EBAB60 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		338579E5221AE468006861C1 /* ConsentSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ConsentSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		338579ED221AE740006861C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = ConsentSDKDemoObjC/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		33C27E5F221C0B710026F090 /* SmartlookConsentSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SmartlookConsentSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				338579E6221AE468006861C1 /* ConsentSDK.framework in Frameworks */,
+				33C27E60221C0B710026F090 /* SmartlookConsentSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,8 +62,8 @@
 		337E624122173CAB00EBAB60 = {
 			isa = PBXGroup;
 			children = (
-				338579E5221AE468006861C1 /* ConsentSDK.framework */,
-				337E624C22173CAB00EBAB60 /* ConsentSDKDemoObjC */,
+				33C27E5F221C0B710026F090 /* SmartlookConsentSDK.framework */,
+				337E624C22173CAB00EBAB60 /* ConsentsDemo */,
 				337E624B22173CAB00EBAB60 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,12 +71,12 @@
 		337E624B22173CAB00EBAB60 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				337E624A22173CAB00EBAB60 /* ConsentSDKDemoObjC.app */,
+				337E624A22173CAB00EBAB60 /* Consents Demo ObjC.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		337E624C22173CAB00EBAB60 /* ConsentSDKDemoObjC */ = {
+		337E624C22173CAB00EBAB60 /* ConsentsDemo */ = {
 			isa = PBXGroup;
 			children = (
 				337E624D22173CAB00EBAB60 /* AppDelegate.h */,
@@ -90,15 +90,15 @@
 				337E625C22173CAC00EBAB60 /* main.m */,
 				338579EC221AE740006861C1 /* Localizable.strings */,
 			);
-			path = ConsentSDKDemoObjC;
+			path = ConsentsDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		337E624922173CAB00EBAB60 /* ConsentSDKDemoObjC */ = {
+		337E624922173CAB00EBAB60 /* Consents Demo ObjC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 337E626022173CAC00EBAB60 /* Build configuration list for PBXNativeTarget "ConsentSDKDemoObjC" */;
+			buildConfigurationList = 337E626022173CAC00EBAB60 /* Build configuration list for PBXNativeTarget "Consents Demo ObjC" */;
 			buildPhases = (
 				337E624622173CAB00EBAB60 /* Sources */,
 				337E624722173CAB00EBAB60 /* Frameworks */,
@@ -109,9 +109,9 @@
 			);
 			dependencies = (
 			);
-			name = ConsentSDKDemoObjC;
+			name = "Consents Demo ObjC";
 			productName = ConsentSDKDemoObjC;
-			productReference = 337E624A22173CAB00EBAB60 /* ConsentSDKDemoObjC.app */;
+			productReference = 337E624A22173CAB00EBAB60 /* Consents Demo ObjC.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -129,7 +129,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 337E624522173CAB00EBAB60 /* Build configuration list for PBXProject "ConsentSDKDemoObjC" */;
+			buildConfigurationList = 337E624522173CAB00EBAB60 /* Build configuration list for PBXProject "Consents Demo ObjC" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -142,7 +142,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				337E624922173CAB00EBAB60 /* ConsentSDKDemoObjC */,
+				337E624922173CAB00EBAB60 /* Consents Demo ObjC */,
 			);
 		};
 /* End PBXProject section */
@@ -321,7 +321,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57MHDLMMHS;
-				INFOPLIST_FILE = ConsentSDKDemoObjC/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ConsentsDemo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,7 +342,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57MHDLMMHS;
-				INFOPLIST_FILE = ConsentSDKDemoObjC/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ConsentsDemo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,7 +358,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		337E624522173CAB00EBAB60 /* Build configuration list for PBXProject "ConsentSDKDemoObjC" */ = {
+		337E624522173CAB00EBAB60 /* Build configuration list for PBXProject "Consents Demo ObjC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				337E625E22173CAC00EBAB60 /* Debug */,
@@ -367,7 +367,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		337E626022173CAC00EBAB60 /* Build configuration list for PBXNativeTarget "ConsentSDKDemoObjC" */ = {
+		337E626022173CAC00EBAB60 /* Build configuration list for PBXNativeTarget "Consents Demo ObjC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				337E626122173CAC00EBAB60 /* Debug */,

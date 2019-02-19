@@ -9,7 +9,7 @@
 #
 
 Pod::Spec.new do |s|
-s.name             = 'ConsentSDK'
+s.name             = 'SmartlookConsentSDK'
 s.version          = '0.1.0'
 s.summary          = 'This SDK provides a configurable control panel where user selects her privacy options.'
 
@@ -39,7 +39,7 @@ s.source           = { :git => 'https://github.com/smartlook/ios-consent-sdk.git
 s.ios.deployment_target = '9.0'
 
 s.swift_version = '4.2'
-s.source_files = 'ConsentSDK/ConsentSDK/*.{h,m,c,swift}'
+s.source_files = 'SmartlookConsentSDK/SmartlookConsentSDK/*.{h,m,c,swift}'
 
 # s.resource_bundles = {
 #   'ABCPod' => ['ABCPod/Assets/*.png']

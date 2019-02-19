@@ -32,7 +32,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		338579CC221AD646006861C1 /* ConsentSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConsentSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		338579CC221AD646006861C1 /* Consents Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Consents Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		338579CF221AD646006861C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		338579D1221AD646006861C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		338579D4221AD646006861C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				33C27E5C221C08320026F090 /* SmartlookConsentSDK.framework */,
-				338579CE221AD646006861C1 /* ConsentSDKDemo */,
+				338579CE221AD646006861C1 /* ConsentsDemo */,
 				338579CD221AD646006861C1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,12 +67,12 @@
 		338579CD221AD646006861C1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				338579CC221AD646006861C1 /* ConsentSDKDemo.app */,
+				338579CC221AD646006861C1 /* Consents Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		338579CE221AD646006861C1 /* ConsentSDKDemo */ = {
+		338579CE221AD646006861C1 /* ConsentsDemo */ = {
 			isa = PBXGroup;
 			children = (
 				338579E9221AE6F4006861C1 /* Localizable.strings */,
@@ -83,15 +83,15 @@
 				338579D8221AD647006861C1 /* LaunchScreen.storyboard */,
 				338579DB221AD647006861C1 /* Info.plist */,
 			);
-			path = ConsentSDKDemo;
+			path = ConsentsDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		338579CB221AD646006861C1 /* ConsentSDKDemo */ = {
+		338579CB221AD646006861C1 /* Consents Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 338579DE221AD647006861C1 /* Build configuration list for PBXNativeTarget "ConsentSDKDemo" */;
+			buildConfigurationList = 338579DE221AD647006861C1 /* Build configuration list for PBXNativeTarget "Consents Demo" */;
 			buildPhases = (
 				338579C8221AD646006861C1 /* Sources */,
 				338579C9221AD646006861C1 /* Frameworks */,
@@ -102,9 +102,9 @@
 			);
 			dependencies = (
 			);
-			name = ConsentSDKDemo;
+			name = "Consents Demo";
 			productName = ConsentSDKDemo;
-			productReference = 338579CC221AD646006861C1 /* ConsentSDKDemo.app */;
+			productReference = 338579CC221AD646006861C1 /* Consents Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -122,7 +122,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 338579C7221AD646006861C1 /* Build configuration list for PBXProject "ConsentSDKDemo" */;
+			buildConfigurationList = 338579C7221AD646006861C1 /* Build configuration list for PBXProject "Consents Demo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -135,7 +135,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				338579CB221AD646006861C1 /* ConsentSDKDemo */,
+				338579CB221AD646006861C1 /* Consents Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -316,7 +316,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57MHDLMMHS;
-				INFOPLIST_FILE = ConsentSDKDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ConsentsDemo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,7 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57MHDLMMHS;
-				INFOPLIST_FILE = ConsentSDKDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ConsentsDemo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -349,7 +349,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		338579C7221AD646006861C1 /* Build configuration list for PBXProject "ConsentSDKDemo" */ = {
+		338579C7221AD646006861C1 /* Build configuration list for PBXProject "Consents Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				338579DC221AD647006861C1 /* Debug */,
@@ -358,7 +358,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		338579DE221AD647006861C1 /* Build configuration list for PBXNativeTarget "ConsentSDKDemo" */ = {
+		338579DE221AD647006861C1 /* Build configuration list for PBXNativeTarget "Consents Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				338579DF221AD647006861C1 /* Debug */,

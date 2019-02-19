@@ -66,15 +66,15 @@
 			children = (
 				33C27E4C221C07D30026F090 /* ButtonCell.swift */,
 				33C27E51221C07D30026F090 /* ConsentCell.swift */,
-				33C27E4A221C07D20026F090 /* HeaderCell.swift */,
 				33C27E4D221C07D30026F090 /* ControlPanel.storyboard */,
+				33C27E4A221C07D20026F090 /* HeaderCell.swift */,
+				33C27E43221C07560026F090 /* Info.plist */,
 				33C27E4E221C07D30026F090 /* SLConsentSDK+Consent.swift */,
 				33C27E50221C07D30026F090 /* SLConsentSDK+ObjC.swift */,
-				33C27E4F221C07D30026F090 /* ViewController.swift */,
+				33C27E42221C07560026F090 /* SmartlookConsentSDK.h */,
 				33C27E52221C07D30026F090 /* SmartlookConsentSDK.swift */,
 				33C27E4B221C07D30026F090 /* TopBorderCell.swift */,
-				33C27E42221C07560026F090 /* SmartlookConsentSDK.h */,
-				33C27E43221C07560026F090 /* Info.plist */,
+				33C27E4F221C07D30026F090 /* ViewController.swift */,
 			);
 			path = SmartlookConsentSDK;
 			sourceTree = "<group>";

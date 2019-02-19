@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <ConsentSDK/ConsentSDK.h>
+#import <SmartlookConsentSDK/SmartlookConsentSDK.h>
 
 @interface ViewController ()
 

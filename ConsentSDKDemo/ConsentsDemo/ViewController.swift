@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         var consentsSettingsDefaults = SmartlookConsentSDK.ConsentsSettings()
         consentsSettingsDefaults.append((.privacy, .provided))
         consentsSettingsDefaults.append((.analytics, .notProvided))
-        consentsSettingsDefaults.append(("gdpr", .notProvided))
+        //consentsSettingsDefaults.append(("gdpr", .notProvided))   // adding a custom consent
 
         SmartlookConsentSDK.check(with: consentsSettingsDefaults) {
             self.updateConsentIndicators()
