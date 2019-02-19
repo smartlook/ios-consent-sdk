@@ -36,16 +36,9 @@ s.license          = { :type => 'MIT', :file => 'LICENSE' }
 s.author           = { 'Pavel Kroh' => 'pavelkroh@smartlook.com' }
 s.source           = { :git => 'https://github.com/smartlook/ios-consent-sdk.git', :tag => s.version.to_s }
 
-s.ios.deployment_target = '9.0'
+s.ios.deployment_target = '10.0'
 
 s.swift_version = '4.2'
 s.source_files = 'SmartlookConsentSDK/SmartlookConsentSDK/*.{h,m,c,swift}'
 
-# s.resource_bundles = {
-#   'ABCPod' => ['ABCPod/Assets/*.png']
-# }
-
-# s.public_header_files = 'Pod/Classes/**/*.h'
-# s.frameworks = 'UIKit', 'MapKit'
-# s.dependency 'AFNetworking', '~> 2.3'
 end
