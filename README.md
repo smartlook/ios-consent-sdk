@@ -1,4 +1,4 @@
-# ConsentSDK for iOS
+# SmartlookConsentSDK for iOS
 
 Obtaining explicit user consent with gathering analytics data in an app, or with processing user’s personal data is important part of establishing user trust and seamless user experience.
 
@@ -23,8 +23,8 @@ This SDK:
 ### Simple example 
 The most straightforward use that utilises default settings:
 ```swift
-ConsentSDK.check() {
-      if ConsentSDK.consent(for: .analytics) == .provided {
+SmartlookConsentSDK.check() {
+      if SmartlookConsentSDK.consent(for: .analytics) == .provided {
           // Start analytics tools
       }
 }
@@ -39,12 +39,12 @@ In the case user previously went though these settings, the control panel is not
 In this example, only consent for analytics is sought for with the consent provided by default.
 
 ```swift
-var consentsSettingsDefaults = ConsentSDK.ConsentsSettings()
+var consentsSettingsDefaults = SmartlookConsentSDK.ConsentsSettings()
 //consentsSettingsDefaults.append((.privacy, .notProvided)) 
 consentsSettingsDefaults.append((.analytics, .provided))
 
-ConsentSDK.check(with: consentsSettingsDefaults) {
-    if ConsentSDK.consentState(for: .analytics) == .provided {
+SmartlookConsentSDK.check(with: consentsSettingsDefaults) {
+    if SmartlookConsentSDK.consentState(for: .analytics) == .provided {
         // start analytics tools
     }
 }
@@ -70,7 +70,7 @@ Is a standard enumaration and indicates whether user seen and provided consent t
       case provided = 1
 }
 ```
-### ConsentSDK.check()
+### SmartlookConsentSDK.check()
 Is the key method of the SDK. It comes in two versions:
 
 ```swift
@@ -83,7 +83,7 @@ public static func check(with consentsSettings: ConsentsSettings, callback: @esc
 ```  
 a version with configuration that allows fine-tuning required consents (adding, removing, chaning order of or their default values) 
 
-### ConsentSDK.show()
+### SmartlookConsentSDK.show()
 Two variants much like `check()`, it **always** opens the Control Panle for the user to review her current privacy settings.
 
 ## Localisation
