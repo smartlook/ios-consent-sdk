@@ -53,6 +53,14 @@ SmartlookConsentSDK.check(with: consentsSettingsDefaults) {
 ## Objective-C
 The SDK is fully compatible with `Objective-C`. For code examples see the respective demo app.
 
+## Instalation
+
+### Direct framework embedding
+Framwork is ready for direct embedding in your app, e.g. the way it is embedded into the demo apps here. For detailed descriptions see this Apple Developer Portal document [Embedding Frameworks In An App](https://developer.apple.com/library/archive/technotes/tn2435/_index.html)
+
+### Cocoapods
+{TBD}
+
 ## API
 
 ### Consent
@@ -99,9 +107,3 @@ Localization follows a name conventions. If a new consent type is added (on top 
 ```
 
 where `*consent-key*` is simply the text string constant used to identify the policy.
-
-## Instalation
-### Cocoapods
-{TBD}
-### Direct framework embedding
-Framwork is ready for direct embedding in your app, e.g. the way it is embedded into the demo apps here. For detailed descriptions see this Apple Developer Portal document [Embedding Frameworks In An App](https://developer.apple.com/library/archive/technotes/tn2435/_index.html)
