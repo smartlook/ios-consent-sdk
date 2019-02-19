@@ -1,23 +1,29 @@
 # SmartlookConsentSDK for iOS
 
-Obtaining explicit user consent with gathering analytics data in an app, or with processing user’s personal data is important part of establishing user trust and seamless user experience.
+Getting explicit user consent with gathering analytics data in an app, or with processing the user’s personal data, is an important part of establishing user trust and seamless user experience.
 
-It is also an obligation of an app developer stated in [App Store Guidelines](https://developer.apple.com/app-store/review/guidelines/) (2.5.14 and 5.1.2), necessary to fulfil in order to get your app approved for distribution. If your app e.g. uses a 3rd party tool for analytics, it is the sole responsibility of you as the app developer, not of the 3rd party tool provider, that the analytics tool does not start registering events in the app without user explicit consent.
+It is also an obligation of an app developer stated in [App Store Guidelines](https://developer.apple.com/app-store/review/guidelines/) (2.5.14 and 5.1.2), necessary to fulfil to get your app approved for distribution.
 
-Although implementing some dialog to obtain user consents and store them for further reference seems pretty straightforward, digging into it reveals (as usual with “_simple tasks_”) many programming and design details that must be implemented, which are not the core functionality of your app. 
+Per the guidelines, if an app uses a 3rd party tool for analytics, it is the sole responsibility of the app developer, not of the 3rd party tool provider, to verify that the analytics tool does not register events in the app without user explicit consent.
 
+Although implementing a simple dialog to obtain user consents and store them for further reference seems like a straightforward process — digging into it reveals (as it is usual with “simple tasks”) that many programming and design details should be respected. 
+
+Since implementing the consent goes beyond core functionality and the intended design of the app, it is likely that this consent necessity will bring further annoyances, impact time and disrupt existing developing processes. 
 So why not use or reuse some ready-made SDK?
 
+The SmartlookConsentSDK:
+- provides a configurable control panel where user can select their privacy options
+- stores the selected user preferences the app
+- enables all texts to be fully localized 
+- enables linking to privacy policies which may be provided by an external web page and presenting them without leaving the app
+
+SmartlookConsentSDK works well with both Swift and Objective-C apps.
+
+&nbsp;
+&nbsp;
+
+
 [![iPhone Screenshot](readme-media/ConsentSDK-Screenshot-iPhone-thumbnail.png)](readme-media/ConsentSDK-Screenshot-iPhone.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![iPad Screenshot](readme-media/ConsentSDK-Screenshot-iPad-thumbnail.png)](readme-media/ConsentSDK-Screenshot-iPad.png)
-
-## What SmartlookConsentSDK does. 
-
-This SDK:
-- provides a configurable control panel where user selects her privacy options
-- stores the selected user preferences to be used in your app
-- works both with Swift and Objective-C apps
-- all texts are fully localizable
-- privacy policies may be provided by an external web page that is presented w/out leaving the app (see [localisation](#localisation).)
 
 ## Code examples
 ### Simple example 
