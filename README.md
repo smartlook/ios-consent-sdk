@@ -10,7 +10,7 @@ So why not use or reuse some ready-made SDK?
 
 [![iPhone Screenshot](readme-media/ConsentSDK-Screenshot-iPhone-thumbnail.png)](readme-media/ConsentSDK-Screenshot-iPhone.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![iPad Screenshot](readme-media/ConsentSDK-Screenshot-iPad-thumbnail.png)](readme-media/ConsentSDK-Screenshot-iPad.png)
 
-## What ConsentsSDK does. 
+## What SmartlookConsentSDK does. 
 
 This SDK:
 - provides a configurable control panel where user selects her privacy options
