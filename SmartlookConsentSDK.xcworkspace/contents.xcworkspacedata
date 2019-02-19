@@ -11,12 +11,12 @@
       location = "group:Consents Demo/Consents Demo.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jezovec/Work/Smartlook/ios-consent-sdk/Consents Demo/README.md">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/jezovec/Work/Smartlook/ios-consent-sdk/SmartlookConsentSDK.podspec">
+      location = "group:README.md">
    </FileRef>
    <FileRef
       location = "group:LICENSE">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/jezovec/Work/Smartlook/ios-consent-sdk/SmartlookConsentSDK.podspec">
    </FileRef>
 </Workspace>
