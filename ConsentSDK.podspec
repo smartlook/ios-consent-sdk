@@ -14,11 +14,6 @@ s.version          = '0.1.0'
 s.summary          = 'This SDK provides a configurable control panel where user selects her privacy options.'
 
 # This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
 s.description      = <<-DESC
 This SDK:
 
@@ -44,7 +39,7 @@ s.source           = { :git => 'https://github.com/smartlook/ios-consent-sdk.git
 s.ios.deployment_target = '9.0'
 
 s.swift_version = '4.2'
-s.source_files = 'ConsentSDK/*.{h,m,c,swift}'
+s.source_files = 'ConsentSDK/ConsentSDK/*.{h,m,c,swift}'
 
 # s.resource_bundles = {
 #   'ABCPod' => ['ABCPod/Assets/*.png']
