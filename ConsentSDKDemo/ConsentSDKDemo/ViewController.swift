@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ConsentSDK
+import SmartlookConsentSDK
 
 class ViewController: UIViewController {
    
@@ -19,14 +19,14 @@ class ViewController: UIViewController {
         
         updateConsentIndicators()
         
-        var consentsSettingsDefaults = ConsentSDK.ConsentsSettings()
+        var consentsSettingsDefaults = SmartlookConsentSDK.ConsentsSettings()
         consentsSettingsDefaults.append((.privacy, .provided))
         consentsSettingsDefaults.append((.analytics, .notProvided))
         consentsSettingsDefaults.append(("gdpr", .notProvided))
 
-        ConsentSDK.check(with: consentsSettingsDefaults) {
+        SmartlookConsentSDK.check(with: consentsSettingsDefaults) {
             self.updateConsentIndicators()
-            if ConsentSDK.consentState(for: .analytics) == .provided {
+            if SmartlookConsentSDK.consentState(for: .analytics) == .provided {
                 // start analytics tools
             }
         }
@@ -34,9 +34,9 @@ class ViewController: UIViewController {
     
     @IBAction func reviewConsents(_ sender: Any) {
         // let user review or check the consents
-        ConsentSDK.show {
+        SmartlookConsentSDK.show {
             self.updateConsentIndicators()
-            if ConsentSDK.consentState(for: .analytics) != .provided {
+            if SmartlookConsentSDK.consentState(for: .analytics) != .provided {
                 // stop analytics tools
             }
         }
@@ -46,12 +46,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var privacyConsentIndicator: UIView!
     @IBOutlet weak var analyticsConsentIndicator: UIView!
     
-    let consentColors: Dictionary<ConsentSDK.ConsentState,UIColor> = [.unknown : UIColor.lightGray, .provided : UIColor.green, .notProvided : UIColor.red]
+    let consentColors: Dictionary<SmartlookConsentSDK.ConsentState,UIColor> = [.unknown : UIColor.lightGray, .provided : UIColor.green, .notProvided : UIColor.red]
     
     func updateConsentIndicators() {
-        consentPanelWasShown.backgroundColor = ConsentSDK.wasShown ? UIColor.green : UIColor.red
-        privacyConsentIndicator.backgroundColor = consentColors[ConsentSDK.consentState(for: .privacy)]
-        analyticsConsentIndicator.backgroundColor = consentColors[ConsentSDK.consentState(for: .analytics)]
+        consentPanelWasShown.backgroundColor = SmartlookConsentSDK.wasShown ? UIColor.green : UIColor.red
+        privacyConsentIndicator.backgroundColor = consentColors[SmartlookConsentSDK.consentState(for: .privacy)]
+        analyticsConsentIndicator.backgroundColor = consentColors[SmartlookConsentSDK.consentState(for: .analytics)]
     }
     
 

@@ -12,9 +12,9 @@
 		338579D5221AD646006861C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338579D3221AD646006861C1 /* Main.storyboard */; };
 		338579D7221AD647006861C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 338579D6221AD647006861C1 /* Assets.xcassets */; };
 		338579DA221AD647006861C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338579D8221AD647006861C1 /* LaunchScreen.storyboard */; };
-		338579E2221AD67D006861C1 /* ConsentSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 338579E1221AD67D006861C1 /* ConsentSDK.framework */; };
-		338579E3221AD67D006861C1 /* ConsentSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 338579E1221AD67D006861C1 /* ConsentSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		338579EB221AE6F4006861C1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 338579E9221AE6F4006861C1 /* Localizable.strings */; };
+		33C27E5D221C08320026F090 /* SmartlookConsentSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C27E5C221C08320026F090 /* SmartlookConsentSDK.framework */; };
+		33C27E5E221C08320026F090 /* SmartlookConsentSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 33C27E5C221C08320026F090 /* SmartlookConsentSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				338579E3221AD67D006861C1 /* ConsentSDK.framework in Embed Frameworks */,
+				33C27E5E221C08320026F090 /* SmartlookConsentSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -39,8 +39,8 @@
 		338579D6221AD647006861C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		338579D9221AD647006861C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		338579DB221AD647006861C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		338579E1221AD67D006861C1 /* ConsentSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ConsentSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		338579EA221AE6F4006861C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		33C27E5C221C08320026F090 /* SmartlookConsentSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SmartlookConsentSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				338579E2221AD67D006861C1 /* ConsentSDK.framework in Frameworks */,
+				33C27E5D221C08320026F090 /* SmartlookConsentSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +58,7 @@
 		338579C3221AD646006861C1 = {
 			isa = PBXGroup;
 			children = (
-				338579E1221AD67D006861C1 /* ConsentSDK.framework */,
+				33C27E5C221C08320026F090 /* SmartlookConsentSDK.framework */,
 				338579CE221AD646006861C1 /* ConsentSDKDemo */,
 				338579CD221AD646006861C1 /* Products */,
 			);

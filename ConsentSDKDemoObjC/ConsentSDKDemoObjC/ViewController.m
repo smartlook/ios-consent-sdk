@@ -30,41 +30,41 @@
     [self updateConsentIndicators];
 
     NSMutableArray *consentsSettingsDefaults = [NSMutableArray new];
-    [consentsSettingsDefaults addObjectsFromArray:@[CSDKConsentPrivacy, @(CSDKConsentStateProvided)]];
-    [consentsSettingsDefaults addObjectsFromArray:@[CSDKConsentAnalytics, @(CSDKConsentStateNotProvided)]];
+    [consentsSettingsDefaults addObjectsFromArray:@[SLCConsentPrivacy, @(SLCConsentStateProvided)]];
+    [consentsSettingsDefaults addObjectsFromArray:@[SLCConsentAnalytics, @(SLCConsentStateNotProvided)]];
 
-    [ConsentSDK checkWith:consentsSettingsDefaults callback:^{
+    [SmartlookConsentSDK checkWith:consentsSettingsDefaults callback:^{
         [self updateConsentIndicators];
-        if ([ConsentSDK consentStateFor:CSDKConsentAnalytics] == CSDKConsentStateProvided) {
+        if ([SmartlookConsentSDK consentStateFor:SLCConsentAnalytics] == SLCConsentStateProvided) {
             // start analytics tools
         };
     }];
 }
 
-- (UIColor *)colourForState:(CSDKConsentState)state {
+- (UIColor *)colourForState:(SLCConsentState)state {
     switch (state) {
-        case CSDKConsentStateUnknown:
+        case SLCConsentStateUnknown:
             return [UIColor lightGrayColor];
             break;
-        case CSDKConsentStateNotProvided:
+        case SLCConsentStateNotProvided:
             return [UIColor redColor];
             break;
-        case CSDKConsentStateProvided:
+        case SLCConsentStateProvided:
             return [UIColor greenColor];
             break;
     }
 }
 
 -(void)updateConsentIndicators {
-    self.consentsPanelWasShownIndicator.backgroundColor = ConsentSDK.wasShown ? [UIColor greenColor] : [UIColor grayColor];
-    self.privacyConsentIndicator.backgroundColor = [self colourForState:[ConsentSDK consentStateFor:CSDKConsentPrivacy]];
-    self.analyticsConsentIndicator.backgroundColor = [self colourForState:[ConsentSDK consentStateFor:CSDKConsentAnalytics]];
+    self.consentsPanelWasShownIndicator.backgroundColor = SmartlookConsentSDK.wasShown ? [UIColor greenColor] : [UIColor grayColor];
+    self.privacyConsentIndicator.backgroundColor = [self colourForState:[SmartlookConsentSDK consentStateFor:SLCConsentPrivacy]];
+    self.analyticsConsentIndicator.backgroundColor = [self colourForState:[SmartlookConsentSDK consentStateFor:SLCConsentAnalytics]];
 }
 
 - (IBAction)buttonAction:(id)sender {
-    [ConsentSDK showWithCallback:^{
+    [SmartlookConsentSDK showWithCallback:^{
         [self updateConsentIndicators];
-        if ([ConsentSDK consentStateFor:CSDKConsentAnalytics] != CSDKConsentStateProvided) {
+        if ([SmartlookConsentSDK consentStateFor:SLCConsentAnalytics] != SLCConsentStateProvided) {
             // stop analytics tools
         };
 

@@ -22,18 +22,18 @@ class ConsentCell: TopBorderCell {
     
     private var consentUrl: URL?
     
-    var consent: ConsentSDK.Consent?
+    var consent: SmartlookConsentSDK.Consent?
     
-    func setupCell(_ consent_: ConsentSDK.Consent, _ defaultState_: ConsentSDK.ConsentState) {
+    func setupCell(_ consent_: SmartlookConsentSDK.Consent, _ defaultState_: SmartlookConsentSDK.ConsentState) {
         consent = consent_
         if let consent = consent {
-            if ConsentSDK.consentState(for: consent) == .unknown {
+            if SmartlookConsentSDK.consentState(for: consent) == .unknown {
                 // default default state is .provided
-                ConsentSDK.set(state: defaultState_ == .unknown ? .provided : defaultState_, for: consent)
+                SmartlookConsentSDK.set(state: defaultState_ == .unknown ? .provided : defaultState_, for: consent)
             }
-            consentSwitch.isOn = ConsentSDK.consentState(for: consent) == .provided
-            label.text = ConsentSDK.label(for: consent)
-            consentUrl = ConsentSDK.detailUrl(for: consent)
+            consentSwitch.isOn = SmartlookConsentSDK.consentState(for: consent) == .provided
+            label.text = SmartlookConsentSDK.label(for: consent)
+            consentUrl = SmartlookConsentSDK.detailUrl(for: consent)
             detailView.isHidden = consentUrl == nil
         }
     }
@@ -41,8 +41,8 @@ class ConsentCell: TopBorderCell {
     // the state is changed immediatelly
     @IBAction func switchAction(_ sender: Any) {
         if let consent = consent {
-            ConsentSDK.set(state: consentSwitch.isOn ? .provided : .notProvided, for: consent)
-            consentSwitch.isOn = ConsentSDK.consentState(for: consent) != .notProvided
+            SmartlookConsentSDK.set(state: consentSwitch.isOn ? .provided : .notProvided, for: consent)
+            consentSwitch.isOn = SmartlookConsentSDK.consentState(for: consent) != .notProvided
         }
     }
     

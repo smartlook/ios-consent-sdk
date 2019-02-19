@@ -64,7 +64,7 @@ Is a standard enumaration and indicates whether user seen and provided consent t
 - `.notProvided` state indicates that the user explicitely refused consent to the policy
 - `.provided` state indicates that the user explicitely provided consent to the policy 
 ```swift
-@objc(CSDKConsentState) public enum ConsentState: Int {
+@objc(SLCConsentState) public enum ConsentState: Int {
       case unknown = -2
       case notProvided = -1
       case provided = 1

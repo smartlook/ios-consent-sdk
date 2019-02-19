@@ -7,35 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		33857971221AD3CE006861C1 /* ConsentSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 3385796F221AD3CE006861C1 /* ConsentSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3385799E221AD45E006861C1 /* ConsentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33857997221AD45E006861C1 /* ConsentCell.swift */; };
-		3385799F221AD45E006861C1 /* CSDKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33857998221AD45E006861C1 /* CSDKViewController.swift */; };
-		338579A0221AD45E006861C1 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33857999221AD45E006861C1 /* ButtonCell.swift */; };
-		338579A1221AD45E006861C1 /* CSDKControlPanel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3385799A221AD45E006861C1 /* CSDKControlPanel.storyboard */; };
-		338579A2221AD45E006861C1 /* ConsentSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3385799B221AD45E006861C1 /* ConsentSDK.swift */; };
-		338579A3221AD45E006861C1 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3385799C221AD45E006861C1 /* HeaderCell.swift */; };
-		338579A4221AD45E006861C1 /* TopBorderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3385799D221AD45E006861C1 /* TopBorderCell.swift */; };
-		338579F0221B1711006861C1 /* ConsentSDK+Consent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338579EF221B1711006861C1 /* ConsentSDK+Consent.swift */; };
-		338579F2221B1E99006861C1 /* ConsentSDK+ObjC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338579F1221B1E99006861C1 /* ConsentSDK+ObjC.swift */; };
+		33C27E44221C07560026F090 /* SmartlookConsentSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 33C27E42221C07560026F090 /* SmartlookConsentSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33C27E53221C07D30026F090 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E4A221C07D20026F090 /* HeaderCell.swift */; };
+		33C27E54221C07D30026F090 /* TopBorderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E4B221C07D30026F090 /* TopBorderCell.swift */; };
+		33C27E55221C07D30026F090 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E4C221C07D30026F090 /* ButtonCell.swift */; };
+		33C27E56221C07D30026F090 /* ControlPanel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C27E4D221C07D30026F090 /* ControlPanel.storyboard */; };
+		33C27E57221C07D30026F090 /* SLConsentSDK+Consent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E4E221C07D30026F090 /* SLConsentSDK+Consent.swift */; };
+		33C27E58221C07D30026F090 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E4F221C07D30026F090 /* ViewController.swift */; };
+		33C27E59221C07D30026F090 /* SLConsentSDK+ObjC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E50221C07D30026F090 /* SLConsentSDK+ObjC.swift */; };
+		33C27E5A221C07D30026F090 /* ConsentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E51221C07D30026F090 /* ConsentCell.swift */; };
+		33C27E5B221C07D30026F090 /* SmartlookConsentSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E52221C07D30026F090 /* SmartlookConsentSDK.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3385796C221AD3CE006861C1 /* ConsentSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ConsentSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3385796F221AD3CE006861C1 /* ConsentSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConsentSDK.h; sourceTree = "<group>"; };
-		33857970221AD3CE006861C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		33857997221AD45E006861C1 /* ConsentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentCell.swift; sourceTree = "<group>"; };
-		33857998221AD45E006861C1 /* CSDKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSDKViewController.swift; sourceTree = "<group>"; };
-		33857999221AD45E006861C1 /* ButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
-		3385799A221AD45E006861C1 /* CSDKControlPanel.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CSDKControlPanel.storyboard; sourceTree = "<group>"; };
-		3385799B221AD45E006861C1 /* ConsentSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentSDK.swift; sourceTree = "<group>"; };
-		3385799C221AD45E006861C1 /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
-		3385799D221AD45E006861C1 /* TopBorderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopBorderCell.swift; sourceTree = "<group>"; };
-		338579EF221B1711006861C1 /* ConsentSDK+Consent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConsentSDK+Consent.swift"; sourceTree = "<group>"; };
-		338579F1221B1E99006861C1 /* ConsentSDK+ObjC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConsentSDK+ObjC.swift"; sourceTree = "<group>"; };
+		33C27E3F221C07560026F090 /* SmartlookConsentSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SmartlookConsentSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33C27E42221C07560026F090 /* SmartlookConsentSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmartlookConsentSDK.h; sourceTree = "<group>"; };
+		33C27E43221C07560026F090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33C27E4A221C07D20026F090 /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		33C27E4B221C07D30026F090 /* TopBorderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopBorderCell.swift; sourceTree = "<group>"; };
+		33C27E4C221C07D30026F090 /* ButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
+		33C27E4D221C07D30026F090 /* ControlPanel.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ControlPanel.storyboard; sourceTree = "<group>"; };
+		33C27E4E221C07D30026F090 /* SLConsentSDK+Consent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SLConsentSDK+Consent.swift"; sourceTree = "<group>"; };
+		33C27E4F221C07D30026F090 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		33C27E50221C07D30026F090 /* SLConsentSDK+ObjC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SLConsentSDK+ObjC.swift"; sourceTree = "<group>"; };
+		33C27E51221C07D30026F090 /* ConsentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentCell.swift; sourceTree = "<group>"; };
+		33C27E52221C07D30026F090 /* SmartlookConsentSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartlookConsentSDK.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		33857969221AD3CE006861C1 /* Frameworks */ = {
+		33C27E3C221C07560026F090 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,135 +45,135 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		33857962221AD3CE006861C1 = {
+		33C27E35221C07560026F090 = {
 			isa = PBXGroup;
 			children = (
-				3385796E221AD3CE006861C1 /* ConsentSDK */,
-				3385796D221AD3CE006861C1 /* Products */,
+				33C27E41221C07560026F090 /* SmartlookConsentSDK */,
+				33C27E40221C07560026F090 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3385796D221AD3CE006861C1 /* Products */ = {
+		33C27E40221C07560026F090 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3385796C221AD3CE006861C1 /* ConsentSDK.framework */,
+				33C27E3F221C07560026F090 /* SmartlookConsentSDK.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3385796E221AD3CE006861C1 /* ConsentSDK */ = {
+		33C27E41221C07560026F090 /* SmartlookConsentSDK */ = {
 			isa = PBXGroup;
 			children = (
-				3385796F221AD3CE006861C1 /* ConsentSDK.h */,
-				3385799B221AD45E006861C1 /* ConsentSDK.swift */,
-				338579EF221B1711006861C1 /* ConsentSDK+Consent.swift */,
-				338579F1221B1E99006861C1 /* ConsentSDK+ObjC.swift */,
-				33857999221AD45E006861C1 /* ButtonCell.swift */,
-				33857997221AD45E006861C1 /* ConsentCell.swift */,
-				3385799A221AD45E006861C1 /* CSDKControlPanel.storyboard */,
-				33857998221AD45E006861C1 /* CSDKViewController.swift */,
-				3385799C221AD45E006861C1 /* HeaderCell.swift */,
-				33857970221AD3CE006861C1 /* Info.plist */,
-				3385799D221AD45E006861C1 /* TopBorderCell.swift */,
+				33C27E4C221C07D30026F090 /* ButtonCell.swift */,
+				33C27E51221C07D30026F090 /* ConsentCell.swift */,
+				33C27E4A221C07D20026F090 /* HeaderCell.swift */,
+				33C27E4D221C07D30026F090 /* ControlPanel.storyboard */,
+				33C27E4E221C07D30026F090 /* SLConsentSDK+Consent.swift */,
+				33C27E50221C07D30026F090 /* SLConsentSDK+ObjC.swift */,
+				33C27E4F221C07D30026F090 /* ViewController.swift */,
+				33C27E52221C07D30026F090 /* SmartlookConsentSDK.swift */,
+				33C27E4B221C07D30026F090 /* TopBorderCell.swift */,
+				33C27E42221C07560026F090 /* SmartlookConsentSDK.h */,
+				33C27E43221C07560026F090 /* Info.plist */,
 			);
-			path = ConsentSDK;
+			path = SmartlookConsentSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		33857967221AD3CE006861C1 /* Headers */ = {
+		33C27E3A221C07560026F090 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33857971221AD3CE006861C1 /* ConsentSDK.h in Headers */,
+				33C27E44221C07560026F090 /* SmartlookConsentSDK.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3385796B221AD3CE006861C1 /* ConsentSDK */ = {
+		33C27E3E221C07560026F090 /* SmartlookConsentSDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 33857974221AD3CE006861C1 /* Build configuration list for PBXNativeTarget "ConsentSDK" */;
+			buildConfigurationList = 33C27E47221C07560026F090 /* Build configuration list for PBXNativeTarget "SmartlookConsentSDK" */;
 			buildPhases = (
-				33857967221AD3CE006861C1 /* Headers */,
-				33857968221AD3CE006861C1 /* Sources */,
-				33857969221AD3CE006861C1 /* Frameworks */,
-				3385796A221AD3CE006861C1 /* Resources */,
+				33C27E3A221C07560026F090 /* Headers */,
+				33C27E3B221C07560026F090 /* Sources */,
+				33C27E3C221C07560026F090 /* Frameworks */,
+				33C27E3D221C07560026F090 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ConsentSDK;
-			productName = ConsentSDK;
-			productReference = 3385796C221AD3CE006861C1 /* ConsentSDK.framework */;
+			name = SmartlookConsentSDK;
+			productName = SmartlookConsentSDK;
+			productReference = 33C27E3F221C07560026F090 /* SmartlookConsentSDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		33857963221AD3CE006861C1 /* Project object */ = {
+		33C27E36221C07560026F090 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Smartlook;
 				TargetAttributes = {
-					3385796B221AD3CE006861C1 = {
+					33C27E3E221C07560026F090 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
 					};
 				};
 			};
-			buildConfigurationList = 33857966221AD3CE006861C1 /* Build configuration list for PBXProject "ConsentSDK" */;
+			buildConfigurationList = 33C27E39221C07560026F090 /* Build configuration list for PBXProject "SmartlookConsentSDK" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 33857962221AD3CE006861C1;
-			productRefGroup = 3385796D221AD3CE006861C1 /* Products */;
+			mainGroup = 33C27E35221C07560026F090;
+			productRefGroup = 33C27E40221C07560026F090 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3385796B221AD3CE006861C1 /* ConsentSDK */,
+				33C27E3E221C07560026F090 /* SmartlookConsentSDK */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3385796A221AD3CE006861C1 /* Resources */ = {
+		33C27E3D221C07560026F090 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				338579A1221AD45E006861C1 /* CSDKControlPanel.storyboard in Resources */,
+				33C27E56221C07D30026F090 /* ControlPanel.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		33857968221AD3CE006861C1 /* Sources */ = {
+		33C27E3B221C07560026F090 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3385799F221AD45E006861C1 /* CSDKViewController.swift in Sources */,
-				338579A3221AD45E006861C1 /* HeaderCell.swift in Sources */,
-				3385799E221AD45E006861C1 /* ConsentCell.swift in Sources */,
-				338579A4221AD45E006861C1 /* TopBorderCell.swift in Sources */,
-				338579F0221B1711006861C1 /* ConsentSDK+Consent.swift in Sources */,
-				338579F2221B1E99006861C1 /* ConsentSDK+ObjC.swift in Sources */,
-				338579A0221AD45E006861C1 /* ButtonCell.swift in Sources */,
-				338579A2221AD45E006861C1 /* ConsentSDK.swift in Sources */,
+				33C27E53221C07D30026F090 /* HeaderCell.swift in Sources */,
+				33C27E58221C07D30026F090 /* ViewController.swift in Sources */,
+				33C27E59221C07D30026F090 /* SLConsentSDK+ObjC.swift in Sources */,
+				33C27E57221C07D30026F090 /* SLConsentSDK+Consent.swift in Sources */,
+				33C27E5B221C07D30026F090 /* SmartlookConsentSDK.swift in Sources */,
+				33C27E5A221C07D30026F090 /* ConsentCell.swift in Sources */,
+				33C27E54221C07D30026F090 /* TopBorderCell.swift in Sources */,
+				33C27E55221C07D30026F090 /* ButtonCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		33857972221AD3CE006861C1 /* Debug */ = {
+		33C27E45221C07560026F090 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -237,7 +237,7 @@
 			};
 			name = Debug;
 		};
-		33857973221AD3CE006861C1 /* Release */ = {
+		33C27E46221C07560026F090 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -295,7 +295,7 @@
 			};
 			name = Release;
 		};
-		33857975221AD3CE006861C1 /* Debug */ = {
+		33C27E48221C07560026F090 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -307,14 +307,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ConsentSDK/Info.plist;
+				INFOPLIST_FILE = SmartlookConsentSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.smartlook.ConsentSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartlook.SmartlookConsentSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -323,7 +323,7 @@
 			};
 			name = Debug;
 		};
-		33857976221AD3CE006861C1 /* Release */ = {
+		33C27E49221C07560026F090 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -335,14 +335,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ConsentSDK/Info.plist;
+				INFOPLIST_FILE = SmartlookConsentSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.smartlook.ConsentSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartlook.SmartlookConsentSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -353,25 +353,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		33857966221AD3CE006861C1 /* Build configuration list for PBXProject "ConsentSDK" */ = {
+		33C27E39221C07560026F090 /* Build configuration list for PBXProject "SmartlookConsentSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				33857972221AD3CE006861C1 /* Debug */,
-				33857973221AD3CE006861C1 /* Release */,
+				33C27E45221C07560026F090 /* Debug */,
+				33C27E46221C07560026F090 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		33857974221AD3CE006861C1 /* Build configuration list for PBXNativeTarget "ConsentSDK" */ = {
+		33C27E47221C07560026F090 /* Build configuration list for PBXNativeTarget "SmartlookConsentSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				33857975221AD3CE006861C1 /* Debug */,
-				33857976221AD3CE006861C1 /* Release */,
+				33C27E48221C07560026F090 /* Debug */,
+				33C27E49221C07560026F090 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 33857963221AD3CE006861C1 /* Project object */;
+	rootObject = 33C27E36221C07560026F090 /* Project object */;
 }

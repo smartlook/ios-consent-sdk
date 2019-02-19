@@ -17,7 +17,7 @@ class HeaderCell: UITableViewCell {
         super.awakeFromNib()
         
         let appName = Bundle.main.infoDictionary?["CFBundleDisplayName"] as? String ?? ""
-        var titleText = NSLocalizedString("\(ConsentSDK.keyPrefix)-title", comment: "")
+        var titleText = NSLocalizedString("\(SmartlookConsentSDK.keyPrefix)-title", comment: "")
         titleText = titleText.replacingOccurrences(of: "$APP", with: appName)
 
         let titleStyles = [NSAttributedString.Key.font : UIFont.preferredFont(forTextStyle: .title1)]
@@ -30,7 +30,7 @@ class HeaderCell: UITableViewCell {
         
         titleLabel.attributedText = attributedString
             
-        infoLabel.text = NSLocalizedString("\(ConsentSDK.keyPrefix)-text", comment: "")
+        infoLabel.text = NSLocalizedString("\(SmartlookConsentSDK.keyPrefix)-text", comment: "")
     }
 
 }

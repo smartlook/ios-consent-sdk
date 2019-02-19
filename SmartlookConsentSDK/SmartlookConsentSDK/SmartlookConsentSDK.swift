@@ -8,12 +8,12 @@
 
 import Foundation
 
-@objc public class ConsentSDK : NSObject, CSDKViewControllerDelegate {
+@objc public class SmartlookConsentSDK : NSObject, SLCViewControllerDelegate {
     
     static let keyPrefix = "consent-sdk"
 
-    private static var _shared: ConsentSDK = {
-        return ConsentSDK()
+    private static var _shared: SmartlookConsentSDK = {
+        return SmartlookConsentSDK()
     }()
     
     // MARK: - Presenting Control Panel
@@ -23,7 +23,7 @@ import Foundation
     /**
      An array used to configure what consents with which default state appear in the control panel. If user already changed set its own state to a particular consent, her choise is respected and the default state is not used.
      */
-    public typealias ConsentsSettings = Array<(consent: ConsentSDK.Consent, defaultState: ConsentSDK.ConsentState)>
+    public typealias ConsentsSettings = Array<(consent: SmartlookConsentSDK.Consent, defaultState: SmartlookConsentSDK.ConsentState)>
     
     private var originalKeyWindow: UIWindow?
     private var keyWindow: UIWindow?
@@ -85,7 +85,7 @@ import Foundation
      */
     public static func check(with consentsSettings: ConsentsSettings, callback: @escaping RequestIdCallback) {
         var consentsHaveBeenSet = true
-        consentsSettings.forEach { (key: ConsentSDK.Consent, value: ConsentSDK.ConsentState) in
+        consentsSettings.forEach { (key: SmartlookConsentSDK.Consent, value: SmartlookConsentSDK.ConsentState) in
             consentsHaveBeenSet = consentsHaveBeenSet && consentState(for: key) != .unknown
         }
         guard consentsHaveBeenSet else {
@@ -96,14 +96,14 @@ import Foundation
     }
 
     // MARK: - View Controller Implementation
-    private var _viewController: CSDKViewController?
+    private var _viewController: ViewController?
     
-    private var viewController: CSDKViewController? {
+    private var viewController: ViewController? {
         get {
             if _viewController != nil {
                 return _viewController
             }
-            guard let _viewController = UIStoryboard(name: "CSDKControlPanel", bundle: Bundle(for: type(of: self))).instantiateInitialViewController() as? CSDKViewController else {
+            guard let _viewController = UIStoryboard(name: "ControlPanel", bundle: Bundle(for: type(of: self))).instantiateInitialViewController() as? ViewController else {
                 return nil
             }
             _viewController.delegate = self
@@ -121,7 +121,7 @@ import Foundation
         }
     }
     
-    func viewControllerRequestClose(_ viewController: CSDKViewController) {
+    func viewControllerRequestClose(_ viewController: ViewController) {
         DispatchQueue.main.async {
             viewController.dismiss(animated: true) {
                 self.originalKeyWindow?.makeKeyAndVisible()

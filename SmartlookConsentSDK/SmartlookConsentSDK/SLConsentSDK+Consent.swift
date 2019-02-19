@@ -1,6 +1,6 @@
 //
-//  ConsentSDK+Consent.swift
-//  ConsentSDK
+//  SmartlookConsentSDK+Consent.swift
+//  SmartlookConsentSDK
 //
 //  Created by Pavel Kroh on 18/02/2019.
 //  Copyright © 2019 Smartlook. All rights reserved.
@@ -8,16 +8,16 @@
 
 import Foundation
 
-extension ConsentSDK {
+extension SmartlookConsentSDK {
     public typealias Consent = String
 }
 
-extension ConsentSDK.Consent {
-    public static let privacy: ConsentSDK.Consent = "privacy"
-    public static let analytics: ConsentSDK.Consent = "analytics"
+extension SmartlookConsentSDK.Consent {
+    public static let privacy: SmartlookConsentSDK.Consent = "privacy"
+    public static let analytics: SmartlookConsentSDK.Consent = "analytics"
 }
 
-extension ConsentSDK {
+extension SmartlookConsentSDK {
 
     /**
      Indicates whether user seen and provided consent to a policy.
@@ -28,14 +28,14 @@ extension ConsentSDK {
      
      `.provided` state indicates that the user explicitely provided consent to the policy
      */
-    @objc(CSDKConsentState) public enum ConsentState: Int {
+    @objc(SLCConsentState) public enum ConsentState: Int {
         case unknown = -2
         case notProvided = -1
         case provided = 1
     }
 
     static func key(for consent: Consent) -> String {
-        return "\(ConsentSDK.keyPrefix)-\(consent)-consent"
+        return "\(SmartlookConsentSDK.keyPrefix)-\(consent)-consent"
     }
     
     static func set(state: ConsentState, for consent: Consent) {

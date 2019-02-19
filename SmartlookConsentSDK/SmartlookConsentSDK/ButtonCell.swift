@@ -16,7 +16,7 @@ class ButtonCell: TopBorderCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         buttonBackground.layer.cornerRadius = 6
-        title.text = NSLocalizedString("\(ConsentSDK.keyPrefix)-button", comment: "")
+        title.text = NSLocalizedString("\(SmartlookConsentSDK.keyPrefix)-button", comment: "")
     }
 }
 

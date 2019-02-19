@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:ConsentSDK/ConsentSDK.xcodeproj">
+      location = "group:SmartlookConsentSDK/SmartlookConsentSDK.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:ConsentSDKDemo/ConsentSDKDemo.xcodeproj">

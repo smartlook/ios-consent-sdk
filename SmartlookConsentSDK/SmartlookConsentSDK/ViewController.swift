@@ -9,17 +9,17 @@
 import UIKit
 import SafariServices
 
-protocol CSDKViewControllerDelegate {
-    func viewControllerRequestClose(_ viewController: CSDKViewController)
+protocol SLCViewControllerDelegate {
+    func viewControllerRequestClose(_ viewController: ViewController)
 }
 
-class CSDKViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ConsentCellDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ConsentCellDelegate {
 
    @IBOutlet weak var tableView: UITableView!
     
-    public var delegate: CSDKViewControllerDelegate?
+    public var delegate: SLCViewControllerDelegate?
     
-    public var consents = ConsentSDK.ConsentsSettings()
+    public var consents = SmartlookConsentSDK.ConsentsSettings()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +62,7 @@ class CSDKViewController: UIViewController, UITableViewDelegate, UITableViewData
     private var safariController: SFSafariViewController?
     
     func consentCellDetailButtonPressed(cell: ConsentCell) {
-        guard let consent = cell.consent, let url = ConsentSDK.detailUrl(for: consent) else {
+        guard let consent = cell.consent, let url = SmartlookConsentSDK.detailUrl(for: consent) else {
             return
         }
         var safariController: SFSafariViewController?
