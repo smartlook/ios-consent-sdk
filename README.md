@@ -23,7 +23,7 @@ SmartlookConsentSDK works well with both Swift and Objective-C apps.
 &nbsp;
 
 
-[![iPhone Screenshot](readme-media/ConsentSDK-Screenshot-iPhone-thumbnail.png)](readme-media/ConsentSDK-Screenshot-iPhone.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![iPad Screenshot](readme-media/SmartlookConsentSDKDemo2.gif)
+[![iPhone Screenshot](https://sdk.smartlook.com/assets/ConsentSDK-Screenshot-iPhone-thumbnail.png)](https://sdk.smartlook.com/assets/ConsentSDK-Screenshot-iPhone.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![iPad Screenshot](https://sdk.smartlook.com/assets/SmartlookConsentSDKDemo2.gif)
 
 ## Code examples
 ### Simple example 
@@ -103,7 +103,7 @@ Two variants much like `check()`, it **always** opens the Control Panle for the 
 ## Localisation
 The texts shown in the control panel are configured using the standard `Localizable.strings` mechanism. `Localizable.strings`  are also used to provide an optional URL of a detailed policy information (thus the link is localised as well).
 
-The keys used in the `Localizable.strings` are listed in the table below, or you can simply reuse [the file in our demo app](Consents%20Demo/ConsentsDemo/Base.lproj/Localizable.strings) .
+The keys used in the `Localizable.strings` are listed in the table below, or you can simply reuse [the file in our demo app](https://raw.githubusercontent.com/smartlook/ios-consent-sdk/master/Consents%20Demo/ConsentsDemo/Base.lproj/Localizable.strings) .
 
 Localization follows a name conventions. If a new consent type is added (on top of the predefined convenience types `.privacy` a `.analytics`), the respective keys must be added to localized files following the pattern
 
