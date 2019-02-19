@@ -23,7 +23,7 @@ SmartlookConsentSDK works well with both Swift and Objective-C apps.
 &nbsp;
 
 
-[![iPhone Screenshot](https://sdk.smartlook.com/assets/ConsentSDK-Screenshot-iPhone-thumbnail.png)](https://sdk.smartlook.com/assets/ConsentSDK-Screenshot-iPhone.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![iPad Screenshot](https://sdk.smartlook.com/assets/SmartlookConsentSDKDemo2.gif)
+![iPhone Screenshot](https://github.com/smartlook/ios-consent-sdk/raw/master/readme-media/ConsentSDK-Screenshot-iPhone-thumbnail.png)] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![iPad Screenshot](https://github.com/smartlook/ios-consent-sdk/raw/master/readme-media/SmartlookConsentSDKDemo2.gif)
 
 ## Code examples
 ### Simple example 
