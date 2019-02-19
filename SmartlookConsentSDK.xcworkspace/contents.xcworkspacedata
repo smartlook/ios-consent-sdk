@@ -5,13 +5,13 @@
       location = "group:SmartlookConsentSDK/SmartlookConsentSDK.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jezovec/Work/Smartlook/ios-consent-sdk/ConsentSDKDemo/Consents Demo.xcodeproj">
+      location = "group:Consents Demo ObjC/Consents Demo ObjC.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jezovec/Work/Smartlook/ios-consent-sdk/ConsentSDKDemoObjC/Consents Demo ObjC.xcodeproj">
+      location = "group:Consents Demo/Consents Demo.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:README.md">
+      location = "group:/Users/jezovec/Work/Smartlook/ios-consent-sdk/Consents Demo/README.md">
    </FileRef>
    <FileRef
       location = "group:/Users/jezovec/Work/Smartlook/ios-consent-sdk/SmartlookConsentSDK.podspec">
