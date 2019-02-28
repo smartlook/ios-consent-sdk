@@ -100,7 +100,7 @@ public static func check(with consentsSettings: ConsentsSettings, callback: @esc
 a version with configuration that allows fine-tuning required consents (adding, removing, chaning order of or their default values) 
 
 ### SmartlookConsentSDK.show()
-Two variants much like `check()`, it **always** opens the Control Panle for the user to review her current privacy settings.
+Two variants much like `check()`, it **always** opens the Control Panel for the user to review their current privacy settings.
 
 ## Localisation
 The texts shown in the control panel are configured using the standard `Localizable.strings` mechanism. `Localizable.strings`  are also used to provide an optional URL of a detailed policy information (thus the link is localised as well).
