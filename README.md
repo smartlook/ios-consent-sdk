@@ -13,7 +13,7 @@ So why not use or reuse some ready-made SDK?
 
 The SmartlookConsentSDK:
 - provides a configurable control panel where user can select their privacy options
-- stores the selected user preferences the app
+- stores the selected user preferences for the app
 - enables all texts to be fully localized 
 - enables linking to privacy policies which may be provided by an external web page and presenting them without leaving the app
 
