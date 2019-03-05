@@ -16,19 +16,11 @@ class ViewController: UIViewController {
 
         privacyConsentIndicator.layer.cornerRadius = 3
         analyticsConsentIndicator.layer.cornerRadius = 3
-        
-        updateConsentIndicators()
-        
-        var consentsSettingsDefaults = SmartlookConsentSDK.ConsentsSettings()
-        consentsSettingsDefaults.append((.privacy, .provided))
-        consentsSettingsDefaults.append((.analytics, .notProvided))
-        //consentsSettingsDefaults.append(("gdpr", .notProvided))   // adding a custom consent
-
-        SmartlookConsentSDK.check(with: consentsSettingsDefaults) {
+    
+        // this is not necessary if all the logic is handled in the `SmartlookConsentSDK.check` or `SmartlookConsentSDK.show` callbacks
+        // may be usefull eg., if some UI depends on the consents state like here
+        NotificationCenter.default.addObserver(forName: SmartlookConsentSDK.consentsTouchedNotification, object: nil, queue: nil) { (notif) in
             self.updateConsentIndicators()
-            if SmartlookConsentSDK.consentState(for: .analytics) == .provided {
-                // start analytics tools
-            }
         }
     }
     

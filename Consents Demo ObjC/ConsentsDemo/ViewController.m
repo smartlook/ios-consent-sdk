@@ -27,17 +27,10 @@
     //privacyConsentIndicator.layer.cornerRadius = 3
     //analyticsConsentIndicator.layer.cornerRadius = 3
     
-    [self updateConsentIndicators];
-
-    NSMutableArray *consentsSettingsDefaults = [NSMutableArray new];
-    [consentsSettingsDefaults addObjectsFromArray:@[SLCConsentPrivacy, @(SLCConsentStateProvided)]];
-    [consentsSettingsDefaults addObjectsFromArray:@[SLCConsentAnalytics, @(SLCConsentStateNotProvided)]];
-
-    [SmartlookConsentSDK checkWith:consentsSettingsDefaults callback:^{
+    // this is not necessary if all the logic is handled in the `SmartlookConsentSDK.check` or `SmartlookConsentSDK.show` callbacks
+    // may be usefull eg., if some UI depends on the consents state like here
+    [[NSNotificationCenter defaultCenter] addObserverForName:SCCConsentsTouchedNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
         [self updateConsentIndicators];
-        if ([SmartlookConsentSDK consentStateFor:SLCConsentAnalytics] == SLCConsentStateProvided) {
-            // start analytics tools
-        };
     }];
 }
 
