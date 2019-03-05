@@ -13,7 +13,7 @@ So why not use or reuse some ready-made SDK?
 
 The SmartlookConsentSDK:
 - provides a configurable control panel where user can select their privacy options
-- stores the selected user preferences the app
+- stores the selected user preferences for the app
 - enables all texts to be fully localized 
 - enables linking to privacy policies which may be provided by an external web page and presenting them without leaving the app
 
@@ -100,7 +100,7 @@ public static func check(with consentsSettings: ConsentsSettings, callback: @esc
 a version with configuration that allows fine-tuning required consents (adding, removing, chaning order of or their default values) 
 
 ### SmartlookConsentSDK.show()
-Two variants much like `check()`, it **always** opens the Control Panle for the user to review her current privacy settings.
+Two variants much like `check()`, it **always** opens the Control Panel for the user to review their current privacy settings.
 
 ## Localisation
 The texts shown in the control panel are configured using the standard `Localizable.strings` mechanism. `Localizable.strings`  are also used to provide an optional URL of a detailed policy information (thus the link is localised as well).
