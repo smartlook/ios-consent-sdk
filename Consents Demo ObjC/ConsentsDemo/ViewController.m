@@ -22,16 +22,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [super viewDidLoad];
-    
     //privacyConsentIndicator.layer.cornerRadius = 3
     //analyticsConsentIndicator.layer.cornerRadius = 3
     
     // this is not necessary if all the logic is handled in the `SmartlookConsentSDK.check` or `SmartlookConsentSDK.show` callbacks
     // may be usefull eg., if some UI depends on the consents state like here
-    [[NSNotificationCenter defaultCenter] addObserverForName:SCCConsentsTouchedNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+    [[NSNotificationCenter defaultCenter] addObserverForName:SLCConsentsTouchedNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
         [self updateConsentIndicators];
     }];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self updateConsentIndicators];
 }
 
 - (UIColor *)colourForState:(SLCConsentState)state {
@@ -63,5 +66,14 @@
 
     }];
 }
+
+- (IBAction)showAppSettingsAction:(id)sender {
+    NSURL *settingsUrl = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+    if ([[UIApplication sharedApplication] canOpenURL:settingsUrl]) {
+        [[UIApplication sharedApplication] openURL:settingsUrl options:@{} completionHandler:nil];
+    }
+
+}
+
 
 @end

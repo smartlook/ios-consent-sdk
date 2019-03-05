@@ -24,6 +24,11 @@ class ViewController: UIViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.updateConsentIndicators()
+    }
+    
     @IBAction func reviewConsents(_ sender: Any) {
         // let user review or check the consents
         SmartlookConsentSDK.show {
@@ -46,6 +51,11 @@ class ViewController: UIViewController {
         analyticsConsentIndicator.backgroundColor = consentColors[SmartlookConsentSDK.consentState(for: .analytics)]
     }
     
+    @IBAction func showAppSettingsAction(_ sender: Any) {
+        if let settingsUrl = URL(string: UIApplication.openSettingsURLString), UIApplication.shared.canOpenURL(settingsUrl) {
+            UIApplication.shared.open(settingsUrl, completionHandler:nil)
+        }
+    }
 
 }
 
