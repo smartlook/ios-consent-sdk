@@ -25,7 +25,7 @@ SmartlookConsentSDK works well with both Swift and Objective-C apps.
 &nbsp;
 
 
-![iPhone Screenshot](https://github.com/smartlook/ios-consent-sdk/raw/master/readme-media/ConsentSDK-Screenshot-iPhone-thumbnail.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![iPad Screenshot](https://github.com/smartlook/ios-consent-sdk/raw/master/readme-media/SmartlookConsentSDKDemo2.gif)
+  ![iPad Screenshot](https://github.com/smartlook/ios-consent-sdk/raw/master/readme-media/SmartlookConsentSDKDemo2.gif) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ![iPhone SettingsScreenshot](https://github.com/smartlook/ios-consent-sdk/raw/master/readme-media/ConsentSDK-Settings.png)  
 
 ## Code examples
 ### Simple example 
@@ -66,6 +66,10 @@ Framwork is ready for direct embedding in your app, e.g. the way it is embedded 
 ### Cocoapods
 Add cocoapod `SmartlookConsentSDK` into your Podfile.
 
+## Adding SmartlookConsentSDK to app code
+
+Generally, you want `SmartlookConsentSDK.check()` be called at the very beginning of the app life-cycle. Where exactly, it depends on your app architecture. If you don't want integrate this SDK into the standard app Settings, then `viewDidLoad()` of the root view controller is enough. If you want more comprehensive solution, then see our demo apps `AppDelegate` and `ViewController` for an inpiration.
+
 ## Objective-C
 The SDK is fully compatible with `Objective-C`. For code examples see the respective demo app.
 
@@ -102,6 +106,11 @@ a version with configuration that allows fine-tuning required consents (adding, 
 ### SmartlookConsentSDK.show()
 Two variants much like `check()`, it **always** opens the Control Panel for the user to review their current privacy settings.
 
+### Content Touched Notification
+Whenever user closes the panel opened by a call to `check()` or `show()`, `SmartlookConsentSDK.consentsTouchedNotification` notification is broadcased (regardless whether the consents were changed or not). This provides an alternative way to the `callback` block to let the app know there might be a change in consents.
+
+In ObjC, the notification identifier is `SLCConsentsTouchedNotification`.
+
 ## Localisation
 The texts shown in the control panel are configured using the standard `Localizable.strings` mechanism. `Localizable.strings`  are also used to provide an optional URL of a detailed policy information (thus the link is localised as well).
 
@@ -115,3 +124,14 @@ Localization follows a name conventions. If a new consent type is added (on top 
 ```
 
 where `*consent-key*` is simply the text string constant used to identify the policy.
+
+## iOS Settings
+
+The Consents SDK can be straigthforwardly integrated into the iOS Settings app so the user can also review their consents there. To do this, some manual work is needed even if the SDK is integrated using Cocoapods. If you are not familiar with adding system settings panel into your app, have a look at [Implementing an iOS Settings Bundle](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html) or just copy the `Settings.bundle` from one of our Demo apps to start.
+
+The key for SDK integration here is using the same names for your settings items as you use for localised strings, i.e., in order to add the most basic consent settings to iOS settings:
+
+1. Add `Settings.bundle` if it is not there
+2. Into it, add a `Toggle Switch` for each consent.
+3. To connect it with a consent, set the toggle identifier to the same string you use for it in `Localizable.strings`, e.g., `smartlook-consent-sdk-analytics-consent`
+4. Do not forget that `Settings.bundle` localisation is separated from the app localisation (the respective `.strings` file is inside the `Settings.bundle`, in the demo apps it is named `Root.strings`) 

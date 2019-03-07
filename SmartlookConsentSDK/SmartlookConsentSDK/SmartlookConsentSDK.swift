@@ -92,6 +92,7 @@ import Foundation
             show(with: consentsSettings, callback: callback)
             return
         }
+        NotificationCenter.default.post(name: SmartlookConsentSDK.consentsTouchedNotification, object: nil)
         callback()
     }
 
@@ -134,6 +135,7 @@ import Foundation
                 self.originalKeyWindow = nil
                 self.keyWindow = nil
                 self.viewController = nil
+                NotificationCenter.default.post(name: SmartlookConsentSDK.consentsTouchedNotification, object: nil)
                 self.callback?()
                 self.callback = nil
             }

@@ -58,9 +58,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // this could be only the button
         delegate?.viewControllerRequestClose(self)
     }
-    
-    private var safariController: SFSafariViewController?
-    
+       
     func consentCellDetailButtonPressed(cell: ConsentCell) {
         guard let consent = cell.consent, let url = SmartlookConsentSDK.detailUrl(for: consent) else {
             return

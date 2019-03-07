@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3313512D222E80FB004BE5AE /* SLConsentSDK+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3313512C222E80FB004BE5AE /* SLConsentSDK+Notification.swift */; };
 		33C27E44221C07560026F090 /* SmartlookConsentSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 33C27E42221C07560026F090 /* SmartlookConsentSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		33C27E53221C07D30026F090 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E4A221C07D20026F090 /* HeaderCell.swift */; };
 		33C27E54221C07D30026F090 /* TopBorderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E4B221C07D30026F090 /* TopBorderCell.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3313512C222E80FB004BE5AE /* SLConsentSDK+Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SLConsentSDK+Notification.swift"; sourceTree = "<group>"; };
 		33C27E3F221C07560026F090 /* SmartlookConsentSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SmartlookConsentSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C27E42221C07560026F090 /* SmartlookConsentSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmartlookConsentSDK.h; sourceTree = "<group>"; };
 		33C27E43221C07560026F090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				33C27E43221C07560026F090 /* Info.plist */,
 				33C27E4E221C07D30026F090 /* SLConsentSDK+Consent.swift */,
 				33C27E50221C07D30026F090 /* SLConsentSDK+ObjC.swift */,
+				3313512C222E80FB004BE5AE /* SLConsentSDK+Notification.swift */,
 				33C27E42221C07560026F090 /* SmartlookConsentSDK.h */,
 				33C27E52221C07D30026F090 /* SmartlookConsentSDK.swift */,
 				33C27E4B221C07D30026F090 /* TopBorderCell.swift */,
@@ -167,6 +170,7 @@
 				33C27E5A221C07D30026F090 /* ConsentCell.swift in Sources */,
 				33C27E54221C07D30026F090 /* TopBorderCell.swift in Sources */,
 				33C27E55221C07D30026F090 /* ButtonCell.swift in Sources */,
+				3313512D222E80FB004BE5AE /* SLConsentSDK+Notification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

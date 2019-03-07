@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <SmartlookConsentSDK/SmartlookConsentSDK.h>
 
 @interface AppDelegate ()
 
@@ -14,9 +15,28 @@
 
 @implementation AppDelegate
 
+/** This method is to be invoked any time the app starts to check if the consets are provided
+ namely in:
+ - `application:didFinishWithLaunchingOptions` for the fresh start
+ - `application:WillEnterForeground` for app woken up from background (where possibly the consent setting could be changed in system sessings)
+ */
+-(void)checkConsentStates {
+    NSMutableArray *consentsSettingsDefaults = [NSMutableArray new];
+    [consentsSettingsDefaults addObjectsFromArray:@[SLCConsentPrivacy, @(SLCConsentStateProvided)]];
+    [consentsSettingsDefaults addObjectsFromArray:@[SLCConsentAnalytics, @(SLCConsentStateNotProvided)]];
+    
+    [SmartlookConsentSDK checkWith:consentsSettingsDefaults callback:^{
+        if ([SmartlookConsentSDK consentStateFor:SLCConsentAnalytics] == SLCConsentStateProvided) {
+            // start analytics tools
+        };
+    }];
+
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // Override point for customization after application launch;
+    [self checkConsentStates];
     return YES;
 }
 
@@ -35,6 +55,7 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    [self checkConsentStates];
 }
 
 

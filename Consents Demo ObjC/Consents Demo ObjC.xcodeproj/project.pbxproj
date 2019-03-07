@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3313512F222E8D55004BE5AE /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3313512E222E8D55004BE5AE /* Settings.bundle */; };
 		337E624F22173CAB00EBAB60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 337E624E22173CAB00EBAB60 /* AppDelegate.m */; };
 		337E625222173CAB00EBAB60 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337E625122173CAB00EBAB60 /* ViewController.m */; };
 		337E625522173CAB00EBAB60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337E625322173CAB00EBAB60 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3313512E222E8D55004BE5AE /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ConsentsDemo/Settings.bundle; sourceTree = "<group>"; };
 		337E624A22173CAB00EBAB60 /* Consents Demo ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Consents Demo ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		337E624D22173CAB00EBAB60 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		337E624E22173CAB00EBAB60 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 		337E624122173CAB00EBAB60 = {
 			isa = PBXGroup;
 			children = (
+				3313512E222E8D55004BE5AE /* Settings.bundle */,
 				33C27E5F221C0B710026F090 /* SmartlookConsentSDK.framework */,
 				337E624C22173CAB00EBAB60 /* ConsentsDemo */,
 				337E624B22173CAB00EBAB60 /* Products */,
@@ -154,6 +157,7 @@
 			files = (
 				337E625A22173CAC00EBAB60 /* LaunchScreen.storyboard in Resources */,
 				338579EE221AE740006861C1 /* Localizable.strings in Resources */,
+				3313512F222E8D55004BE5AE /* Settings.bundle in Resources */,
 				337E625722173CAC00EBAB60 /* Assets.xcassets in Resources */,
 				337E625522173CAB00EBAB60 /* Main.storyboard in Resources */,
 			);

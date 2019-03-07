@@ -18,4 +18,5 @@ FOUNDATION_EXPORT const unsigned char SmartlookConsentSDKVersionString[];
 
 #define SLCConsentPrivacy @"privacy"
 #define SLCConsentAnalytics @"analytics"
+#define SLCConsentsTouchedNotification @"com.smartlook.SmartlookConsentSDK.notification.consentsTouched"
 
