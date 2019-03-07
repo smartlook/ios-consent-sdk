@@ -10,7 +10,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'SmartlookConsentSDK'
-s.version          = '1.0.1'
+s.version          = '1.1.0'
 s.summary          = 'This SDK provides a configurable control panel where user selects her privacy options.'
 
 # This description is used to generate tags and improve search results.
@@ -31,7 +31,7 @@ Although implementing some dialog to obtain user consents and store them for fur
 DESC
 
 s.homepage         = 'https://github.com/smartlook/ios-consent-sdk/'
-s.screenshots     =  ['https://sdk.smartlook.com/assets/SmartlookConsentSDKDemo2.gif']
+s.screenshots     =  ['https://sdk.smartlook.com/assets/SmartlookConsentSDKDemo2.gif', 'https://github.com/smartlook/ios-consent-sdk/raw/master/readme-media/ConsentSDK-Settings.png']
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
 s.author           = { 'Pavel Kroh' => 'pavelkroh@smartlook.com' }
 s.source           = { :git => 'https://github.com/smartlook/ios-consent-sdk.git', :tag => s.version.to_s }
