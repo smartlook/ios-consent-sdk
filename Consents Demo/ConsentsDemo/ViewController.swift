@@ -16,20 +16,17 @@ class ViewController: UIViewController {
 
         privacyConsentIndicator.layer.cornerRadius = 3
         analyticsConsentIndicator.layer.cornerRadius = 3
-        
-        updateConsentIndicators()
-        
-        var consentsSettingsDefaults = SmartlookConsentSDK.ConsentsSettings()
-        consentsSettingsDefaults.append((.privacy, .provided))
-        consentsSettingsDefaults.append((.analytics, .notProvided))
-        //consentsSettingsDefaults.append(("gdpr", .notProvided))   // adding a custom consent
-
-        SmartlookConsentSDK.check(with: consentsSettingsDefaults) {
+    
+        // this is not necessary if all the logic is handled in the `SmartlookConsentSDK.check` or `SmartlookConsentSDK.show` callbacks
+        // may be usefull eg., if some UI depends on the consents state like here
+        NotificationCenter.default.addObserver(forName: SmartlookConsentSDK.consentsTouchedNotification, object: nil, queue: nil) { (notif) in
             self.updateConsentIndicators()
-            if SmartlookConsentSDK.consentState(for: .analytics) == .provided {
-                // start analytics tools
-            }
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.updateConsentIndicators()
     }
     
     @IBAction func reviewConsents(_ sender: Any) {
@@ -54,6 +51,11 @@ class ViewController: UIViewController {
         analyticsConsentIndicator.backgroundColor = consentColors[SmartlookConsentSDK.consentState(for: .analytics)]
     }
     
+    @IBAction func showAppSettingsAction(_ sender: Any) {
+        if let settingsUrl = URL(string: UIApplication.openSettingsURLString), UIApplication.shared.canOpenURL(settingsUrl) {
+            UIApplication.shared.open(settingsUrl, completionHandler:nil)
+        }
+    }
 
 }
 

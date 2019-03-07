@@ -70,6 +70,13 @@
                                     <action selector="reviewConsents:" destination="mXd-qs-Tuh" eventType="touchUpInside" id="D95-ly-sdM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5C-JV-HoQ">
+                                <rect key="frame" x="16" y="256" width="140" height="30"/>
+                                <state key="normal" title="Show app settings..."/>
+                                <connections>
+                                    <action selector="showAppSettingsAction:" destination="mXd-qs-Tuh" eventType="touchUpInside" id="aFj-yf-QbM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -92,12 +99,14 @@
                             <constraint firstItem="7f3-wJ-wxY" firstAttribute="leading" secondItem="lAI-jv-3h8" secondAttribute="leading" constant="16" id="b28-1f-v9X"/>
                             <constraint firstItem="b7n-LX-fLk" firstAttribute="top" secondItem="7f3-wJ-wxY" secondAttribute="bottom" constant="32" id="b3n-6J-0Zx"/>
                             <constraint firstItem="dag-Y1-SgF" firstAttribute="height" secondItem="7f3-wJ-wxY" secondAttribute="height" id="bn3-F0-DdW"/>
+                            <constraint firstItem="N5C-JV-HoQ" firstAttribute="top" secondItem="b7n-LX-fLk" secondAttribute="bottom" constant="16" id="c6w-wq-EE8"/>
                             <constraint firstItem="dag-Y1-SgF" firstAttribute="leading" secondItem="8fo-g4-Czz" secondAttribute="leading" id="cIF-5R-I8g"/>
                             <constraint firstItem="8fo-g4-Czz" firstAttribute="leading" secondItem="eMH-Ld-eYV" secondAttribute="trailing" priority="750" constant="12" id="cck-we-TX4"/>
                             <constraint firstItem="7f3-wJ-wxY" firstAttribute="top" secondItem="eMH-Ld-eYV" secondAttribute="bottom" constant="8" id="eCZ-RG-VOO"/>
                             <constraint firstItem="9XM-0E-dit" firstAttribute="width" secondItem="9XM-0E-dit" secondAttribute="height" multiplier="1:1" id="fjA-r8-MRY"/>
                             <constraint firstItem="eMH-Ld-eYV" firstAttribute="top" secondItem="niN-6t-20E" secondAttribute="bottom" constant="8" id="h72-Lw-1w1"/>
                             <constraint firstItem="dag-Y1-SgF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7f3-wJ-wxY" secondAttribute="trailing" constant="12" id="jOc-fv-cjd"/>
+                            <constraint firstItem="N5C-JV-HoQ" firstAttribute="leading" secondItem="lAI-jv-3h8" secondAttribute="leading" constant="16" id="jn3-eG-Ram"/>
                             <constraint firstItem="dag-Y1-SgF" firstAttribute="leading" secondItem="7f3-wJ-wxY" secondAttribute="trailing" priority="750" constant="12" id="k6l-nv-BIP"/>
                             <constraint firstItem="dag-Y1-SgF" firstAttribute="centerY" secondItem="7f3-wJ-wxY" secondAttribute="centerY" id="kDs-ze-Mhb"/>
                             <constraint firstItem="xgV-tS-thK" firstAttribute="top" secondItem="lAI-jv-3h8" secondAttribute="top" constant="12" id="s8a-6e-ADY"/>

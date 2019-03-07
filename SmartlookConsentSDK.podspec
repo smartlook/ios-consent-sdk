@@ -31,7 +31,7 @@ Although implementing some dialog to obtain user consents and store them for fur
 DESC
 
 s.homepage         = 'https://github.com/smartlook/ios-consent-sdk/'
-s.screenshots     =  ['https://sdk.smartlook.com/assets/SmartlookConsentSDKDemo2.gif', 'https://sdk.smartlook.com/assets/ConsentSDK-Screenshot-iPhone.png']
+s.screenshots     =  ['https://sdk.smartlook.com/assets/SmartlookConsentSDKDemo2.gif']
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
 s.author           = { 'Pavel Kroh' => 'pavelkroh@smartlook.com' }
 s.source           = { :git => 'https://github.com/smartlook/ios-consent-sdk.git', :tag => s.version.to_s }
