@@ -58,7 +58,7 @@ SmartlookConsentSDK.check(with: consentsSettingsDefaults) {
 }
 ```
 
-## Installation
+## Instalation
 
 ### Direct framework embedding
 Framwork is ready for direct embedding in your app, e.g. the way it is embedded into the demo apps here. For detailed descriptions see this Apple Developer Portal document [Embedding Frameworks In An App](https://developer.apple.com/library/archive/technotes/tn2435/_index.html)
