@@ -158,6 +158,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zJO-WL-clK" firstAttribute="trailing" secondItem="Ngg-Up-DpY" secondAttribute="trailing" constant="16" id="3iZ-L7-ENC"/>
                             <constraint firstItem="Ngg-Up-DpY" firstAttribute="top" secondItem="zJO-WL-clK" secondAttribute="top" id="duv-ov-ijk"/>
