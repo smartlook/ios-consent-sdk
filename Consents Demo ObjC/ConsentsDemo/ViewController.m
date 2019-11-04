@@ -30,6 +30,13 @@
     [[NSNotificationCenter defaultCenter] addObserverForName:SLCConsentsTouchedNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
         [self updateConsentIndicators];
     }];
+    
+    if (@available(iOS 13.0, *)) {
+        self.view.backgroundColor = UIColor.systemBackgroundColor;
+    } else {
+        self.view.backgroundColor = UIColor.whiteColor;
+    }
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {

@@ -22,6 +22,12 @@ class ViewController: UIViewController {
         NotificationCenter.default.addObserver(forName: SmartlookConsentSDK.consentsTouchedNotification, object: nil, queue: nil) { (notif) in
             self.updateConsentIndicators()
         }
+        
+        if #available(iOS 13.0, *) {
+            view.backgroundColor = UIColor.systemBackground;
+        } else {
+            view.backgroundColor = UIColor.white;
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

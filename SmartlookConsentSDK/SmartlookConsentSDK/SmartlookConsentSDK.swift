@@ -55,6 +55,12 @@ import Foundation
         guard _shared.keyWindow == nil else {
             return
         }
+        guard UIApplication.shared.keyWindow != nil else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+                show(with: consentsSettings, callback: callback)
+            }
+            return
+        }
         _shared.originalKeyWindow = UIApplication.shared.keyWindow
         _shared.keyWindow = UIWindow()
         _shared.callback = callback
@@ -120,6 +126,10 @@ import Foundation
             viewController.modalPresentationStyle = .formSheet
             if let currentRootViewController = originalKeyWindow?.rootViewController, currentRootViewController.traitCollection.containsTraits(in: UITraitCollection(userInterfaceIdiom: .phone)) {
                 viewController.modalPresentationStyle = .fullScreen
+            }
+            if #available(iOS 13.0, *) {
+                // disable 'swipe to dismiss'
+                viewController.isModalInPresentation = true
             }
             return _viewController
         }
