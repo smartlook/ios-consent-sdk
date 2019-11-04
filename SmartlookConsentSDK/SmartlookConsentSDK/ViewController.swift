@@ -23,6 +23,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 13.0, *) {
+            view.backgroundColor = UIColor.systemBackground
+        }
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
