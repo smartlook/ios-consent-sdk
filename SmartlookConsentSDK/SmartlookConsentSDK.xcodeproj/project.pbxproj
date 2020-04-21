@@ -100,6 +100,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33C27E47221C07560026F090 /* Build configuration list for PBXNativeTarget "SmartlookConsentSDK" */;
 			buildPhases = (
+				3332D680237040CD00A1C2F0 /* Build Number Increase */,
 				33C27E3A221C07560026F090 /* Headers */,
 				33C27E3B221C07560026F090 /* Sources */,
 				33C27E3C221C07560026F090 /* Frameworks */,
@@ -156,6 +157,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3332D680237040CD00A1C2F0 /* Build Number Increase */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build Number Increase";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		33C27E3B221C07560026F090 /* Sources */ = {
