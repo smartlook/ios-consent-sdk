@@ -55,25 +55,32 @@ import Foundation
         guard _shared.keyWindow == nil else {
             return
         }
-        guard UIApplication.shared.keyWindow != nil else {
+        var keyWindow : UIWindow? = nil
+        for (_, window) in UIApplication.shared.windows.enumerated() {
+            if window.isKeyWindow {
+                keyWindow = window
+                break
+            }
+        }
+        if let keyWindow = keyWindow {
+            _shared.originalKeyWindow = keyWindow
+            _shared.keyWindow = UIWindow()
+            _shared.callback = callback
+            if let viewController = _shared.viewController {
+                keyWindow.windowLevel += 1
+                keyWindow.accessibilityViewIsModal = true
+                keyWindow.rootViewController = UIViewController()
+                keyWindow.backgroundColor = UIColor.clear
+                viewController.consents = consentsSettings
+                DispatchQueue.main.async {
+                    UserDefaults.standard.set(true, forKey: "\(keyPrefix)-shown")
+                    keyWindow.makeKeyAndVisible()
+                    keyWindow.rootViewController?.present(viewController, animated: true, completion: nil)
+                }
+            }
+        } else {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
                 show(with: consentsSettings, callback: callback)
-            }
-            return
-        }
-        _shared.originalKeyWindow = UIApplication.shared.keyWindow
-        _shared.keyWindow = UIWindow()
-        _shared.callback = callback
-        if let keyWindow = _shared.keyWindow, let viewController = _shared.viewController {
-            keyWindow.windowLevel += 1
-            keyWindow.accessibilityViewIsModal = true
-            keyWindow.rootViewController = UIViewController()
-            keyWindow.backgroundColor = UIColor.clear
-            viewController.consents = consentsSettings
-            DispatchQueue.main.async {
-                UserDefaults.standard.set(true, forKey: "\(keyPrefix)-shown")
-                keyWindow.makeKeyAndVisible()
-                keyWindow.rootViewController?.present(viewController, animated: true, completion: nil)
             }
         }
     }
