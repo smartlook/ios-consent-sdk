@@ -19,8 +19,6 @@ The SmartlookConsentSDK:
 
 SmartlookConsentSDK works well with both Swift and Objective-C apps.
 
-> Discuss the `ConsentSDK` directly on [Smartlook Discord server](https://discord.gg/SbEt98m).
-
 &nbsp;
 &nbsp;
 
