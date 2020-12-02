@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3313512D222E80FB004BE5AE /* SLConsentSDK+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3313512C222E80FB004BE5AE /* SLConsentSDK+Notification.swift */; };
+		3313512D222E80FB004BE5AE /* SmartlookConsentSDK+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3313512C222E80FB004BE5AE /* SmartlookConsentSDK+Notification.swift */; };
 		33C27E44221C07560026F090 /* SmartlookConsentSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 33C27E42221C07560026F090 /* SmartlookConsentSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		33C27E53221C07D30026F090 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E4A221C07D20026F090 /* HeaderCell.swift */; };
 		33C27E54221C07D30026F090 /* TopBorderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E4B221C07D30026F090 /* TopBorderCell.swift */; };
 		33C27E55221C07D30026F090 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E4C221C07D30026F090 /* ButtonCell.swift */; };
 		33C27E56221C07D30026F090 /* ControlPanel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C27E4D221C07D30026F090 /* ControlPanel.storyboard */; };
-		33C27E57221C07D30026F090 /* SLConsentSDK+Consent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E4E221C07D30026F090 /* SLConsentSDK+Consent.swift */; };
+		33C27E57221C07D30026F090 /* SmartlookConsentSDK+Consent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E4E221C07D30026F090 /* SmartlookConsentSDK+Consent.swift */; };
 		33C27E58221C07D30026F090 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E4F221C07D30026F090 /* ViewController.swift */; };
-		33C27E59221C07D30026F090 /* SLConsentSDK+ObjC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E50221C07D30026F090 /* SLConsentSDK+ObjC.swift */; };
+		33C27E59221C07D30026F090 /* SmartlookConsentSDK+ObjC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E50221C07D30026F090 /* SmartlookConsentSDK+ObjC.swift */; };
 		33C27E5A221C07D30026F090 /* ConsentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E51221C07D30026F090 /* ConsentCell.swift */; };
 		33C27E5B221C07D30026F090 /* SmartlookConsentSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E52221C07D30026F090 /* SmartlookConsentSDK.swift */; };
 		8F0CFF782576A085002CBC8B /* ConsentCellDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0CFF772576A085002CBC8B /* ConsentCellDelegateProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3313512C222E80FB004BE5AE /* SLConsentSDK+Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SLConsentSDK+Notification.swift"; sourceTree = "<group>"; };
+		3313512C222E80FB004BE5AE /* SmartlookConsentSDK+Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SmartlookConsentSDK+Notification.swift"; sourceTree = "<group>"; };
 		33C27E3F221C07560026F090 /* SmartlookConsentSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SmartlookConsentSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C27E42221C07560026F090 /* SmartlookConsentSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmartlookConsentSDK.h; sourceTree = "<group>"; };
 		33C27E43221C07560026F090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -30,9 +30,9 @@
 		33C27E4B221C07D30026F090 /* TopBorderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopBorderCell.swift; sourceTree = "<group>"; };
 		33C27E4C221C07D30026F090 /* ButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		33C27E4D221C07D30026F090 /* ControlPanel.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ControlPanel.storyboard; sourceTree = "<group>"; };
-		33C27E4E221C07D30026F090 /* SLConsentSDK+Consent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SLConsentSDK+Consent.swift"; sourceTree = "<group>"; };
+		33C27E4E221C07D30026F090 /* SmartlookConsentSDK+Consent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SmartlookConsentSDK+Consent.swift"; sourceTree = "<group>"; };
 		33C27E4F221C07D30026F090 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		33C27E50221C07D30026F090 /* SLConsentSDK+ObjC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SLConsentSDK+ObjC.swift"; sourceTree = "<group>"; };
+		33C27E50221C07D30026F090 /* SmartlookConsentSDK+ObjC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SmartlookConsentSDK+ObjC.swift"; sourceTree = "<group>"; };
 		33C27E51221C07D30026F090 /* ConsentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentCell.swift; sourceTree = "<group>"; };
 		33C27E52221C07D30026F090 /* SmartlookConsentSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartlookConsentSDK.swift; sourceTree = "<group>"; };
 		8F0CFF772576A085002CBC8B /* ConsentCellDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentCellDelegateProtocol.swift; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		33C27E35221C07560026F090 = {
 			isa = PBXGroup;
 			children = (
-				33C27E41221C07560026F090 /* SmartlookConsentSDK */,
+				33C27E41221C07560026F090 /* Sources */,
 				33C27E40221C07560026F090 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,31 +65,26 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		33C27E41221C07560026F090 /* SmartlookConsentSDK */ = {
+		33C27E41221C07560026F090 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				33C27E4C221C07D30026F090 /* ButtonCell.swift */,
-				33C27E51221C07D30026F090 /* ConsentCell.swift */,
-				8F0CFF772576A085002CBC8B /* ConsentCellDelegateProtocol.swift */,
-				33C27E4A221C07D20026F090 /* HeaderCell.swift */,
-				33C27E4B221C07D30026F090 /* TopBorderCell.swift */,
-				33C27E4F221C07D30026F090 /* ViewController.swift */,
-				33C27E4D221C07D30026F090 /* ControlPanel.storyboard */,
 				8F0CFF7E2576A55E002CBC8B /* UI */,
 				33C27E42221C07560026F090 /* SmartlookConsentSDK.h */,
 				33C27E52221C07D30026F090 /* SmartlookConsentSDK.swift */,
-				33C27E4E221C07D30026F090 /* SLConsentSDK+Consent.swift */,
-				33C27E50221C07D30026F090 /* SLConsentSDK+ObjC.swift */,
-				3313512C222E80FB004BE5AE /* SLConsentSDK+Notification.swift */,
+				33C27E4E221C07D30026F090 /* SmartlookConsentSDK+Consent.swift */,
+				33C27E50221C07D30026F090 /* SmartlookConsentSDK+ObjC.swift */,
+				3313512C222E80FB004BE5AE /* SmartlookConsentSDK+Notification.swift */,
 				33C27E43221C07560026F090 /* Info.plist */,
 			);
-			path = SmartlookConsentSDK;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		8F0CFF7E2576A55E002CBC8B /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				8FEA48B92576923A002B07EA /* Cells */,
+				33C27E4F221C07D30026F090 /* ViewController.swift */,
+				33C27E4D221C07D30026F090 /* ControlPanel.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -97,6 +92,11 @@
 		8FEA48B92576923A002B07EA /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				33C27E4C221C07D30026F090 /* ButtonCell.swift */,
+				33C27E51221C07D30026F090 /* ConsentCell.swift */,
+				8F0CFF772576A085002CBC8B /* ConsentCellDelegateProtocol.swift */,
+				33C27E4A221C07D20026F090 /* HeaderCell.swift */,
+				33C27E4B221C07D30026F090 /* TopBorderCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -224,14 +224,14 @@
 			files = (
 				33C27E53221C07D30026F090 /* HeaderCell.swift in Sources */,
 				33C27E58221C07D30026F090 /* ViewController.swift in Sources */,
-				33C27E59221C07D30026F090 /* SLConsentSDK+ObjC.swift in Sources */,
-				33C27E57221C07D30026F090 /* SLConsentSDK+Consent.swift in Sources */,
+				33C27E59221C07D30026F090 /* SmartlookConsentSDK+ObjC.swift in Sources */,
+				33C27E57221C07D30026F090 /* SmartlookConsentSDK+Consent.swift in Sources */,
 				33C27E5B221C07D30026F090 /* SmartlookConsentSDK.swift in Sources */,
 				33C27E5A221C07D30026F090 /* ConsentCell.swift in Sources */,
 				33C27E54221C07D30026F090 /* TopBorderCell.swift in Sources */,
 				8F0CFF782576A085002CBC8B /* ConsentCellDelegateProtocol.swift in Sources */,
 				33C27E55221C07D30026F090 /* ButtonCell.swift in Sources */,
-				3313512D222E80FB004BE5AE /* SLConsentSDK+Notification.swift in Sources */,
+				3313512D222E80FB004BE5AE /* SmartlookConsentSDK+Notification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
