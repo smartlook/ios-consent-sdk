@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import <SmartlookConsentSDK/SmartlookConsentSDK.h>
 
-@interface ViewController ()
+@interface ViewController ();
 
 @property (weak, nonatomic) IBOutlet UIView *consentsPanelWasShownIndicator;
 @property (weak, nonatomic) IBOutlet UIView *privacyConsentIndicator;
@@ -19,14 +19,17 @@
 
 @implementation ViewController
 
+// MARK: - View lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //privacyConsentIndicator.layer.cornerRadius = 3
-    //analyticsConsentIndicator.layer.cornerRadius = 3
+    _privacyConsentIndicator.layer.cornerRadius = 3;
+    _analyticsConsentIndicator.layer.cornerRadius = 3;
     
-    // this is not necessary if all the logic is handled in the `SmartlookConsentSDK.check` or `SmartlookConsentSDK.show` callbacks
-    // may be usefull eg., if some UI depends on the consents state like here
+    // This is not necessary if all the logic is handled in the `SmartlookConsentSDK.check`
+    // or `SmartlookConsentSDK.show` callbacks may be usefully eg.,
+    // if some UI depends on the consents state like here.
     [[NSNotificationCenter defaultCenter] addObserverForName:SLCConsentsTouchedNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
         [self updateConsentIndicators];
     }];
@@ -36,7 +39,6 @@
     } else {
         self.view.backgroundColor = UIColor.whiteColor;
     }
-
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -44,7 +46,10 @@
     [self updateConsentIndicators];
 }
 
-- (UIColor *)colourForState:(SLCConsentState)state {
+
+// MARK: - Consent state visualization
+
+- (UIColor *)colorForState:(SLCConsentState)state {
     switch (state) {
         case SLCConsentStateUnknown:
             return [UIColor lightGrayColor];
@@ -60,17 +65,20 @@
 
 -(void)updateConsentIndicators {
     self.consentsPanelWasShownIndicator.backgroundColor = SmartlookConsentSDK.wasShown ? [UIColor greenColor] : [UIColor grayColor];
-    self.privacyConsentIndicator.backgroundColor = [self colourForState:[SmartlookConsentSDK consentStateFor:SLCConsentPrivacy]];
-    self.analyticsConsentIndicator.backgroundColor = [self colourForState:[SmartlookConsentSDK consentStateFor:SLCConsentAnalytics]];
+    self.privacyConsentIndicator.backgroundColor = [self colorForState:[SmartlookConsentSDK consentStateFor:SLCConsentPrivacy]];
+    self.analyticsConsentIndicator.backgroundColor = [self colorForState:[SmartlookConsentSDK consentStateFor:SLCConsentAnalytics]];
 }
 
+
+// MARK: - UI Actions
+
 - (IBAction)buttonAction:(id)sender {
+    // let user review or check the consents
     [SmartlookConsentSDK showWithCallback:^{
         [self updateConsentIndicators];
         if ([SmartlookConsentSDK consentStateFor:SLCConsentAnalytics] != SLCConsentStateProvided) {
             // stop analytics tools
         };
-
     }];
 }
 

@@ -18,6 +18,7 @@
 		33C27E59221C07D30026F090 /* SLConsentSDK+ObjC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E50221C07D30026F090 /* SLConsentSDK+ObjC.swift */; };
 		33C27E5A221C07D30026F090 /* ConsentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E51221C07D30026F090 /* ConsentCell.swift */; };
 		33C27E5B221C07D30026F090 /* SmartlookConsentSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E52221C07D30026F090 /* SmartlookConsentSDK.swift */; };
+		8F0CFF782576A085002CBC8B /* ConsentCellDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0CFF772576A085002CBC8B /* ConsentCellDelegateProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		33C27E50221C07D30026F090 /* SLConsentSDK+ObjC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SLConsentSDK+ObjC.swift"; sourceTree = "<group>"; };
 		33C27E51221C07D30026F090 /* ConsentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentCell.swift; sourceTree = "<group>"; };
 		33C27E52221C07D30026F090 /* SmartlookConsentSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartlookConsentSDK.swift; sourceTree = "<group>"; };
+		8F0CFF772576A085002CBC8B /* ConsentCellDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentCellDelegateProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,18 +70,35 @@
 			children = (
 				33C27E4C221C07D30026F090 /* ButtonCell.swift */,
 				33C27E51221C07D30026F090 /* ConsentCell.swift */,
-				33C27E4D221C07D30026F090 /* ControlPanel.storyboard */,
+				8F0CFF772576A085002CBC8B /* ConsentCellDelegateProtocol.swift */,
 				33C27E4A221C07D20026F090 /* HeaderCell.swift */,
-				33C27E43221C07560026F090 /* Info.plist */,
+				33C27E4B221C07D30026F090 /* TopBorderCell.swift */,
+				33C27E4F221C07D30026F090 /* ViewController.swift */,
+				33C27E4D221C07D30026F090 /* ControlPanel.storyboard */,
+				8F0CFF7E2576A55E002CBC8B /* UI */,
+				33C27E42221C07560026F090 /* SmartlookConsentSDK.h */,
+				33C27E52221C07D30026F090 /* SmartlookConsentSDK.swift */,
 				33C27E4E221C07D30026F090 /* SLConsentSDK+Consent.swift */,
 				33C27E50221C07D30026F090 /* SLConsentSDK+ObjC.swift */,
 				3313512C222E80FB004BE5AE /* SLConsentSDK+Notification.swift */,
-				33C27E42221C07560026F090 /* SmartlookConsentSDK.h */,
-				33C27E52221C07D30026F090 /* SmartlookConsentSDK.swift */,
-				33C27E4B221C07D30026F090 /* TopBorderCell.swift */,
-				33C27E4F221C07D30026F090 /* ViewController.swift */,
+				33C27E43221C07560026F090 /* Info.plist */,
 			);
 			path = SmartlookConsentSDK;
+			sourceTree = "<group>";
+		};
+		8F0CFF7E2576A55E002CBC8B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8FEA48B92576923A002B07EA /* Cells */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		8FEA48B92576923A002B07EA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,6 +124,7 @@
 				33C27E3B221C07560026F090 /* Sources */,
 				33C27E3C221C07560026F090 /* Frameworks */,
 				33C27E3D221C07560026F090 /* Resources */,
+				8FEA48B525767DCD002B07EA /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -121,12 +141,12 @@
 		33C27E36221C07560026F090 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = Smartlook;
 				TargetAttributes = {
 					33C27E3E221C07560026F090 = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1220;
 					};
 				};
 			};
@@ -177,6 +197,24 @@
 			shellPath = /bin/sh;
 			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"\n";
 		};
+		8FEA48B525767DCD002B07EA /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#: '\nif which swiftlint >/dev/null; then\nswiftlint\nfi\n#'\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -191,6 +229,7 @@
 				33C27E5B221C07D30026F090 /* SmartlookConsentSDK.swift in Sources */,
 				33C27E5A221C07D30026F090 /* ConsentCell.swift in Sources */,
 				33C27E54221C07D30026F090 /* TopBorderCell.swift in Sources */,
+				8F0CFF782576A085002CBC8B /* ConsentCellDelegateProtocol.swift in Sources */,
 				33C27E55221C07D30026F090 /* ButtonCell.swift in Sources */,
 				3313512D222E80FB004BE5AE /* SLConsentSDK+Notification.swift in Sources */,
 			);
@@ -225,6 +264,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -289,6 +329,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -345,7 +386,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -373,7 +414,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.smartlook.SmartlookConsentSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

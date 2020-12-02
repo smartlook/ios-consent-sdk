@@ -1,5 +1,5 @@
 //
-//  SLConsentSDK+Notification.swift
+//  SmartlookConsentSDK+Notification.swift
 //  SmartlookConsentSDK
 //
 //  Created by Pavel Kroh on 05/03/2019.
@@ -9,8 +9,12 @@
 import Foundation
 
 extension SmartlookConsentSDK {
+
+    private static var touchedName = "com.smartlook.SmartlookConsentSDK.notification.consentsTouched"
+
     /**
-     This notification is sent whenever user touches the consents, regardless there is an actual change in the consents or not.
+     This notification is sent whenever user touches the consents,
+     regardless there is an actual change in the consents or not.
      */
-    public static let consentsTouchedNotification = Notification.Name(rawValue: "com.smartlook.SmartlookConsentSDK.notification.consentsTouched")
+    public static let consentsTouchedNotification = Notification.Name(rawValue: touchedName)
 }
