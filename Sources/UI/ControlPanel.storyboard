@@ -12,7 +12,7 @@
         <!--Control Panel View Controller-->
         <scene sceneID="nZO-h7-nCt">
             <objects>
-                <viewController id="hBv-OV-dYa" customClass="ControlPanelViewController" customModule="SmartlookConsentSDK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hBv-OV-dYa" customClass="ControlPanelViewController" customModule="SmartlookConsentSDK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NmP-RK-Vit">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
