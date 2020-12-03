@@ -127,6 +127,13 @@ import UIKit
     private var controlPanel: ViewController?
 
     private func instantiateControlPanel() -> ViewController? {
+        // Framework is used as Swift Package
+        #if SWIFT_PACKAGE
+        let storyboard = UIStoryboard(name: "ControlPanel", bundle: Bundle.module)
+        return storyboard.instantiateInitialViewController() as? ViewController
+        #endif
+        
+        // Framework is imported via legacy methods
         let thisBundle = Bundle(for: type(of: self))
         if thisBundle.bundleIdentifier == "com.smartlook.SmartlookConsentSDK" {
             let storyboard = UIStoryboard(name: "ControlPanel", bundle: thisBundle)
