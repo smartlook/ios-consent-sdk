@@ -6,6 +6,8 @@
 //  Copyright © 2019 Smartlook. All rights reserved.
 //
 
+import UIKit
+
 class TopBorderCell: UITableViewCell {
 
     // MARK: - View lifecycle

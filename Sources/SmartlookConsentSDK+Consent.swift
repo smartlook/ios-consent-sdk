@@ -6,6 +6,8 @@
 //  Copyright © 2019 Smartlook. All rights reserved.
 //
 
+import Foundation
+
 extension SmartlookConsentSDK {
     public typealias Consent = String
 }
