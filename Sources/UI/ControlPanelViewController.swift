@@ -10,10 +10,10 @@ import UIKit
 import SafariServices
 
 protocol SLCViewControllerDelegate: AnyObject {
-    func viewControllerRequestClose(_ viewController: ViewController)
+    func viewControllerRequestClose(_ viewController: ControlPanelViewController)
 }
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ControlPanelViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     // MARK: - UI Outlets
 
@@ -75,7 +75,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 }
 
-extension ViewController: ConsentCellDelegate {
+extension ControlPanelViewController: ConsentCellDelegate {
 
     // MARK: - ConsentCellDelegate methods
 

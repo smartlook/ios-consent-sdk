@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hBv-OV-dYa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hBv-OV-dYa">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Control Panel View Controller-->
         <scene sceneID="nZO-h7-nCt">
             <objects>
-                <viewController id="hBv-OV-dYa" customClass="ViewController" customModule="SmartlookConsentSDK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hBv-OV-dYa" customClass="ControlPanelViewController" customModule="SmartlookConsentSDK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NmP-RK-Vit">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ngg-Up-DpY">
                                 <rect key="frame" x="16" y="0.0" width="343" height="647"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ConsentCell" rowHeight="74" id="fD0-2E-sps" customClass="ConsentCell" customModule="SmartlookConsentSDK" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="74"/>
@@ -92,7 +93,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdY-yG-DPk">
-                                                    <rect key="frame" x="23" y="36" width="297" height="20.5"/>
+                                                    <rect key="frame" x="24" y="36" width="295" height="20.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -158,6 +159,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="zJO-WL-clK"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zJO-WL-clK" firstAttribute="trailing" secondItem="Ngg-Up-DpY" secondAttribute="trailing" constant="16" id="3iZ-L7-ENC"/>
@@ -165,7 +167,6 @@
                             <constraint firstItem="Ngg-Up-DpY" firstAttribute="leading" secondItem="zJO-WL-clK" secondAttribute="leading" constant="16" id="f35-5n-Kzt"/>
                             <constraint firstItem="zJO-WL-clK" firstAttribute="bottom" secondItem="Ngg-Up-DpY" secondAttribute="bottom" constant="20" id="iFX-US-ReY"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="zJO-WL-clK"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="Ngg-Up-DpY" id="Yfh-s8-rZo"/>
@@ -176,4 +177,9 @@
             <point key="canvasLocation" x="224.80000000000001" y="164.16791604197903"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

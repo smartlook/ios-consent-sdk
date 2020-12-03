@@ -124,27 +124,27 @@ import UIKit
 
     // MARK: - Control panel instantiate
 
-    private var controlPanel: ViewController?
+    private var controlPanel: ControlPanelViewController?
 
-    private func instantiateControlPanel() -> ViewController? {
+    private func instantiateControlPanel() -> ControlPanelViewController? {
         // Framework is used as Swift Package
         #if SWIFT_PACKAGE
         let storyboard = UIStoryboard(name: "ControlPanel", bundle: Bundle.module)
-        return storyboard.instantiateInitialViewController() as? ViewController
+        return storyboard.instantiateInitialViewController() as? ControlPanelViewController
         #endif
         
         // Framework is imported via legacy methods
         let thisBundle = Bundle(for: type(of: self))
         if thisBundle.bundleIdentifier == "com.smartlook.SmartlookConsentSDK" {
             let storyboard = UIStoryboard(name: "ControlPanel", bundle: thisBundle)
-            return storyboard.instantiateInitialViewController() as? ViewController
+            return storyboard.instantiateInitialViewController() as? ControlPanelViewController
 
         } else if
             let cocoapodResourcesBundleUrl = thisBundle.url(forResource: Self.bundleName, withExtension: "bundle"),
             let cocoapodResourcesBundle = Bundle(url: cocoapodResourcesBundleUrl)
         {
             let storyboard = UIStoryboard(name: "ControlPanel", bundle: cocoapodResourcesBundle)
-            return storyboard.instantiateInitialViewController() as? ViewController
+            return storyboard.instantiateInitialViewController() as? ControlPanelViewController
         }
 
         return nil
@@ -152,7 +152,7 @@ import UIKit
 
     // MARK: - View Controller Implementation
 
-    var viewController: ViewController? {
+    var viewController: ControlPanelViewController? {
         get {
             if controlPanel != nil {
                 return controlPanel
@@ -191,7 +191,7 @@ import UIKit
         }
     }
 
-    func viewControllerRequestClose(_ viewController: ViewController) {
+    func viewControllerRequestClose(_ viewController: ControlPanelViewController) {
         DispatchQueue.main.async {
             viewController.dismiss(animated: true) { [weak self] in
                 self?.originalKeyWindow?.makeKeyAndVisible()

@@ -14,7 +14,7 @@
 		33C27E55221C07D30026F090 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E4C221C07D30026F090 /* ButtonCell.swift */; };
 		33C27E56221C07D30026F090 /* ControlPanel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C27E4D221C07D30026F090 /* ControlPanel.storyboard */; };
 		33C27E57221C07D30026F090 /* SmartlookConsentSDK+Consent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E4E221C07D30026F090 /* SmartlookConsentSDK+Consent.swift */; };
-		33C27E58221C07D30026F090 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E4F221C07D30026F090 /* ViewController.swift */; };
+		33C27E58221C07D30026F090 /* ControlPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E4F221C07D30026F090 /* ControlPanelViewController.swift */; };
 		33C27E59221C07D30026F090 /* SmartlookConsentSDK+ObjC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E50221C07D30026F090 /* SmartlookConsentSDK+ObjC.swift */; };
 		33C27E5A221C07D30026F090 /* ConsentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E51221C07D30026F090 /* ConsentCell.swift */; };
 		33C27E5B221C07D30026F090 /* SmartlookConsentSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E52221C07D30026F090 /* SmartlookConsentSDK.swift */; };
@@ -31,7 +31,7 @@
 		33C27E4C221C07D30026F090 /* ButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		33C27E4D221C07D30026F090 /* ControlPanel.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ControlPanel.storyboard; sourceTree = "<group>"; };
 		33C27E4E221C07D30026F090 /* SmartlookConsentSDK+Consent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SmartlookConsentSDK+Consent.swift"; sourceTree = "<group>"; };
-		33C27E4F221C07D30026F090 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		33C27E4F221C07D30026F090 /* ControlPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlPanelViewController.swift; sourceTree = "<group>"; };
 		33C27E50221C07D30026F090 /* SmartlookConsentSDK+ObjC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SmartlookConsentSDK+ObjC.swift"; sourceTree = "<group>"; };
 		33C27E51221C07D30026F090 /* ConsentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentCell.swift; sourceTree = "<group>"; };
 		33C27E52221C07D30026F090 /* SmartlookConsentSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartlookConsentSDK.swift; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				8FEA48B92576923A002B07EA /* Cells */,
-				33C27E4F221C07D30026F090 /* ViewController.swift */,
+				33C27E4F221C07D30026F090 /* ControlPanelViewController.swift */,
 				33C27E4D221C07D30026F090 /* ControlPanel.storyboard */,
 			);
 			path = UI;
@@ -223,7 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33C27E53221C07D30026F090 /* HeaderCell.swift in Sources */,
-				33C27E58221C07D30026F090 /* ViewController.swift in Sources */,
+				33C27E58221C07D30026F090 /* ControlPanelViewController.swift in Sources */,
 				33C27E59221C07D30026F090 /* SmartlookConsentSDK+ObjC.swift in Sources */,
 				33C27E57221C07D30026F090 /* SmartlookConsentSDK+Consent.swift in Sources */,
 				33C27E5B221C07D30026F090 /* SmartlookConsentSDK.swift in Sources */,
