@@ -21,7 +21,7 @@
                                 <rect key="frame" x="16" y="0.0" width="343" height="647"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ConsentCell" rowHeight="74" id="fD0-2E-sps" customClass="ConsentCell" customModule="SmartlookConsentSDK" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ConsentCell" rowHeight="74" id="fD0-2E-sps" customClass="ConsentCell" customModule="SmartlookConsentSDK">
                                         <rect key="frame" x="0.0" y="28" width="343" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fD0-2E-sps" id="DTI-Ig-8ku">
@@ -78,7 +78,7 @@
                                             <outlet property="label" destination="bNS-V7-Cbj" id="k7c-Aj-TmT"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ButtonCell" rowHeight="76" id="oy0-Kw-gJ8" customClass="ButtonCell" customModule="SmartlookConsentSDK" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ButtonCell" rowHeight="76" id="oy0-Kw-gJ8" customClass="ButtonCell" customModule="SmartlookConsentSDK">
                                         <rect key="frame" x="0.0" y="102" width="343" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oy0-Kw-gJ8" id="cKE-nz-ifl">
@@ -114,7 +114,7 @@
                                             <outlet property="title" destination="PdY-yG-DPk" id="oSm-hs-ZzU"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="108" id="glC-Rp-Jfz" customClass="HeaderCell" customModule="SmartlookConsentSDK" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="108" id="glC-Rp-Jfz" customClass="HeaderCell" customModule="SmartlookConsentSDK">
                                         <rect key="frame" x="0.0" y="178" width="343" height="108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="glC-Rp-Jfz" id="sbA-4l-Bv4">
@@ -174,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WpF-gP-hgN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="224.80000000000001" y="164.16791604197903"/>
+            <point key="canvasLocation" x="46" y="150"/>
         </scene>
     </scenes>
     <resources>

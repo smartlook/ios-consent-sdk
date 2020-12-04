@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "SmartlookConsentSDK",
     platforms: [
-        SupportedPlatform.iOS(.v10)
+        .iOS(.v10)
     ],
     products: [
         .library(
