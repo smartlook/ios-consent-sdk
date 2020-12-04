@@ -30,7 +30,7 @@ SmartlookConsentSDK works well with both Swift and Objective-C apps.
 The most straightforward use that utilises default settings:
 ```swift
 SmartlookConsentSDK.check() {
-      if SmartlookConsentSDK.consent(for: .analytics) == .provided {
+      if SmartlookConsentSDK.consentState(for: .analytics) == .provided {
           // Start analytics tools
       }
 }
@@ -46,22 +46,25 @@ In this example, only consent for analytics is sought for with the consent provi
 
 ```swift
 var consentsSettingsDefaults = SmartlookConsentSDK.ConsentsSettings()
-//consentsSettingsDefaults.append((.privacy, .notProvided)) 
+// consentsSettingsDefaults.append((.privacy, .notProvided)) 
 consentsSettingsDefaults.append((.analytics, .provided))
 
 SmartlookConsentSDK.check(with: consentsSettingsDefaults) {
     if SmartlookConsentSDK.consentState(for: .analytics) == .provided {
-        // start analytics tools
+        // Start analytics tools
     }
 }
 ```
 
 ## Installation
 
+### Swift Package Manager
+Integration into the application using [Swift package Manager](https://swift.org/package-manager/) is fully supported.
+
 ### Direct framework embedding
 Framwork is ready for direct embedding in your app, e.g. the way it is embedded into the demo apps here. For detailed descriptions see this Apple Developer Portal document [Embedding Frameworks In An App](https://developer.apple.com/library/archive/technotes/tn2435/_index.html)
 
-### Cocoapods
+### Cocoapods (deprecated)
 Add cocoapod `SmartlookConsentSDK` into your Podfile.
 
 ## Adding SmartlookConsentSDK to app code

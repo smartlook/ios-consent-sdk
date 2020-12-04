@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ControlPanelViewController.swift
 //  SmartlookConsentSDK
 //
 //  Created by Pavel Kroh on 13/02/2019.
@@ -49,7 +49,10 @@ class ControlPanelViewController: UIViewController, UITableViewDelegate, UITable
             return tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath)
 
         case consents.count + 1:
-            return tableView.dequeueReusableCell(withIdentifier: "ButtonCell", for: indexPath)
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "ButtonCell", for: indexPath) as? ButtonCell {
+                cell.delegate = self
+                return cell
+            }
 
         default:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "ConsentCell", for: indexPath) as? ConsentCell {
@@ -67,11 +70,6 @@ class ControlPanelViewController: UIViewController, UITableViewDelegate, UITable
 
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         return indexPath.item == consents.count + 1
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // this could be only the button
-        delegate?.viewControllerRequestClose(self)
     }
 }
 
@@ -100,5 +98,14 @@ extension ControlPanelViewController: ConsentCellDelegate {
         if let safariController = safariController {
             present(safariController, animated: true, completion: nil)
         }
+    }
+}
+
+extension ControlPanelViewController: ButtonCellDelegate {
+
+    // MARK: - ButtonCellDelegate methods
+
+    func buttonCellPressed(button: UIButton) {
+        delegate?.viewControllerRequestClose(self)
     }
 }

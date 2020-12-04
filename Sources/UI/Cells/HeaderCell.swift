@@ -20,6 +20,18 @@ class HeaderCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
+        fillContent()
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        fillContent()
+    }
+
+    // MARK: - Content
+
+    private func fillContent() {
         let appName = Bundle.main.infoDictionary?["CFBundleDisplayName"] as? String ?? ""
         var titleText = NSLocalizedString("\(SmartlookConsentSDK.keyPrefix)-title", comment: "")
         titleText = titleText.replacingOccurrences(of: "$APP", with: appName)
@@ -28,7 +40,7 @@ class HeaderCell: UITableViewCell {
         let attributedString = NSMutableAttributedString(string: titleText, attributes: titleStyles)
 
         if let appNameRange = titleText.range(of: appName), !appNameRange.isEmpty {
-            let appNameColor = UIColor(red: 0, green: 0.48, blue: 1, alpha: 1)
+            let appNameColor = tintColor ?? UIColor(red: 0, green: 0.48, blue: 1, alpha: 1)
             let appNameAttributes = [NSAttributedString.Key.foregroundColor: appNameColor]
             attributedString.setAttributes(appNameAttributes, range: NSRange(appNameRange, in: titleText))
         }

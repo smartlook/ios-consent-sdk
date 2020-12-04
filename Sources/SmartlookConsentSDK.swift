@@ -127,12 +127,12 @@ import UIKit
     private var controlPanel: ControlPanelViewController?
 
     private func instantiateControlPanel() -> ControlPanelViewController? {
-        // Framework is used as Swift Package
         #if SWIFT_PACKAGE
+        // Framework is used as Swift Package
         let storyboard = UIStoryboard(name: "ControlPanel", bundle: Bundle.module)
         return storyboard.instantiateInitialViewController() as? ControlPanelViewController
-        #endif
 
+        #else
         // Framework is imported via legacy methods
         let thisBundle = Bundle(for: type(of: self))
         if thisBundle.bundleIdentifier == "com.smartlook.SmartlookConsentSDK" {
@@ -148,6 +148,7 @@ import UIKit
         }
 
         return nil
+        #endif
     }
 
     // MARK: - View Controller Implementation

@@ -12,15 +12,35 @@ class ButtonCell: TopBorderCell {
 
     // MARK: - UI Outlets
 
-    @IBOutlet weak var buttonBackground: UIView!
-    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var button: UIButton!
+
+    // MARK: - Public
+
+    public weak var delegate: ButtonCellDelegate?
+
+    // MARK: - UI Actions
+
+    @IBAction func detailButtonAction(_ sender: Any) {
+        if let button = sender as? UIButton {
+            delegate?.buttonCellPressed(button: button)
+        }
+    }
 
     // MARK: - View lifecycle
 
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        buttonBackground.layer.cornerRadius = 6
-        title.text = NSLocalizedString("\(SmartlookConsentSDK.keyPrefix)-button", comment: "")
+        button.layer.cornerRadius = 6
+        button.setTitleColor(.white, for: .normal)
+
+        let buttonTitle = NSLocalizedString("\(SmartlookConsentSDK.keyPrefix)-button", comment: "")
+        button.setTitle(buttonTitle, for: .normal)
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        button.backgroundColor = tintColor
     }
 }

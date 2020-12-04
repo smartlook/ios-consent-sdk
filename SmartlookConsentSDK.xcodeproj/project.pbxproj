@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		33C27E5A221C07D30026F090 /* ConsentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E51221C07D30026F090 /* ConsentCell.swift */; };
 		33C27E5B221C07D30026F090 /* SmartlookConsentSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27E52221C07D30026F090 /* SmartlookConsentSDK.swift */; };
 		8F0CFF782576A085002CBC8B /* ConsentCellDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0CFF772576A085002CBC8B /* ConsentCellDelegateProtocol.swift */; };
+		8F114349257A34F000F41179 /* ButtonCellDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F114348257A34F000F41179 /* ButtonCellDelegateProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		33C27E51221C07D30026F090 /* ConsentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentCell.swift; sourceTree = "<group>"; };
 		33C27E52221C07D30026F090 /* SmartlookConsentSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartlookConsentSDK.swift; sourceTree = "<group>"; };
 		8F0CFF772576A085002CBC8B /* ConsentCellDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentCellDelegateProtocol.swift; sourceTree = "<group>"; };
+		8F114348257A34F000F41179 /* ButtonCellDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCellDelegateProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				33C27E4C221C07D30026F090 /* ButtonCell.swift */,
+				8F114348257A34F000F41179 /* ButtonCellDelegateProtocol.swift */,
 				33C27E51221C07D30026F090 /* ConsentCell.swift */,
 				8F0CFF772576A085002CBC8B /* ConsentCellDelegateProtocol.swift */,
 				33C27E4A221C07D20026F090 /* HeaderCell.swift */,
@@ -151,7 +154,7 @@
 				};
 			};
 			buildConfigurationList = 33C27E39221C07560026F090 /* Build configuration list for PBXProject "SmartlookConsentSDK" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -232,6 +235,7 @@
 				8F0CFF782576A085002CBC8B /* ConsentCellDelegateProtocol.swift in Sources */,
 				33C27E55221C07D30026F090 /* ButtonCell.swift in Sources */,
 				3313512D222E80FB004BE5AE /* SmartlookConsentSDK+Notification.swift in Sources */,
+				8F114349257A34F000F41179 /* ButtonCellDelegateProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
