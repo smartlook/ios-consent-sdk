@@ -59,7 +59,7 @@ SmartlookConsentSDK.check(with: consentsSettingsDefaults) {
 ## Installation
 
 ### Swift Package Manager
-Integration into the application using [Swift package Manager](https://swift.org/package-manager/) is fully supported.
+Integration into the application using [Swift Package Manager](https://swift.org/package-manager/) is fully supported.
 
 ### Direct framework embedding
 Framwork is ready for direct embedding in your app, e.g. the way it is embedded into the demo apps here. For detailed descriptions see this Apple Developer Portal document [Embedding Frameworks In An App](https://developer.apple.com/library/archive/technotes/tn2435/_index.html)
