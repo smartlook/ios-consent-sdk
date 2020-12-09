@@ -10,7 +10,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'SmartlookConsentSDK'
-s.version          = '1.3.0'
+s.version          = '1.5.0'
 s.summary          = 'This SDK provides a configurable control panel where user selects her privacy options.'
 
 # This description is used to generate tags and improve search results.
@@ -33,17 +33,17 @@ DESC
 s.homepage         = 'https://github.com/smartlook/ios-consent-sdk/'
 s.screenshots     =  ['https://sdk.smartlook.com/assets/SmartlookConsentSDKDemo2.gif', 'https://github.com/smartlook/ios-consent-sdk/raw/master/readme-media/ConsentSDK-Settings.png']
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
-s.author           = { 'Pavel Kroh' => 'pavelkroh@smartlook.com' }
+s.authors           = { 'Pavel Kroh' => 'pavelkroh@smartlook.com', 'Václav Halík' => 'vaclav.halik@smartlook.com' }
 s.source           = { :git => 'https://github.com/smartlook/ios-consent-sdk.git', :tag => s.version.to_s }
 s.documentation_url = 'https://github.com/smartlook/ios-consent-sdk/'
 
 s.ios.deployment_target = '10.0'
 
-s.swift_version = '4.2'
-s.source_files = 'SmartlookConsentSDK/SmartlookConsentSDK/*.{h,m,c,swift}'
+s.swift_versions = ['5.1', '5.2', '5.3']
+s.source_files = 'Sources/**/*.{h,m,c,swift}'
 
 s.resource_bundles = {
-    'SmartlookConsentSDK' => ['SmartlookConsentSDK/SmartlookConsentSDK/**/*.{storyboard,xib}']
+    'SmartlookConsentSDK' => ['Sources/**/*.{storyboard,xib}']
 }
 
 end
