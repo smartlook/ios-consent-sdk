@@ -61,14 +61,14 @@ import UIKit
             return
         }
 
-        var keyWindow: UIWindow?
+        var originalWindow: UIWindow?
         for window in UIApplication.shared.windows where window.isKeyWindow {
-            keyWindow = window
+            originalWindow = window
             break
         }
 
-        if let keyWindow = keyWindow {
-            shared.originalKeyWindow = keyWindow
+        if let originalWindow = originalWindow {
+            shared.originalKeyWindow = originalWindow
             shared.keyWindow = UIWindow()
             shared.callback = callback
 

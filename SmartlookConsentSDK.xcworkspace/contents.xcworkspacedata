@@ -2,13 +2,13 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SmartlookConsentSDK.xcodeproj">
+      location = "container:SmartlookConsentSDK.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Consents Demo/Consents Demo.xcodeproj">
+      location = "container:Consents Demo/Consents Demo.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Consents Demo ObjC/Consents Demo ObjC.xcodeproj">
+      location = "container:Consents Demo ObjC/Consents Demo ObjC.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Package.swift">

@@ -15,6 +15,8 @@
 		337E625A22173CAC00EBAB60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337E625822173CAC00EBAB60 /* LaunchScreen.storyboard */; };
 		337E625D22173CAC00EBAB60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 337E625C22173CAC00EBAB60 /* main.m */; };
 		338579EE221AE740006861C1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 338579EC221AE740006861C1 /* Localizable.strings */; };
+		8FAA367025A8620B00945E91 /* SmartlookConsentSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAA366F25A8620B00945E91 /* SmartlookConsentSDK.framework */; };
+		8FAA367125A8620B00945E91 /* SmartlookConsentSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAA366F25A8620B00945E91 /* SmartlookConsentSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,6 +26,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				8FAA367125A8620B00945E91 /* SmartlookConsentSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,6 +46,7 @@
 		337E625B22173CAC00EBAB60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		337E625C22173CAC00EBAB60 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		338579ED221AE740006861C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = ConsentSDKDemoObjC/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8FAA366F25A8620B00945E91 /* SmartlookConsentSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SmartlookConsentSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FAA367025A8620B00945E91 /* SmartlookConsentSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +67,7 @@
 				3313512E222E8D55004BE5AE /* Settings.bundle */,
 				337E624C22173CAB00EBAB60 /* ConsentsDemo */,
 				337E624B22173CAB00EBAB60 /* Products */,
+				8FAA366E25A8620B00945E91 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +94,14 @@
 				338579EC221AE740006861C1 /* Localizable.strings */,
 			);
 			path = ConsentsDemo;
+			sourceTree = "<group>";
+		};
+		8FAA366E25A8620B00945E91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FAA366F25A8620B00945E91 /* SmartlookConsentSDK.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
