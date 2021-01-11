@@ -10,8 +10,8 @@
 		8F24310D25AC5FCD00403182 /* ConsentStatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F24310C25AC5FCD00403182 /* ConsentStatesView.swift */; };
 		8FA8741225AC5AE2003CA69F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8FA8741125AC5AE2003CA69F /* Settings.bundle */; };
 		8FA8741725AC5B04003CA69F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FA8741525AC5B04003CA69F /* Localizable.strings */; };
-		8FA8741A25AC5B64003CA69F /* SmartlookConsentSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA8741925AC5B64003CA69F /* SmartlookConsentSDK.framework */; };
-		8FA8741B25AC5B64003CA69F /* SmartlookConsentSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA8741925AC5B64003CA69F /* SmartlookConsentSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8FD01CC925AC92EE00FD6871 /* SmartlookConsentSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD01CC825AC92EE00FD6871 /* SmartlookConsentSDK.framework */; };
+		8FD01CCA25AC92EE00FD6871 /* SmartlookConsentSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD01CC825AC92EE00FD6871 /* SmartlookConsentSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8FE5C8BD25A88E460073DEBD /* ConsentsDemoSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5C8BC25A88E460073DEBD /* ConsentsDemoSwiftUIApp.swift */; };
 		8FE5C8BF25A88E460073DEBD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5C8BE25A88E460073DEBD /* ContentView.swift */; };
 		8FE5C8C125A88E480073DEBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5C8C025A88E480073DEBD /* Assets.xcassets */; };
@@ -26,7 +26,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8FA8741B25AC5B64003CA69F /* SmartlookConsentSDK.framework in Embed Frameworks */,
+				8FD01CCA25AC92EE00FD6871 /* SmartlookConsentSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -37,14 +37,13 @@
 		8F24310C25AC5FCD00403182 /* ConsentStatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentStatesView.swift; sourceTree = "<group>"; };
 		8FA8741125AC5AE2003CA69F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../Shared/Settings.bundle; sourceTree = "<group>"; };
 		8FA8741625AC5B04003CA69F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = ../../Shared/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		8FA8741925AC5B64003CA69F /* SmartlookConsentSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SmartlookConsentSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FD01CC825AC92EE00FD6871 /* SmartlookConsentSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SmartlookConsentSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FE5C8B925A88E460073DEBD /* ConsentsSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConsentsSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FE5C8BC25A88E460073DEBD /* ConsentsDemoSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentsDemoSwiftUIApp.swift; sourceTree = "<group>"; };
 		8FE5C8BE25A88E460073DEBD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8FE5C8C025A88E480073DEBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FE5C8C325A88E480073DEBD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8FE5C8C525A88E480073DEBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8FE5C8D025A8938F0073DEBD /* SmartlookConsentSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SmartlookConsentSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FE5C8D625A898C30073DEBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FA8741A25AC5B64003CA69F /* SmartlookConsentSDK.framework in Frameworks */,
+				8FD01CC925AC92EE00FD6871 /* SmartlookConsentSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,8 +103,7 @@
 		8FE5C8CF25A8938F0073DEBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8FA8741925AC5B64003CA69F /* SmartlookConsentSDK.framework */,
-				8FE5C8D025A8938F0073DEBD /* SmartlookConsentSDK.framework */,
+				8FD01CC825AC92EE00FD6871 /* SmartlookConsentSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
