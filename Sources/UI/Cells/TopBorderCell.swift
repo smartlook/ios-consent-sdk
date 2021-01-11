@@ -18,7 +18,12 @@ class TopBorderCell: UITableViewCell {
         let borderView = UIView()
         borderView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(borderView)
-        borderView.backgroundColor = UIColor.lightGray
+
+        var separatorColor: UIColor = .lightGray
+        if #available(iOS 13.0, *) {
+            separatorColor = .separator
+        }
+        borderView.backgroundColor = separatorColor
         borderView.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
         borderView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         borderView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
