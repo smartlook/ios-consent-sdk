@@ -4,12 +4,19 @@
    <FileRef
       location = "container:SmartlookConsentSDK.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "container:Consents Demo/Consents Demo.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "container:Consents Demo ObjC/Consents Demo ObjC.xcodeproj">
-   </FileRef>
+   <Group
+      location = "container:"
+      name = "Demos">
+      <FileRef
+         location = "group:Demos/ConsentsDemo/ConsentsDemo.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Demos/ConsentsObjC/ConsentsObjC.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Demos/ConsentsSwiftUI/ConsentsSwiftUI.xcodeproj">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:Package.swift">
    </FileRef>
