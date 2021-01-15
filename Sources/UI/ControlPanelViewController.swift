@@ -94,6 +94,7 @@ extension ControlPanelViewController: ConsentCellDelegate {
 
         safariController?.modalPresentationStyle = .formSheet
         safariController?.modalTransitionStyle = .crossDissolve
+        safariController?.preferredControlTintColor = self.view.tintColor
 
         if let safariController = safariController {
             present(safariController, animated: true, completion: nil)

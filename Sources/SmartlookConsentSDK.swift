@@ -61,16 +61,23 @@ import UIKit
             return
         }
 
-        var keyWindow: UIWindow?
+        var originalWindow: UIWindow?
         for window in UIApplication.shared.windows where window.isKeyWindow {
-            keyWindow = window
+            originalWindow = window
             break
         }
 
-        if let keyWindow = keyWindow {
-            shared.originalKeyWindow = keyWindow
-            shared.keyWindow = UIWindow()
+        if let originalWindow = originalWindow {
+            shared.originalKeyWindow = originalWindow
             shared.callback = callback
+
+            if #available(iOS 13.0, *) {
+                if let windowScene = originalWindow.windowScene {
+                    shared.keyWindow = UIWindow(windowScene: windowScene)
+                }
+            } else {
+                shared.keyWindow = UIWindow()
+            }
 
             if let viewController = shared.viewController {
                 shared.keyWindow?.windowLevel += 1
@@ -80,9 +87,10 @@ import UIKit
                 viewController.consents = consentsSettings
 
                 DispatchQueue.main.async {
-                    UserDefaults.standard.set(true, forKey: "\(keyPrefix)-shown")
                     shared.keyWindow?.makeKeyAndVisible()
-                    shared.keyWindow?.rootViewController?.present(viewController, animated: true, completion: nil)
+                    shared.keyWindow?.rootViewController?.present(viewController, animated: true) {
+                        UserDefaults.standard.set(true, forKey: "\(keyPrefix)-shown")
+                    }
                 }
             }
         } else {
