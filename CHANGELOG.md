@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented here.
 
+## [1.6.0] - 2021-01-15
+### Added
+- Support for apps managed with SceneDelegate
+
 ## [1.3.0] - 2020-04-21
 ### Fixed
 - Fixed issues with dialog not appearing in new apps due to `keyWindow` behaviour changes in latest iOS
